@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		2024-1-13 | 
+		hexo-typora-img | 
 	 
 	hi
 	</title>
@@ -139,7 +139,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/%E6%8A%A5%E9%94%99/hexo-typora-img/">
                      
 										    hexo-typora-img
@@ -161,7 +161,7 @@
 									</a>
 									
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/%E6%97%A5%E8%AE%B0/2024-1-13/">
                      
 										    2024-1-13
@@ -204,7 +204,7 @@
 	<!-- 引入正文 -->
 	<div id="content" class="content">
 		<h1 id="article-title">
-	2024-1-13
+	hexo-typora-img
 </h1>
 
 <!-- meta -->
@@ -212,7 +212,7 @@
 	
 
 	<span>lucky</span>
-	<span>2024-01-13 21:11:01</span>
+	<span>2024-01-17 18:51:01</span>
 
   <div id="article-categories">
     
@@ -230,7 +230,22 @@
 
 <!-- content -->
 <div id="article-content">
-	<p>my first blog</p>
+	<p>博客渲染图片解决方法</p>
+<p>1.hexo主目录下安装插件</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-renderer-marked --save</span><br></pre></td></tr></table></figure>
+
+<p>2.修改hexo主目录下的_config.yml,添加配置</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">marked:</span><br><span class="line">  prependRoot: <span class="literal">true</span></span><br><span class="line">  postAsset: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>3.在“Blog-&gt;source”下新建”imags”文件夹。注意”imags”与”_posts”同级。 </p>
+<p>4.在Typora中“文件-&gt;设置偏好-&gt;图像“。在插入图片时”复制到指定路径“设置为 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">../../source/images//$&#123;filename&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../source/images/hexo-typora-img/1705489039127.png" alt="1705489039127"></p>
+<ol start="5">
+<li>在”格式-&gt;图像-&gt;设置图片根目录“将”Blog-&gt;source”设置为根目录</li>
+<li>修改_config.yml中post_asset_folder: true</li>
+</ol>
 
 </div>
 
@@ -239,13 +254,17 @@
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/%E6%97%A5%E8%AE%B0/2024-1-15/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  2024-1-15
-              </a>
-            
         </div>
         <div class="item right">
+            
+              <a href="/%E6%8A%A5%E9%94%99/hexo-deploy/">
+			  
+			
+				  <!-- 在这里访问 page.next.slug -->
+				  报错/hexo-deploy
+				
+				<i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
             
         </div>
     </div>
