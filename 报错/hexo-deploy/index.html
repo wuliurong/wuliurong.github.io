@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		About | 
+		hexo-deploy | 
 	 
 	hi
 	</title>
@@ -128,7 +128,7 @@
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/%E6%8A%A5%E9%94%99/hexo-deploy/">
                      
 										    hexo-deploy
@@ -193,7 +193,7 @@
 	<!-- 引入正文 -->
 	<div id="content" class="content">
 		<h1 id="article-title">
-	About
+	hexo-deploy
 </h1>
 
 <!-- meta -->
@@ -201,11 +201,17 @@
 	
 
 	<span>lucky</span>
-	<span>2024-01-13 21:03:58</span>
+	<span>2024-01-17 17:48:04</span>
 
   <div id="article-categories">
     
+		  <span>Categories：</span>
+      
+    
 
+    
+		    <span>Tags：</span>
+        
     
   </div>
 
@@ -213,10 +219,35 @@
 
 <!-- content -->
 <div id="article-content">
-	
+	<p>git bash<code>hexo deploy </code>遇到</p>
+<p><img src="C:/Users/吴柳蓉/Desktop/学习笔记/img/1705484900203.png" alt="1705484900203"></p>
+<p>解决</p>
+<p>修改.ssh中config文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Default github user self</span><br><span class="line">Host github.com</span><br><span class="line">	port 443 # 默认是22端口</span><br><span class="line">	HostName ssh.github.com</span><br><span class="line">	IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:/Users/吴柳蓉/Desktop/学习笔记/img/1705485023245.png" alt="1705485023245"></p>
+
 </div>
 
 <!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/%E6%97%A5%E8%AE%B0/2024-1-17/">
+			  
+			
+				  <!-- 在这里访问 page.next.slug -->
+				  日记/2024-1-17
+				
+				<i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
 
 
 <!-- comment - giscus -->
