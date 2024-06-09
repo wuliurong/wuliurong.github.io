@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		rdd | 
+		rdd使用 | 
 	 
 	hi
 	</title>
@@ -128,10 +128,43 @@
 									</a>
 									
 							<ul>
-								<li class="file active">
-									<a href="/Python/rdd/">
+								<li class="file">
+									<a href="/Python/lambda/">
                      
-										    rdd
+										    lambda
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Python/python/">
+                     
+										    python
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/Python/rdd%E4%BD%BF%E7%94%A8/">
+                     
+										    rdd使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Python/rdd%E7%AC%94%E8%AE%B0/">
+                     
+										    rdd笔记
                      
 									</a>
 								</li>
@@ -314,7 +347,7 @@
 	<!-- 引入正文 -->
 	<div id="content" class="content">
 		<h1 id="article-title">
-	rdd
+	rdd使用
 </h1>
 
 <!-- meta -->
@@ -322,7 +355,7 @@
 	
 
 	<span>lucky</span>
-	<span>2024-06-09 16:50:13</span>
+	<span>2024-06-09 16:53:30</span>
 
   <div id="article-categories">
     
@@ -340,18 +373,11 @@
 
 <!-- content -->
 <div id="article-content">
-	
-
-
-
-
-
-
-
-
-
-
-
+	<p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717553140438.png" alt="1717553140438"></p>
+<p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717571643750.png" alt="1717571643750"></p>
+<p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717571703168.png" alt="1717571703168"></p>
+<p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717571711894.png" alt="1717571711894"></p>
+<p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717571717654.png" alt="1717571717654"></p>
 <h1 id="转换算子"><a href="#转换算子" class="headerlink" title="转换算子"></a>转换算子</h1><h3 id="parallelize转化为RDD"><a href="#parallelize转化为RDD" class="headerlink" title="parallelize转化为RDD"></a>parallelize转化为RDD</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rdd = sc.parallelize(data)</span><br></pre></td></tr></table></figure>
 
 <p><code>parallelize</code>方法将本地数据集转换为RDD。这意味着数据将被分布式存储和处理，以便进行并行计算。</p>
@@ -364,10 +390,8 @@
 <p><code>findspark.init()</code>：这行代码调用了findspark库中的init()函数，用于初始化Spark环境。它会查找Spark安装的路径并将其添加到Python解释器的sys.path中，以便Python可以找到Spark。</p>
 <p><code>from pyspark import SparkContext</code>：这行代码从pyspark库中导入了SparkContext类，用于创建一个SparkContext对象。</p>
 <p><code>sc = SparkContext(&quot;local&quot;, &quot;causal&quot;)</code>：这行代码创建了一个本地模式的SparkContext对象，参数”local”表示使用本地模式，”causal”是Spark应用程序的名称。</p>
-<h3 id="flatMap"><a href="#flatMap" class="headerlink" title="flatMap"></a>flatMap</h3>
-
-<h3 id="mapPartitions"><a href="#mapPartitions" class="headerlink" title="mapPartitions"></a>mapPartitions</h3>
-
+<h3 id="flatMap"><a href="#flatMap" class="headerlink" title="flatMap"></a>flatMap</h3><p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717554083439.png" alt="1717554083439"></p>
+<h3 id="mapPartitions"><a href="#mapPartitions" class="headerlink" title="mapPartitions"></a>mapPartitions</h3><p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717556145626.png" alt="1717556145626"></p>
 <ol>
 <li><code>rdd = sc.parallelize([1, 2, 3, 4], 2)</code>：这行代码创建了一个包含数字 1, 2, 3, 4 的RDD，并将其分成两个分区（partitions）。<code>sc</code> 是SparkContext对象，通过它可以创建RDD。<code>parallelize</code> 方法将一个Python列表转换为RDD，并指定了分区数为2，即将列表中的元素分为两个部分。</li>
 <li><code>def f(iterator): yield sum(iterator)</code>：这是一个定义函数的语句，函数名为 <code>f</code>。这个函数接收一个迭代器（iterator）作为参数，对迭代器中的元素进行求和操作，并使用 <code>yield</code> 语句生成求和结果。<code>yield</code> 语句用于生成一个迭代器的元素，类似于 <code>return</code> 但不会终止函数的执行。</li>
@@ -375,8 +399,7 @@
 <li><code>res = rdd.mapPartitions(f).collect()</code>：最后，<code>collect</code> 是一个动作操作（Action），它将RDD中的元素收集到驱动程序中，并以Python列表的形式返回结果。在这里，将每个分区求和的结果收集到列表 <code>res</code> 中。</li>
 </ol>
 <p> 普通话分区服从均匀分布，可手动指定分区方式<code>partitionBy</code> 是Spark中用于手动指定RDD分区方式的方法，通常用于对PairRDD进行分区 </p>
-<h3 id="mapPartitionWithIndex"><a href="#mapPartitionWithIndex" class="headerlink" title="mapPartitionWithIndex"></a>mapPartitionWithIndex</h3>
-
+<h3 id="mapPartitionWithIndex"><a href="#mapPartitionWithIndex" class="headerlink" title="mapPartitionWithIndex"></a>mapPartitionWithIndex</h3><p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717556361101.png" alt="1717556361101"></p>
 <h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rdd = sc.parallelize([1, 2, 3, 4, 5])res = rdd.filter(lambda x: x % 2 == 0).collect()</span><br></pre></td></tr></table></figure>
 
 <h3 id="distinct"><a href="#distinct" class="headerlink" title="distinct"></a>distinct</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rdd = sc.parallelize([1, 1, 2, 3])res = rdd.distinct().collect()</span><br></pre></td></tr></table></figure>
@@ -387,32 +410,19 @@
 
 
 
-<h2 id="pairRDD"><a href="#pairRDD" class="headerlink" title="pairRDD"></a>pairRDD</h2>
-
+<h2 id="pairRDD"><a href="#pairRDD" class="headerlink" title="pairRDD"></a>pairRDD</h2><p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717556836526.png" alt="1717556836526"></p>
 <h3 id="sortByKey"><a href="#sortByKey" class="headerlink" title="sortByKey"></a>sortByKey</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">res = sc.parallelize(tmp).sortByKey().collect()</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-<h3 id="mapValues"><a href="#mapValues" class="headerlink" title="mapValues"></a>mapValues</h3>
-
-<h3 id="groupBykey"><a href="#groupBykey" class="headerlink" title="groupBykey"></a>groupBykey</h3>
-
-<h3 id="reduceBykey"><a href="#reduceBykey" class="headerlink" title="reduceBykey"></a>reduceBykey</h3>
-
-<h3 id="keys-values"><a href="#keys-values" class="headerlink" title=".keys()      .values()"></a>.keys()      .values()</h3>
-
-<h3 id="join"><a href="#join" class="headerlink" title="join"></a>join</h3>
-
-
-
-<h3 id="leftJoin"><a href="#leftJoin" class="headerlink" title="leftJoin"></a>leftJoin</h3><h3 id="rightJoin"><a href="#rightJoin" class="headerlink" title="rightJoin"></a>rightJoin</h3>
-
-<h3 id="aggregateByKey"><a href="#aggregateByKey" class="headerlink" title="aggregateByKey"></a>aggregateByKey</h3>
-
-<h1 id="执行算子"><a href="#执行算子" class="headerlink" title="执行算子"></a>执行算子</h1>
-
+<p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717556963750.png" alt="1717556963750"></p>
+<p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717557001202.png" alt="1717557001202"></p>
+<h3 id="mapValues"><a href="#mapValues" class="headerlink" title="mapValues"></a>mapValues</h3><p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717557047439.png" alt="1717557047439"></p>
+<h3 id="groupBykey"><a href="#groupBykey" class="headerlink" title="groupBykey"></a>groupBykey</h3><p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717557204262.png" alt="1717557204262"></p>
+<h3 id="reduceBykey"><a href="#reduceBykey" class="headerlink" title="reduceBykey"></a>reduceBykey</h3><p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717557243395.png" alt="1717557243395"></p>
+<h3 id="keys-values"><a href="#keys-values" class="headerlink" title=".keys()      .values()"></a>.keys()      .values()</h3><p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717557332668.png" alt="1717557332668"></p>
+<h3 id="join"><a href="#join" class="headerlink" title="join"></a>join</h3><p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717558525799.png" alt="1717558525799"></p>
+<h3 id="leftJoin"><a href="#leftJoin" class="headerlink" title="leftJoin"></a>leftJoin</h3><h3 id="rightJoin"><a href="#rightJoin" class="headerlink" title="rightJoin"></a>rightJoin</h3><p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717558532291.png" alt="1717558532291"></p>
+<h3 id="aggregateByKey"><a href="#aggregateByKey" class="headerlink" title="aggregateByKey"></a>aggregateByKey</h3><p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717570782529.png" alt="1717570782529"></p>
+<h1 id="执行算子"><a href="#执行算子" class="headerlink" title="执行算子"></a>执行算子</h1><p><img src="/../../source/images/rdd%E4%BD%BF%E7%94%A8/1717571781347.png" alt="1717571781347"></p>
 <h3 id="1、collect："><a href="#1、collect：" class="headerlink" title="1、collect："></a>1、collect：</h3><p>返回RDD中所有元素</p>
 <p>sc.parallelize([1 , 2 , 3 , 4]).collect()<br>结果： [1 , 2 , 3 , 4]</p>
 <p> <code>collect</code> 是Spark中的一个动作（Action），它用于将RDD中的所有元素收集到驱动程序（Driver Program）所在的节点上，并以Python列表的形式返回。换句话说，<code>collect</code> 将RDD中的分布式数据集合并到一个本地的Python列表中。 </p>
@@ -440,6 +450,11 @@
 
     <div class="post-guide">
         <div class="item left">
+            
+              <a href="/Python/rdd%E7%AC%94%E8%AE%B0/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  rdd笔记
+              </a>
             
         </div>
         <div class="item right">
