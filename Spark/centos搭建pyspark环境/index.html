@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		centos搭建pyspark环境 | 
+	 
+	hi
+	</title>
+	
+	<!-- keywords,description -->
+	
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">hi</a>
+
+	<ul id="menu">
+    
+
+    
+
+    
+
+    
+      
+      
+        <li class="menu-item">
+          <a href='' class="menu-item-link" target="_blank">
+            
+          </a>
+        </li>
+      
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/wuliurong' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Python/rdd/">
+                     
+										    rdd
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Python/%7Fpyechart%E5%B0%8F%E7%BB%84%E4%BD%9C%E4%B8%9A/">
+                     
+										    pyechart小组作业
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Spark
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/Spark/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    centos搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    windows搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%7F1-spark%E8%BD%AF%E4%BB%B6%E6%A0%88/">
+                     
+										    1-spark软件栈
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										报错
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/github%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5/">
+                     
+										    github基础语句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-deploy/">
+                     
+										    hexo-deploy
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-typora-img/">
+                     
+										    hexo-typora-img
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/vscode-install-config/">
+                     
+										    vscode-install-config
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										日记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-13/">
+                     
+										    2024-1-13
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-17/">
+                     
+										    2024-1-17
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-19/">
+                     
+										    2024-1-19
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-2-15/">
+                     
+										    2024-2-15
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content" class="content">
+		<h1 id="article-title">
+	centos搭建pyspark环境
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>lucky</span>
+	<span>2024-06-09 14:53:21</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<p>注意：每次配置变量完记得source生效</p>
+<h1 id="1-操作系统安装"><a href="#1-操作系统安装" class="headerlink" title="1.操作系统安装**"></a>1.操作系统安装**</h1><h2 id="（1）操作系统镜像"><a href="#（1）操作系统镜像" class="headerlink" title="（1）操作系统镜像"></a><strong>（1）操作系统镜像</strong></h2><p>下载镜像 CentOS-7-x86_64-DVD-1810-centos7.6.iso</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps13.jpg" alt="img"> </p>
+<h2 id="（2）BMC登录"><a href="#（2）BMC登录" class="headerlink" title="（2）BMC登录"></a>（2）<strong>BMC登录</strong></h2><p>1.使用浏览器访问：192.168.2.100 。用户名：Administrator 密码：Admin@9000</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps14.jpg" alt="img"> </p>
+<p>3、登录IBMC后可以查看服务器详细信息</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps15.jpg" alt="img"> </p>
+<p>4、点击远程控制，选择JAVA集成远程控制台(虚拟KVM)，使用JAVA程序显示服务器界面</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps16.jpg" alt="img"> </p>
+<h2 id="（3）操作系统安装"><a href="#（3）操作系统安装" class="headerlink" title="（3）操作系统安装"></a><strong>（3）操作系统安装</strong></h2><p>1.打开vmware,选择创建虚拟机</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps17.jpg" alt="img"> </p>
+<p>\2. 选择自定义，点击下一步</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps18.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps19.jpg" alt="img"> </p>
+<p>\3. 选择稍后安装操作系统，点击下一步</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps20.jpg" alt="img"> </p>
+<p>\4. 点击下一步，选择linux，版本选择Centos7</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps21.jpg" alt="img"> </p>
+<p>\5. 点击下一步，修改虚拟机名称slave**&#x2F;master,选择安装位置，安装在G:\VM下面，点击下一步，选择继续</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps22.jpg" alt="img"> </p>
+<p>\6. 处理器数量选择2 ，核数选择2，点击下一步</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps23.jpg" alt="img"> </p>
+<p>\7. 点击下一步，内存选择2G</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps24.jpg" alt="img"> </p>
+<p>\8. 点击下一步，选择使用网络地址转换NAT</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps25.jpg" alt="img"> </p>
+<p>\9. 选择下一步，选择默认，点击下一步</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps26.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps27.jpg" alt="img"> </p>
+<p>\10. 选择创建新虚拟磁盘</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps28.jpg" alt="img"> </p>
+<p>\11. 点击下一步</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps29.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps30.jpg" alt="img"> </p>
+<p>\12. 点击完成</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps31.jpg" alt="img"> </p>
+<p>\13. 打开创建的虚拟机，添加iso</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps32.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps33.jpg" alt="img"> </p>
+<p>\14. 开启虚拟机</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps34.jpg" alt="img"> </p>
+<p>\15. 选择安装系统</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps35.jpg" alt="img"> </p>
+<p>\16. 选择continue</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps36.jpg" alt="img"> </p>
+<p>\17. 选择data</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps37.jpg" alt="img"> </p>
+<p>\18. 选择data,修改为上海时间</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps38.jpg" alt="img"> </p>
+<p>\19. 选择done,选择software selection</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps39.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps40.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps41.jpg" alt="img"> </p>
+<p>\20. 选择done</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps42.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps43.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps44.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps45.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps46.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps47.jpg" alt="img"> </p>
+<p>\21. 选择done,选择accept</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps48.jpg" alt="img"> </p>
+<p>\22. 开始安装</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps49.jpg" alt="img"> </p>
+<p>设置密码hadoop（用户root）</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps50.jpg" alt="img"> </p>
+<h1 id="2-Linux主机基础配置"><a href="#2-Linux主机基础配置" class="headerlink" title="2.Linux主机基础配置"></a><strong>2.Linux主机基础配置</strong></h1><h2 id="（1）网络配置-nmtui"><a href="#（1）网络配置-nmtui" class="headerlink" title="（1）网络配置  nmtui"></a><strong>（1）网络配置  nmtui</strong></h2><p>1.查看网卡</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps51.jpg" alt="img"> </p>
+<p>2.配置网卡ens33</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps52.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps53.jpg" alt="img"><img src="file:///C:\windows\TEMP\ksohtml6072\wps54.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps55.jpg" alt="img"><img src="file:///C:\windows\TEMP\ksohtml6072\wps56.jpg" alt="img"> </p>
+<p>​	检查对应的网卡速度：ethtool  eno4(网卡名称)</p>
+<p>​	GE1的用作网络管理，25G、100GE用做业务网络，分别修改他们的配置文件</p>
+<p>​	vi &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33</p>
+<p>​	vi &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-enp134s0f1</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps57.jpg" alt="img"> </p>
+<h2 id="（4）关闭防火墙"><a href="#（4）关闭防火墙" class="headerlink" title="（4）关闭防火墙"></a><strong>（4）关闭防火墙</strong></h2><p>​	iptables -F</p>
+<p>​	systemctl stop firewalld.service</p>
+<p>​	systemctl disable firewalld.service</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps58.jpg" alt="img"> </p>
+<h1 id="3-安装jdk1-8"><a href="#3-安装jdk1-8" class="headerlink" title="3.安装jdk1.8"></a><strong>3.安装jdk1.8</strong></h1><p>​	安装包:</p>
+<p>​	jdk-8u292-linux-x64.tar.gz</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps59.jpg" alt="img"> </p>
+<h2 id="（1）将软件包放入-opt下进行解压"><a href="#（1）将软件包放入-opt下进行解压" class="headerlink" title="（1）将软件包放入&#x2F;opt下进行解压"></a><strong>（1）将软件包放入&#x2F;opt下进行解压</strong></h2><p>tar -zxvf jdk-8u212-linux-x64.tar.gz</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps60.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps61.jpg" alt="img"> </p>
+<h2 id="（2）将解压的软件包放入-usr-local下"><a href="#（2）将解压的软件包放入-usr-local下" class="headerlink" title="（2）将解压的软件包放入&#x2F;usr&#x2F;local下"></a><strong>（2）将解压的软件包放入&#x2F;usr&#x2F;local下</strong></h2><p>mv  jdk1.8.0_292&#x2F;  java </p>
+<p>mv  java  &#x2F;usr&#x2F;local&#x2F;java</p>
+<h2 id="（3）修改环境变量"><a href="#（3）修改环境变量" class="headerlink" title="（3）修改环境变量"></a><strong>（3）修改环境变量</strong></h2><p>vi &#x2F;etc&#x2F;profile(最底部添加)</p>
+<p>export JAVA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;java</p>
+<p>export JRE_HOME&#x3D;$JAVA_HOME&#x2F;jre</p>
+<p>export PATH&#x3D;$JAVA_HOME&#x2F;bin:$PATH</p>
+<p>export CLASSPATH&#x3D;$CLASSPATH:$JAVA_HOME&#x2F;lib:$JAVA_HOME&#x2F;jre&#x2F;lib</p>
+<p>使环境变量生效</p>
+<p>source &#x2F;etc&#x2F;profile</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps62.jpg" alt="img"> </p>
+<p>验证java是否安装成功</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps63.jpg" alt="img"> </p>
+<h1 id="4-Python安装"><a href="#4-Python安装" class="headerlink" title="4. Python安装"></a>4. <strong>Python安装</strong></h1><p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps64.jpg" alt="img"> </p>
+<p>上传！解压！</p>
+<p>tar -zxvf Python-3.7.7.tgz</p>
+<p>将解压的文件放置在&#x2F;usr&#x2F;local&#x2F;python3&#x2F;bin&#x2F;python3路径下</p>
+<p>mv Python-3.7.7 &#x2F;usr&#x2F;local&#x2F;python3&#x2F;bin&#x2F;python3</p>
+<p>创建软链接</p>
+<p>ln -s &#x2F;usr&#x2F;local&#x2F;python3&#x2F;bin&#x2F;python3 &#x2F;usr&#x2F;local&#x2F;bin&#x2F;python3</p>
+<p>ln -s &#x2F;usr&#x2F;local&#x2F;python3&#x2F;bin&#x2F;pip3 &#x2F;usr&#x2F;local&#x2F;bin&#x2F;pip3</p>
+<h2 id="1、Spark安装"><a href="#1、Spark安装" class="headerlink" title="1、Spark安装"></a>1、<strong>Spark安装</strong></h2><p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps65.jpg" alt="img"> </p>
+<p>上传，解压</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps66.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps67.jpg" alt="img"> </p>
+<p>环境变量即可</p>
+<p>vi &#x2F;etc&#x2F;profile</p>
+<p>export SPARK_PYTHON&#x3D;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;python3</p>
+<p>export SPARK_HOME&#x3D;&#x2F;root&#x2F;spark&#x2F;pakeage&#x2F;spark-3.2.0-bin-hadoop3.2</p>
+<p>source &#x2F;etc&#x2F;profile</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps68.jpg" alt="img"> </p>
+<p>验证</p>
+<p>进入&#x2F;opt&#x2F;spark-2.4.5-bin-hadoop2.7&#x2F;bin目录</p>
+<p>.&#x2F;pyspark</p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps69.jpg" alt="img"> </p>
+<p><img src="/../../source/images/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps70.jpg" alt="img"></p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/Python/rdd/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  rdd
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/Spark/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+			  
+			
+				  <!-- 在这里访问 page.next.slug -->
+				  Spark/windows搭建pyspark环境
+				
+				<i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+
+
+
+
+
+
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+
+	
+	    <a href="/">lucky</a>
+	
+	
+	
+	<br>
+	Email:wuliurong2021nnnu@163.com
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

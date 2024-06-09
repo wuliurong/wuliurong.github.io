@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		windows搭建pyspark环境 | 
+	 
+	hi
+	</title>
+	
+	<!-- keywords,description -->
+	
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">hi</a>
+
+	<ul id="menu">
+    
+
+    
+
+    
+
+    
+      
+      
+        <li class="menu-item">
+          <a href='' class="menu-item-link" target="_blank">
+            
+          </a>
+        </li>
+      
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/wuliurong' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Python/rdd/">
+                     
+										    rdd
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Python/%7Fpyechart%E5%B0%8F%E7%BB%84%E4%BD%9C%E4%B8%9A/">
+                     
+										    pyechart小组作业
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Spark
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Spark/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    centos搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/Spark/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    windows搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%7F1-spark%E8%BD%AF%E4%BB%B6%E6%A0%88/">
+                     
+										    1-spark软件栈
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										报错
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/github%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5/">
+                     
+										    github基础语句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-deploy/">
+                     
+										    hexo-deploy
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-typora-img/">
+                     
+										    hexo-typora-img
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/vscode-install-config/">
+                     
+										    vscode-install-config
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										日记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-13/">
+                     
+										    2024-1-13
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-17/">
+                     
+										    2024-1-17
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-19/">
+                     
+										    2024-1-19
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-2-15/">
+                     
+										    2024-2-15
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content" class="content">
+		<h1 id="article-title">
+	windows搭建pyspark环境
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>lucky</span>
+	<span>2024-06-09 14:43:29</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<p><em><strong>*Windows操作系统搭建pyspark环境*</strong></em></p>
+<p>下载安装：</p>
+<p>linux：<a target="_blank" rel="noopener" href="http://spark.apache.org/downloads.html">http://spark.apache.org/downloads.html</a></p>
+<p>win： <a target="_blank" rel="noopener" href="https://blog.csdn.net/tttzzzqqq2018/article/details/132052374">Windows下安装Spark（亲测成功安装）_windows spark-CSDN博客</a> </p>
+<h3 id="一：python-、-pycharm-环境的安装"><a href="#一：python-、-pycharm-环境的安装" class="headerlink" title="*一：python**、**pycharm**环境的安装*"></a><em><strong>*一：python*</strong></em><em><strong>*、*</strong></em><em><strong>*pycharm*</strong></em><em><strong>*环境的安装*</strong></em></h3><p><em><strong>*参考：*</strong></em></p>
+<p><img src="/../../source/images/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps1.jpg" alt="img"> </p>
+<h3 id="二：Java-安装"><a href="#二：Java-安装" class="headerlink" title="*二：Java**安装*"></a><em><strong>*二：Java*</strong></em><em><strong>*安装*</strong></em></h3><h3 id="三-：-Hadoop安装"><a href="#三-：-Hadoop安装" class="headerlink" title="*三**：**Hadoop安装*"></a><em><strong>*三*</strong></em><em><strong>*：*</strong></em><em><strong>*Hadoop安装*</strong></em></h3><p>解压hadoop-3.1.0.zip特定路径，如：D:\adasoftware\hadoop（自己定义即可，以D:\adasoftware\hadoop为例）</p>
+<p><img src="/../../source/images/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps2.jpg" alt="img"> </p>
+<p>添加系统变量HADOOP_HOME：D:\adasoftware\hadoop</p>
+<p><img src="/../../source/images/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps3.jpg" alt="img"> </p>
+<p><img src="/../../source/images/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps4.jpg" alt="img"> </p>
+<p>在系统变量PATH中添加：D:\adasoftware\hadoop\bin或%HADOOP_HOME%\bin,  D:\adasoftware\hadoop\bin或%HADOOP_HOME%\sbin</p>
+<p><img src="/../../source/images/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps5.jpg" alt="img"> </p>
+<p>安装组件winutils：将winutils中对应的hadoop版本中的bin替换自己hadoop（此步骤不用操作，我已经帮你们替换好文件了，以后自己使用其他安装包，需要自行下载winutils）</p>
+<h3 id="四-：-Spark安装（-配置环境变量同上-）"><a href="#四-：-Spark安装（-配置环境变量同上-）" class="headerlink" title="*四**：**Spark安装（**配置环境变量同上**）*"></a><em><strong>*四*</strong></em><em><strong>*：*</strong></em><em><strong>*Spark安装（*</strong></em><em><strong>*配置环境变量同上*</strong></em><em><strong>*）*</strong></em></h3><p>spark是基于hadoop之上的，运行过程中会调用相关hadoop库，如果没配置相关hadoop运行环境，会提示相关出错信息，虽然也不影响运行。</p>
+<p>安装包解压</p>
+<p><img src="/../../source/images/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps6.jpg" alt="img"> </p>
+<p>新建系统变量SPARK_HOME：D:\adasoftware\spark-2.4.4-bin-hadoop2.7;（参考hadoop）</p>
+<p><img src="/../../source/images/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps7.jpg" alt="img"> </p>
+<p><img src="/../../source/images/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps8.jpg" alt="img"> </p>
+<p>添加PATH值：D:\adasoftware\spark-2.4.3-bin-hadoop2.7\bin;或%SPARK_HOME%\bin,（参考hadoop）</p>
+<p><img src="/../../source/images/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps9.jpg" alt="img"> </p>
+<h3 id="五-：-打开Pycharm"><a href="#五-：-打开Pycharm" class="headerlink" title="*五**：**打开Pycharm*"></a><em><strong>*五*</strong></em><em><strong>*：*</strong></em><em><strong>*打开Pycharm*</strong></em></h3><p>1.安装pyspark，findspark包</p>
+<p><img src="/../../source/images/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps10.jpg" alt="img"> </p>
+<p>pip install -i <a target="_blank" rel="noopener" href="https://pypi.doubanio.com/simple/">https://pypi.doubanio.com/simple/</a> pyspark</p>
+<p>pip install -i <a target="_blank" rel="noopener" href="https://pypi.doubanio.com/simple/">https://pypi.doubanio.com/simple/</a> findspark</p>
+<p>\2. 打开worldcount.py文件</p>
+<p><img src="/../../source/images/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps11.jpg" alt="img"> </p>
+<p>\3. 运行代码，结果如下</p>
+<p><img src="/../../source/images/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/wps12.jpg" alt="img"> </p>
+<p>terminal输入pyspark</p>
+<p><img src="/../../source/images/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/1717915548482.png" alt="1717915548482"></p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/Spark/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  centos搭建pyspark环境
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/Spark/%7F1-spark%E8%BD%AF%E4%BB%B6%E6%A0%88/">
+			  
+			
+				  <!-- 在这里访问 page.next.slug -->
+				  Spark/1-spark软件栈
+				
+				<i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+
+
+
+
+
+
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+
+	
+	    <a href="/">lucky</a>
+	
+	
+	
+	<br>
+	Email:wuliurong2021nnnu@163.com
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
