@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		课件-tableau仪表板 | 
+	 
+	hi
+	</title>
+	
+	<!-- keywords,description -->
+	
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">hi</a>
+
+	<ul id="menu">
+    
+
+    
+
+    
+
+    
+      
+      
+        <li class="menu-item">
+          <a href='' class="menu-item-link" target="_blank">
+            
+          </a>
+        </li>
+      
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/wuliurong' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Docker/%E9%97%AE%E9%A2%98/">
+                     
+										    问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Spark
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Spark/1-spark%E8%BD%AF%E4%BB%B6%E6%A0%88/">
+                     
+										    1-spark软件栈
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    centos搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/rdd%E4%BD%BF%E7%94%A8/">
+                     
+										    rdd使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/rdd%E7%AC%94%E8%AE%B0/">
+                     
+										    rdd笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    windows搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/python/lambda/">
+                     
+										    lambda
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/python/">
+                     
+										    python
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										tableau
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/">
+                     
+										    课件-tableau仪表板
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/">
+                     
+										    课件-tableau入门
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E7%BB%83%E4%B9%A0/">
+                     
+										    课件-tableau练习
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E4%BD%9C%E4%B8%9A-pyechart/">
+                     
+										    作业-pyechart
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E4%BD%9C%E4%B8%9A-scrapy+mysql+kettle+flask+tableau+%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98+navicat/">
+                     
+										    作业-scrapy+mysql+kettle+flask+tableau+数据挖掘+navicat
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E4%BD%9C%E4%B8%9A-tableau/">
+                     
+										    作业-tableau
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										其他笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/vscode/">
+                     
+										    vscode
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8Btcpip/">
+                     
+										    网络编程tcpip
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										报错
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/github%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5/">
+                     
+										    github基础语句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-deploy/">
+                     
+										    hexo-deploy
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-typora-img/">
+                     
+										    hexo-typora-img
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/vscode-install-config/">
+                     
+										    vscode-install-config
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										日记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-13/">
+                     
+										    2024-1-13
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-17/">
+                     
+										    2024-1-17
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-19/">
+                     
+										    2024-1-19
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-2-15/">
+                     
+										    2024-2-15
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										爬虫
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E7%88%AC%E8%99%AB/1-%E5%9F%BA%E7%A1%80/">
+                     
+										    1-基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E7%88%AC%E8%99%AB/2-%E7%AC%94%E8%AE%B0/">
+                     
+										    2-笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E7%88%AC%E8%99%AB/3-%E6%8A%A5%E9%94%99/">
+                     
+										    3-报错
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E7%88%AC%E8%99%AB/4.%E5%AE%9E%E8%B7%B5/">
+                     
+										    4.实践
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E7%88%AC%E8%99%AB/%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95/">
+                     
+										    模拟登录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E7%88%AC%E8%99%AB/%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2/">
+                     
+										    爬取动态页面
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content" class="content">
+		<h1 id="article-title">
+	课件-tableau仪表板
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>lucky</span>
+	<span>2024-06-13 19:53:06</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<h1 id="项目五-Tableau可视化应用"><a href="#项目五-Tableau可视化应用" class="headerlink" title="项目五.Tableau可视化应用"></a>项目五.Tableau可视化应用</h1><h1 id="——为通讯产品销售和盈利能力分析创建仪表板和故事"><a href="#——为通讯产品销售和盈利能力分析创建仪表板和故事" class="headerlink" title="——为通讯产品销售和盈利能力分析创建仪表板和故事"></a>——为通讯产品销售和盈利能力分析创建仪表板和故事</h1><h2 id="项目要求"><a href="#项目要求" class="headerlink" title="项目要求"></a>项目要求</h2><p>在第四章中，我们创建了3张图，一张是每类商品的利润条形图（图4-18），一张是美国地区利润地图，还有一张是对美国东部地区利润亏损两个州各城市利润情况的下钻得到的条形图。在实际报告中，业务员需要就这3张图说明美国东部地区有两州存在亏损情况，然后分析这两州的各个商品细类销售的利润情况，接着分析这两州哪些城市亏损最为严重，这3者存在一个下钻的逻辑关系。完成以下任务：</p>
+<p>1、使用Tableau 创建仪表板同时显示多个图，或根据需要让它们彼此进行交互。</p>
+<p>2、使用Tableau Desktop创建故事并进行演示。</p>
+<h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><p>1、掌握常见的数据分析思维方法。</p>
+<p>2、学习Tableau仪表板的关知识，并掌握仪表板的创建。</p>
+<p>3、学习Tableau故事的相关知识，并掌握故事的创建。</p>
+<h2 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h2><h3 id="5-1-数据分析的五大思维"><a href="#5-1-数据分析的五大思维" class="headerlink" title="5.1 数据分析的五大思维"></a>5.1 数据分析的五大思维</h3><p> 第一是对照，俗称对比，单独看一个数据是不会有感觉的，必需跟另一个数据做对比才会有感觉。如果只显示某天的销量数据，价值不大，而下图5-1所示了连续一周的数据，通过对比，可以发现7月10日的销量数据下降明显。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/%E8%BF%91%E4%B8%80%E5%91%A8%E9%94%80%E5%94%AE%E6%95%B0%E9%87%8F.png" alt="image-20240130114328017"></p>
+ <div align="center">图5-1 近一周销售量</div>
+
+<p>第二是拆分，从字面上来理解，就是拆分和解析。回到第一个思维对比上面来，当某个维度可以对比的时候，可以选择对比。在对比后发现问题需要找出原因的时候，拆分就闪亮登场了。例如，运营小美，经过对比店铺的数据，发现今天的销售额只有昨天的50%，这个时候，再怎么对比销售额这个维度，已经没有意义了。这时需要对销售额这个维度做分解，拆分指标。销售额&#x3D;成交用户数×客单价，成交用户数&#x3D;访客数×转化率，如图5-2所示。进而转化到从今天的访客数、转化率和客单价上进行分析。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130114652395.png" alt="image-20240130114652395"></p>
+<div align="center">图5-2 销售额拆分公式</div>
+
+<p>第三是降维，当数据维度太多的时候，不可能每个维度都拿来分析，有一些有关联的指标，是可以从中筛选出代表的维度即可。比如在一个销售数据表当中，即访客数、有成交用户数和转化率，而成交用户数&#x2F;访客数&#x3D;转化率，则此三个变量可以只选择其中两个即可，实现降维。</p>
+<p>第四是增维，增维和降维是对应的，有降必有增。当前的维度不能很好地解释我们的问题时，我们就需要对数据做一个运算，增加多一个指标。</p>
+<p>增维和降维是必须对数据的意义有充分的了解后，为了方便进行分析，有目的地对数据进行转换运算。</p>
+<p>第五是假说，假说是统计学的专业名词，俗称假设。当不知道结果，或者有几种选择的时候，那么就可以使用假说，先假设有了结果，然后运用逆向思维。</p>
+<p>从结果到原因，要有怎么样的因，才能产生这种结果，这有点寻根的味道。那么，我们可以知道，现在满足了多少因，还需要多少因。如果是多选的情况下，我们就可以通过这种方法来找到最佳路径（决策）。</p>
+<h3 id="5-2-Tableau-仪表板"><a href="#5-2-Tableau-仪表板" class="headerlink" title="5.2 Tableau 仪表板"></a>5.2 Tableau 仪表板</h3><h4 id="5-2-1-仪表板简介"><a href="#5-2-1-仪表板简介" class="headerlink" title="5.2.1 仪表板简介"></a>5.2.1 仪表板简介</h4><p>在上一章当中，我们创建了3张图，一张是每类商品的利润条形图（图4-18），一张是美国地区利润地图，还有一张是对美国东部地区利润亏损两个州各城市利润情况的下钻得到的条形图。在实际报告中，业务员需要就这3张图说明美国东部地区有两州存在亏损情况，然后分析这两州的各个商品细类销售的利润情况，接着分析这两州哪些城市亏损最为严重，这3者存在一个下钻的逻辑关系。如果能将3张图整合到一个界面内进行可视化，能够使得分析更加直观。Tableau Desktop的仪表板很适合进行这项工作。用户可以使用仪表板同时显示多个图，或根据需要让它们彼此进行交互。</p>
+<h4 id="5-2-2-创建仪表板"><a href="#5-2-2-创建仪表板" class="headerlink" title="5.2.2 创建仪表板"></a>5.2.2 创建仪表板</h4><p>在界面的下方单击新建操作的第二个按钮新建仪表板。新建完成后，在界面左侧对仪表板进行设置，可以根据在实际报告中展示仪表板所用的桌面大小（如笔记本屏幕大小、通用桌面大小等）设置仪表板的大小。大小设置正下方是可供拖入仪表板的工作表，如图5-3所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130165557593.png" alt="image-20240130165557593"></p>
+<div align="center">图5-3 新建仪表板和设置仪表板大小</div>
+
+<h4 id="5-2-3-向仪表板中添加、移除视图"><a href="#5-2-3-向仪表板中添加、移除视图" class="headerlink" title="5.2.3 向仪表板中添加、移除视图"></a>5.2.3 向仪表板中添加、移除视图</h4><p>将界面左侧的3张工作表拖入右侧的仪表板工作区内，得到的仪表板如图5-4所示。但是仪表板的排版十分混乱，如果业务人员希望通过一个特定的逻辑顺序进行讲解，如先讲解仪表板左上角的东部地区利润额地图，再分析右边亏损两州各商品利润情况，最后在下方进行下钻的讲解，分析这两个州哪些城市亏损最为严重，则需要对仪表板进行重新排列。选中要排列移动的工作表，会显示边框，拖动边框可以实现移动或者缩放工作表。而当其中某个表不再使用时，可以进行移除，在仪表板中选中要移除的图，点击右侧的叉号即可。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130184305288.png" alt="image-20240130184305288"></p>
+<div align="center">图5-4 创建原始仪表板</div>
+
+<h4 id="5-2-4-添加交互功能"><a href="#5-2-4-添加交互功能" class="headerlink" title="5.2.4 添加交互功能"></a>5.2.4 添加交互功能</h4><p>在本例中，我们将以在仪表板内设置使用筛选器来实现通过单击地图上的具体某个州，使右方利润情况的条形图产生变化，从而实现与仪表板交互。单击东部地区利润额地图边框上的漏斗状按钮设置使用筛选器，此时单击地图上的某个州，右边的条形图也会随之变化，显示对应州各类商品的利润数据。单击宾夕法尼亚州的区块，右边的条形图发生明显变化，显示的是宾夕法尼亚州的数据，如图5-5所示。从右边的条形图可以看出，宾夕法尼亚州的家具销售基本一直处于亏损状态，虽然近两年来科技产品销售额相对较高，但是整体的亏损程度逐年还在增加。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130195241141.png" alt="image-20240130195241141"></p>
+<div align="center">图5-5 仪表板交互实例</div>
+
+<h4 id="5-2-5-添加布局容器"><a href="#5-2-5-添加布局容器" class="headerlink" title="5.2.5 添加布局容器"></a>5.2.5 添加布局容器</h4><p>新建仪表板，在左侧对象中选择水平容器，拖入至仪表板。若要均匀放置各项，请从布局容器的快捷菜单中选择均匀分布内容，如图5-6所示。像容器内添加工作表，把东部地区利润额地图和每类商品利润条形图拖入到容器内，两州负利润条形图拖动至容器下面，如图5-7所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130195547014.png" alt="image-20240130195547014"></p>
+<div align="center">图5-6 水平容器和均匀分布内容</div>
+
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130200312735.png" alt="image-20240130200312735"></p>
+<div align="center">图5-7 在容器内放置工作表</div>
+
+<h4 id="5-2-6-仪表板命名"><a href="#5-2-6-仪表板命名" class="headerlink" title="5.2.6 仪表板命名"></a>5.2.6 仪表板命名</h4><p>默认的仪表板的标题是不显示的，现在修改为显示，标题为“美国东部利润情况分析”。如图5-8所示，左下角有“显示仪表板标题”，单击勾选。通过双击标题，修改标题及文本格式。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130200844398.png" alt="image-20240130200844398"></p>
+<div align="center">图5-8 修改标题及文本格式</div>
+
+<h3 id="5-3-Tableau-故事"><a href="#5-3-Tableau-故事" class="headerlink" title="5.3 Tableau 故事"></a>5.3 Tableau 故事</h3><h4 id="5-3-1-故事功能简介"><a href="#5-3-1-故事功能简介" class="headerlink" title="5.3.1 故事功能简介"></a>5.3.1 故事功能简介</h4><p>前节讲解到Tableau Desktop可以将各个图（工作表）整合到一个仪表板上，而比仪表板更进一步的是，Tableau Desktop提供了故事功能。与PowerPoint类似，故事功能中设置的每个故事点如同PPT中设置的幻灯片，且每个故事点都支持拖入图（工作表）甚至创建好的仪表板。如果业务人员不希望再花费大量时间制作PPT，则可以选择使用Tableau Desktop创建故事进行演示，通过设置联动和自定义图片、文字等对象达到不输 PPT 的展示效果，并且还可以展示与图（工作表）和仪表板的交互。</p>
+<h4 id="5-3-2-创建故事"><a href="#5-3-2-创建故事" class="headerlink" title="5.3.2 创建故事"></a>5.3.2 创建故事</h4><p>在界面下方单击新建故事按钮，新建故事后的界面如图5-9所示，中间的空白部分可以通过将左边区域的工作表或者仪表板拖入以添加内容。接着在新建故事点中通过新建或者复制故事点，进行类似PPT新建幻灯片的操作，以拖入更多的工作表或仪表板。类似仪表板的创建过程，故事的创建也支持自定义插入文本，在界面左下方拖动以添加文本，或者根据屏幕大小调整故事点的大小。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130201637847.png" alt="image-20240130201637847"></p>
+<div align="center">图5-8 新建故事界面</div>
+
+<h4 id="5-3-3-通过故事总结介绍案例"><a href="#5-3-3-通过故事总结介绍案例" class="headerlink" title="5.3 .3 通过故事总结介绍案例"></a>5.3 .3 通过故事总结介绍案例</h4><p>对于Sample-Superstore案例，我们从最为浅显的商场近4年来销售额、利润的变化开始分析，再细分到各商品的利润情况，之后我们通过地图结合利润颜色设置分析各州的利润情况，以美国东部地区为例发现有两个州出现较大亏损，便继续下钻，分析这两个州哪些城市或哪些商品的销售出现亏损。我们可以将这一过程所建立的工作表或仪表板整合，创建基于Sample-Superstore数据集的案例故事，预览如图5-9所示。如果要展示这个案例，只需要在展示过程中像放映幻灯片一般按顺序切换故事点即可。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130202624921.png" alt="image-20240130202624921"></p>
+<div align="center">图5-9 Sample-Superstore数据集的案例故事</div>
+
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><p>在第四章已创建了6个作表，现在需要把相同主题的工作表放到一个仪表板中，再创建故事，展示本次的分析。</p>
+<h3 id="步骤1：制作仪表板"><a href="#步骤1：制作仪表板" class="headerlink" title="步骤1：制作仪表板"></a>步骤1：制作仪表板</h3><p>新建仪表板，把各国的销售额地图和各国的利润地图拖到仪表板当中。仪表板左下角处，勾选显示标题，标题为“各国销售额、利润地理图”，仪表板命名为“销售额与利润分析”，如图5-10所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130205242714.png" alt="image-20240130205242714"></p>
+<div align="center">图5-10 各国销售额与利润分析</div>
+
+<p>新建仪表板，把各国各服务分类销售额年增长率和各国各服务分类利润年增长率拖到仪表板当中，显示标题，标题为“各国各服务分类销售额、利润增长率”，仪表板命名为“销售额利润增长率”，拖入一个水平容器，选中“水平容器”，在其右上角的下拉三角箭头处，设置为均匀分布内容，如图5-11。把下载和导航拖入水平容器内，分别设置下载和导航的按钮，图5-12所示，最终如图5-13所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/%E5%9D%87%E5%8C%80%E5%B8%83%E5%B1%80.png" alt="均匀布局"></p>
+<div align="center">图5-11 均匀布局</div>
+
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130210652806.png" alt="image-20240130210652806"></p>
+<div align="center">图5-12-1 下载按钮设置</div>
+
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130210625437.png" alt="image-20240130210625437"></p>
+<div align="center">图5-12-2 导航按钮设置</div>
+
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130210730823.png" alt="image-20240130210730823"></p>
+<div align="center">图5-13 各国各服务分类销售额、利润增长率</div>
+
+<h3 id="步骤2：创建故事"><a href="#步骤2：创建故事" class="headerlink" title="步骤2：创建故事"></a>步骤2：创建故事</h3><p>新建故事，标题修改为“通讯产品销售和盈利能力分析”，故事点标题为“非洲各国销售额、利润情况”，把创建好的仪表盘销售额与利润分析拖入到空白处，如图5-14所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130211647468.png" alt="image-20240130211647468"></p>
+<div align="center">图5-14 创建故事点非洲各国销售额、利润情况</div>
+
+<p>新建空白故事点，点击新建故事点下的空白，故事点标题为“非洲各国各服务分类年增长率”，把新建仪表板“销售额利润增长率”拖入空白处，如图5-15所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130211752278.png" alt="image-20240130211752278"></p>
+<div align="center">图5-15 建立非洲各国各服务分类年增长率故事点</div>
+
+<p>新建故事节点，标题为“各国销售额排名后10位”，拖入工作表“各国销售额排名后10位”，根据拖动以添加文本在故事节点中添加一个说明文本，描述销售额的一些统计量，如图5-16所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130213105933.png" alt="image-20240130213105933"></p>
+<div align="center">图5-16 建立非洲各国销售额排名后10位故事点</div>
+
+<h3 id="步骤3：故事演示"><a href="#步骤3：故事演示" class="headerlink" title="步骤3：故事演示"></a>步骤3：故事演示</h3><p>上节操作完成之后，可以进入演示模式，在工具栏上有进入演示模式图标，如图5-17中所标记。点击演示模式，若如退出，可直接按Esc键退出。在演示模式下，屏幕右下角，有显示幻灯片、显示选项卡、上一个故事节点、下一个故事节点、退出全屏和退出演示模式按钮，如图5-18所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130213730206.png" alt="image-20240130213730206"></p>
+<div align="center">图5-17 演示模式图标</div>
+
+<h3 id><a href="#" class="headerlink" title></a><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/image-20240130214536838.png" alt="image-20240130214536838"></h3><div align="center">图5-18 演示模式及各功能按钮</div>
+
+<h2 id="项目总结"><a href="#项目总结" class="headerlink" title="项目总结"></a>项目总结</h2><p>通过以上的学习，学生可以系统地学习和掌握Tableau的仪表板以及故事创建。</p>
+<p>1、常用的五大数据分析思维：对比、拆分、增维、降维、假说。</p>
+<p>2、Tableau仪表板是显示在单一位置的多个工作表、图形和支持信息的集合，便于同时比较和监视各种数据，同时还可以在仪表板上添加筛选器、突出显示等操作，实现关联数据的交互分析和展示。</p>
+<p>3、Tableau故事是一系列共同作用以传达信息的虚拟化项。您可以创建故事以讲述数据，提供上下文，演示决策与结果的关系，或者只是创建一个极具吸引力的案例。</p>
+<h2 id="作业练习"><a href="#作业练习" class="headerlink" title="作业练习"></a>作业练习</h2><p>1、为第四章的作业练习”各国家获奖排行榜“和“运动员获奖排行榜”创建仪表板。</p>
+<p>2、为第四章的作业练习”各国家获奖排行榜“和“运动员获奖排行榜”创建仪表板。</p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/Docker/%E9%97%AE%E9%A2%98/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  问题
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E7%BB%83%E4%B9%A0/">
+			  
+			
+				  <!-- 在这里访问 page.next.slug -->
+				  tableau/课件-tableau练习
+				
+				<i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+
+
+
+
+
+
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+
+	
+	    <a href="/">lucky</a>
+	
+	
+	
+	<br>
+	Email:wuliurong2021nnnu@163.com
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

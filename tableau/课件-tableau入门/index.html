@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		课件-tableau入门 | 
+	 
+	hi
+	</title>
+	
+	<!-- keywords,description -->
+	
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">hi</a>
+
+	<ul id="menu">
+    
+
+    
+
+    
+
+    
+      
+      
+        <li class="menu-item">
+          <a href='' class="menu-item-link" target="_blank">
+            
+          </a>
+        </li>
+      
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/wuliurong' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Docker/%E9%97%AE%E9%A2%98/">
+                     
+										    问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Spark
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Spark/1-spark%E8%BD%AF%E4%BB%B6%E6%A0%88/">
+                     
+										    1-spark软件栈
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    centos搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/rdd%E4%BD%BF%E7%94%A8/">
+                     
+										    rdd使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/rdd%E7%AC%94%E8%AE%B0/">
+                     
+										    rdd笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    windows搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/python/lambda/">
+                     
+										    lambda
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/python/">
+                     
+										    python
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										tableau
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/">
+                     
+										    课件-tableau仪表板
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/">
+                     
+										    课件-tableau入门
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E7%BB%83%E4%B9%A0/">
+                     
+										    课件-tableau练习
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E4%BD%9C%E4%B8%9A-pyechart/">
+                     
+										    作业-pyechart
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E4%BD%9C%E4%B8%9A-scrapy+mysql+kettle+flask+tableau+%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98+navicat/">
+                     
+										    作业-scrapy+mysql+kettle+flask+tableau+数据挖掘+navicat
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E4%BD%9C%E4%B8%9A-tableau/">
+                     
+										    作业-tableau
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										其他笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/vscode/">
+                     
+										    vscode
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8Btcpip/">
+                     
+										    网络编程tcpip
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										报错
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/github%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5/">
+                     
+										    github基础语句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-deploy/">
+                     
+										    hexo-deploy
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-typora-img/">
+                     
+										    hexo-typora-img
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/vscode-install-config/">
+                     
+										    vscode-install-config
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										日记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-13/">
+                     
+										    2024-1-13
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-17/">
+                     
+										    2024-1-17
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-19/">
+                     
+										    2024-1-19
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-2-15/">
+                     
+										    2024-2-15
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										爬虫
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E7%88%AC%E8%99%AB/1-%E5%9F%BA%E7%A1%80/">
+                     
+										    1-基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E7%88%AC%E8%99%AB/2-%E7%AC%94%E8%AE%B0/">
+                     
+										    2-笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E7%88%AC%E8%99%AB/3-%E6%8A%A5%E9%94%99/">
+                     
+										    3-报错
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E7%88%AC%E8%99%AB/4.%E5%AE%9E%E8%B7%B5/">
+                     
+										    4.实践
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E7%88%AC%E8%99%AB/%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95/">
+                     
+										    模拟登录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E7%88%AC%E8%99%AB/%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2/">
+                     
+										    爬取动态页面
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content" class="content">
+		<h1 id="article-title">
+	课件-tableau入门
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>lucky</span>
+	<span>2024-06-13 19:51:40</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<h1 id="项目四-Tableau入门"><a href="#项目四-Tableau入门" class="headerlink" title="项目四 Tableau入门"></a>项目四 Tableau入门</h1><h1 id="——通讯产品销售和盈利能力分析"><a href="#——通讯产品销售和盈利能力分析" class="headerlink" title="——通讯产品销售和盈利能力分析"></a>——通讯产品销售和盈利能力分析</h1><h2 id="项目要求"><a href="#项目要求" class="headerlink" title="项目要求"></a>项目要求</h2><p>本数据是某通讯公司在非洲的多个国家的产品的销售额和利润数据（非洲通讯产品销售数据.xlsx）。需要实现以下的目标：</p>
+<p>1、绘制非洲各国产品的销售地图，并能够查看该国的销售额和利润。</p>
+<p>2、根据地区维度，绘制各服务分类的销售额和利润的年增长率的图表。</p>
+<p>3、绘制销售经理的销售合同数前 5 名排行榜。</p>
+<h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><p>1、了解Tableau的特点并掌握Tableau的下载与安装。</p>
+<p>2、学习Tableau的界面，包括数据导入界面、数据源界面、工作表界面。</p>
+<p>3、学习Tableau的基本操作，区分维度字段和度量字段，认识列和行的区别。</p>
+<p>4、学习Tableau的筛选器功能和标记功能。</p>
+<p>5、了解Tableau数据可视化图表类型，并使用Tableau进行可视化分析。</p>
+<h2 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h2><h3 id="4-Tableau概述"><a href="#4-Tableau概述" class="headerlink" title="4. Tableau概述"></a>4. Tableau概述</h3><p>Tableau是一款数据分析工具，它可以帮助用户快速地分析、可视化和分享数据。Tableau提供了多种数据源的连接，包括Excel文件、数据库、API等，用户可以通过简单的拖放操作来创建数据源和数据表，并通过各种图表和仪表板来展示数据。同时，Tableau还提供了丰富的的数据分析和可视化功能，如筛选器、交叉筛选器、计算字段、动态聚合等，让用户可以更加灵活地分析数据和制定决策。此外，Tableau还支持多种数据可视化方式，如柱状图、折线图、饼图、地图等，让用户可以更加直观地展示数据和吸引观众的注意力。总的来说，Tableau是一款功能强大、易于使用的数据分析工具，适用于各种行业和领域的用户。</p>
+<h4 id="4-1-Tableau特点"><a href="#4-1-Tableau特点" class="headerlink" title="4.1 Tableau特点"></a>4.1 Tableau特点</h4><p>Tableau有6大特点，如图4-1所示，并对其中的3个特点进行介绍。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130115220311.png" alt="image-20240130115220311"></p>
+   <div align="center">图4-1 Tableau的6大特点</div> 
+
+<h5 id="4-1-1-支持多种数据类型"><a href="#4-1-1-支持多种数据类型" class="headerlink" title="4.1.1 支持多种数据类型"></a>4.1.1 支持多种数据类型</h5><p>如图4-2所示，Tableau支持多种数据类型，如支持Miscrosoft Excel文件、文本文件、Json文件等，最重要的是Tableau支持多种类型的数据源（包括数据库和云服务）。数据库除了支持MySQL这类主流Java数据库外，也支持其他各种类型的数据库。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130115335219.png" alt="image-20240130115335219"></p>
+<div align="center">图4-2 Tableau支持的数据源类型</div>
+
+<h5 id="4-1-2-简单易用"><a href="#4-1-2-简单易用" class="headerlink" title="4.1.2 简单易用"></a>4.1.2 简单易用</h5><p>使用Tableau进行数据分析无须复杂的编程操作，直接通过拖放字段就可以实现分析或可视化操作。我们以Tableau软件自带的世界发展指标数据集为例。假设我们需要直观地查看各个国家&#x2F;地区的城市人口数，在左侧数据栏选择字段，我们将“国家&#x2F;地区”字段拖入行，将“城市人口”字段拖入列，在界面右上方“智能推荐”处选择合适的可视化图表类型，如选择条形图，会立即生成图4-3所示的国家／地区的城市人口数的条形图，非常直观。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130120344724.png" alt="image-20240130120344724"></p>
+<div align="center">图4-3 选择智能推荐的可视化图表类型</div>
+
+<h5 id="4-1-3-智能仪表板与瞬时共享"><a href="#4-1-3-智能仪表板与瞬时共享" class="headerlink" title="4.1.3 智能仪表板与瞬时共享"></a>4.1.3 智能仪表板与瞬时共享</h5><p>仪表板是为进行数据分析而创建的可视化组件展示面板，即在面板上嵌入多个可视化的结果并且设置与页面之间的交互关系，集合多个数据视图以进行更深入的数据分析。图4-4所示是 Tableau 官网首页的企业绩效可视化案例，案例中的可视化仪表板将100家企业的增长明细表与直观反映各个企业增长趋势的折线图整合在一起，并且设置了交互栏，通过与仪表板交互可以选择增长组以筛选和查看某一特定部分企业，或者选择细分市场以查看各个企业在特定市场领域的增长情况。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130120536067.png" alt="image-20240130120536067"></p>
+<div align="center">图4-4 企业绩效可视化案例</div>
+
+<h4 id="4-2-Tableau下载与安装"><a href="#4-2-Tableau下载与安装" class="headerlink" title="4.2 Tableau下载与安装"></a>4.2 Tableau下载与安装</h4><p>Tableau有多个产品，Tableau Public，Tableau Desktop，Tableau Server，本教材主要介绍Tableau Desktop的使用。在Tableau官网首页可以单击“免费试用TABLEAU”按钮进行Tableau的下载与安装，可以输入电子邮箱获得试用期为15天的免费试用版。如果选择购买激活，有个人版与团队版可供购买。</p>
+<p>关于Tableau运行的技术规范，以Windows操作系统为例，Tableau要求Windows7或更高版本。Tableau的产品能在虚拟环境中运行，支持VMware、Citrix、Hyper-V和Parallels等虚拟机环境。Tableau系列产品支持Unicode编码，并兼容任何语言存储的数据。Tableau的下载安装步骤具体如下：</p>
+<p>第一步：进入官网，地址:<a target="_blank" rel="noopener" href="https://www.tableau.com/zh-cn%EF%BC%8C%E9%80%89%E6%8B%A9%E5%B7%A6%E4%B8%8A%E8%A7%92%22%E4%BA%A7%E5%93%81%22%EF%BC%8C%E5%9C%A8%E5%BC%B9%E5%87%BA%E7%9A%84%E9%80%89%E9%A1%B9%E4%B8%AD%E7%82%B9%E5%87%BB%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%EF%BC%8C%E5%A6%82%E4%B8%8B%E5%9B%BE4-5%E6%89%80%E7%A4%BA%EF%BC%9A">https://www.tableau.com/zh-cn，选择左上角&quot;产品&quot;，在弹出的选项中点击最新版本，如下图4-5所示：</a></p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/Tableau%E5%AE%98%E7%BD%91%E7%95%8C%E9%9D%A2.png" alt="Tableau官网界面"></p>
+<div align="center">图4-5 Tableau官网界面</div>
+
+<p>第二步，点击下载最新版本,进入下载页面，默认是下载Tableau Desktop的选项，点击第一个2023.3.1，弹出当前大版本下的小版本，点击下面的2023.3.1后进入下载页面（下图）,当然也可以选择下载其他版本。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/Tableau%E5%BD%93%E5%89%8D%E7%89%88%E6%9C%AC%E7%95%8C%E9%9D%A2.png" alt="Tableau当前版本界面"></p>
+<div align="center">图4-6 Tableau当前版本界面</div>
+
+<p>第三步，点击下载 TABLEAU DESKTOP 2023.3，之后会出现创建账户的页面如图4-6所示，如果有账户直接点击左边的立即登录就可以。如果没有账户，建议去：<a href="https://link.zhihu.com/?target=https://id.tableau.com/register">https://id.tableau.com/register</a> 这个页面去注册，会比当前页面填写的简单。按要求填写好信息后，去邮箱查看邮件，点击邮件中第一个链接后，按要求设置好密码，即可完成注册。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/Tableau%E6%B3%A8%E5%86%8C%E7%95%8C%E9%9D%A2.png" alt="Tableau注册界面"></p>
+<div align="center">图4-7 Tableau注册界面</div>
+
+<p>第四步，如果一切顺利，你会看到如下图所示的下载页面，根据系统下载对应的安装软件即可，页面链接：<a target="_blank" rel="noopener" href="https://www.tableau.com/zh-cn/support/releases/desktop/2023.3.1">https://www.tableau.com/zh-cn/support/releases/desktop/2023.3.1</a></p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85%E7%95%8C%E9%9D%A2.png" alt="下载安装包界面"></p>
+<div align="center">图4-8 下载安装包界面</div>
+
+<p>第五步，下载完成之后打开安装即可，默认安装在C盘，如果想更换安装路径就点击自定义，然后点击浏览选择安装的位置，再点击安装。安装完就可以使用了。</p>
+<h4 id="4-3-Tableau界面介绍"><a href="#4-3-Tableau界面介绍" class="headerlink" title="4.3 Tableau界面介绍"></a>4.3 Tableau界面介绍</h4><h5 id="4-3-1-数据导入界面"><a href="#4-3-1-数据导入界面" class="headerlink" title="4.3.1 数据导入界面"></a>4.3.1 数据导入界面</h5><p>连接数据界面分为搜索数据、到文件、到服务器、以及已保存数据源。在此界面你可以导入不同类型的数据文件，如Excel文件、文本文件、json文件等，或者单击更多以查看更多选项。图4-9是以本地文件Excel为例导入数据，点击打开就可以导入数据。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240204181238029.png" alt="image-20240204181238029"></p>
+<div align="center">图4-9 连接数据界面</div>
+
+<h5 id="4-3-2-数据源界面"><a href="#4-3-2-数据源界面" class="headerlink" title="4.3.2 数据源界面"></a>4.3.2 数据源界面</h5><p>选好要连接的文件后点击打开，会自动跳转到数据源界面，在“连接”下方显示的是已导入的数据文件，若有需要，还可以“添加”新的数据文件。数据源界面最重要的功能就是拖拽，将文件中的某个工作表拖到提示“将表拖到此处”的空白处（当不需要时再可将其拖出）。在不需要表中的某个字段时还可以将其隐藏，需要时勾选“显示隐藏字段”便可；单击“＃”可以看出该字段的数据类型（如日期、数字、字符串等）。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/%E6%95%B0%E6%8D%AE%E6%BA%90%E7%95%8C%E9%9D%A2.png" alt="数据源界面"></p>
+<div align="center">图4-10 数据源界面</div>
+
+<h5 id="4-3-3-工作表界面"><a href="#4-3-3-工作表界面" class="headerlink" title="4.3.3 工作表界面"></a>4.3.3 工作表界面</h5><p>点击新建工作表，界面会显示白板，用户可以在其中创建第一个视图。，双击工作表1，即可修改工作表名称。左上方显示软件目前连接到的数据源。将数据源中的列添加到左边的”数据”窗格中，分为维度字段和度量字段。筛选器用于筛选数据，标记下方可以选择图的类型，Tableau比较智能，可自动选择适合的图形，还可以设置相应的颜色，大小文本等内容。列功能区和行功能区都需要从数据列处拖拽相关列，可以拖进来（使用该列），也可以拖出去（不使用该列）。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240204184053529.png" alt="image-20240204184053529"></p>
+<div align="center">图4-11 工作表界面</div>
+
+<h4 id="4-4-Tableau-图表可视化"><a href="#4-4-Tableau-图表可视化" class="headerlink" title="4.4 Tableau 图表可视化"></a>4.4 Tableau 图表可视化</h4><p>在Sample-Superstore数据集中，“Order Date”（订单日期）这类字段适用于列的维度，作折线图的横坐标；而像 “Sales”、“Profit”等适用于行的维度，作为折线图的纵坐标。图4-12就展了绘制年度销售额折线图的过程，将字段分别拖入列功能区和行功能区后，软件自动智能推绘制折线图。也可以手动调整图表类型，除了折线图，也可以选择条形图、饼图等图表类型。假如对于该数据集，我们要进一步分析该商场每一年具体到某一类商品的销售额，可以在行维度再添加Category（分类）字段，将图表类型调为条形图，得到图4-13所示的结果，相对更加直观。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130122434390.png" alt="image-20240130122434390"></p>
+<div align="center">图4-12 年度销售额折线图</div>
+
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130172010545.png" alt="image-20240130172010545"></p>
+<div align="center">图4-13 年度不同种类销售额条形图</div>
+
+<p>Tableau会使用累计（聚合）为总和的销售额生成图表。用户可以按订单日期查看每年的总聚合销售额，即将鼠标指针移动至折线图上以查看对应年份的销售额，或者将数据点信息作为标签添加到用户创建的视图中。单击工具栏上的显示标记标签，可直观显示每年每类商品的销售额，结果如图4-14所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130172150762.png" alt="image-20240130172150762"></p>
+<div align="center">图4-14 单击显示标签后的结果图</div>
+
+<p>关于视图的透视效果还有如下选择，可以设置条形图交换行列显示，或者组内排序。图4-15所示的条形图就可以设置以年份为组别，每组内按不同商品类别的销售额进行排序。可以非常直观地反映出商场每年的销售额总体趋势是Technology（科技产品）高于Furniture（家具），且高于Office Supplies（办公用品）。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130144250281.png" alt="image-20240130144250281"></p>
+ <div align="center">图4-15 设置行列交换显示和升序排列</div>
+
+<h4 id="4-5-使用筛选器和颜色添加细化视图"><a href="#4-5-使用筛选器和颜色添加细化视图" class="headerlink" title="4.5 使用筛选器和颜色添加细化视图"></a>4.5 使用筛选器和颜色添加细化视图</h4><p>Sample-Superstore数据集含有要进行分类的大量数据，Tableau具有为视图添加筛选器、颜色等功能以帮助用户关注那些感兴趣的详细信息和特定结果。在增加对数据的重点关注后，用户可以使用Tableau Desktop提供的其他功能与该数据进行交互。</p>
+<h5 id="4-5-1-将筛选器添加到视图"><a href="#4-5-1-将筛选器添加到视图" class="headerlink" title="4.5.1 将筛选器添加到视图"></a>4.5.1 将筛选器添加到视图</h5><p>用户可以使用筛选器在视图中包含或排除值。在本示例中，通过将一个简单的筛选器添加到工作表中，可以更轻松地按子类查看特定年度的商品销售额。如图4-16所示，对“Order Date”设置年份的筛选，在数据窗格的维度下面，右击“Order Date”，并选择显示筛选器如不查看2020年的数据，则在界面右端的筛选器中不勾选2020。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130172631174.png" alt="image-20240130172631174"></p>
+ <div align="center">图4-16 设置年份筛选器</div>
+
+<h5 id="4-5-2-将颜色添加到视图"><a href="#4-5-2-将颜色添加到视图" class="headerlink" title="4.5.2 将颜色添加到视图"></a>4.5.2 将颜色添加到视图</h5><p>接下来将以每类商品的利润情况为例讲解如何将颜色添加到视图。在按“Category”字段分类的基础上，向列维度引入Sub-Category字段显示家具、办公用品和科技产品更往下细分的商品销售额，如图4-17所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130172737824.png" alt="image-20240130172737824"></p>
+ <div align="center">图4-17 引入Sub-Category字段的更细分的商品销售额</div>
+
+<p>在对销售额进行分析的同时，我们注意到有的商品销售额很高，有的商品的销售额很低。考虑到不同商品的价格和销量有差别，为了更全面地分析销售情况，还需要考虑各类商品最后卖出后带来的利润。如图4-18所示，我们将“Profit”字段拖入标记栏的颜色区域，结果是条形图中每一栏都被染色，同时在视图的右侧有一个利润的色调表，颜色越蓝代表利润越高，颜色越黄代表利润越低，如家具分类下的Table（桌子）近几年一直处于高亏损，而科技产品分类下的Phone（手机）近几年利润都相对较高。总的来讲，将颜色添加到视图后每类商品的利润情况通过颜色的深浅都有一个直观的反映。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130172917475.png" alt="image-20240130172917475"></p>
+ <div align="center">图4-18 用颜色标记利润情况</div>
+
+<p>已经看到，家具分类下的Table（桌子）高亏损，科技产品分类下的Phone（手机）高利润，但是在制定具体的营销策略之前，还需要更多的细节信息。现在，按照区域对视图进行细分，从数据窗格中，将“Region”（区域）拖到行功能区，并将其放在“Sum(Sales)”左侧，如图4-19所示。现在，可以看到每个区域按产品列出的销售额和盈利能力。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130145655446.png" alt="image-20240130145655446"></p>
+ <div align="center">图4-19 按区域细分视图</div>
+
+<p>右击“Sub-Category”，并选择显示筛选器，选择“Table”（桌子），如图4-20所示，此时可以观察到，图中东部地区每年都是负利润。在作区左下方，双击“工作表 1”并输入“Sales by Product&#x2F;Region”（按产品&#x2F;区域列出的销售额）。选择“文件”&gt;“另存为”保存工作。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130150247186.png" alt="image-20240130150247186"></p>
+ <div align="center">图4-20 各地区Table盈利情况</div>
+
+<h4 id="4-6-通过地理方式浏览数据"><a href="#4-6-通过地理方式浏览数据" class="headerlink" title="4.6 通过地理方式浏览数据"></a>4.6 通过地理方式浏览数据</h4><p>在前文的示例中，查看完商品销售额和利润情况之后，接下来可以按区域来研究商品的利润情况。由于要查看地理数据，因此用户可以选择生成地图视图。地图视图非常适用于显示和分析这种区域信息。对于此示例，Tableau已经为“国家&#x2F;地区”、“州&#x2F;省&#x2F;市&#x2F;自治区”“城市”和“邮政编码”字段分配了适当的地理角色，软件可以智能地识别出这些字段中的每个字段都包含的地理数据。</p>
+<p>因为Sample-Superstore数据集反映的是基于美国各州的销售额情况，所以利用该数据集可以非常方便地生成地图视图。使用快捷键Ctrl+M，或者点击左下角的新建工作表按钮创建一个新的工作表，命名为美国各州的利润额地图，把“Country&#x2F;Region”（国家／地区）字段和“State”（州）字段拖入详细信息区域，在地图上就会标注出美国各州。如果我们要查看美国各州的利润额情况，将“Profits”字段拖入标记栏下的颜色区域，即可得到所要的结果。如图4-21所示，颜色的深浅代表利润额的多少，可以直观得出California（加利福尼亚州）的利润额最多。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130182235747.png" alt="image-20240130182235747"></p>
+ <div align="center">图4-21 美国各州的利润额地图</div>
+
+<h4 id="4-7-在Tableau-Desktop实现下钻"><a href="#4-7-在Tableau-Desktop实现下钻" class="headerlink" title="4.7 在Tableau Desktop实现下钻"></a>4.7 在Tableau Desktop实现下钻</h4><p>如果只研究美国东部地区的利润情况，拷贝“美国各州的利润额地图”，将Region拖入筛选器，并选择East，并将新工作表命名为“美国东部地区利润地图”。拷贝“美国东部地区利润地图”，通过智能推荐，选择条形图，并命名为利润条形图。会发现Ohio(俄亥俄州)和Pennsylvania(宾夕法尼亚州)的利润是负数，即这两个州的商场存在亏损，如图4-22所示。此时我们需要进行下钻，研究这两个商场利润亏损的具体情况，这里选中这两个州，右击选择只保留。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130180453957.png" alt="image-20240130180453957"></p>
+ <div align="center">图4-22 利润条形图</div>
+
+<p>数据下钻有助于从汇总数据深入细节数据进行观察，还可以帮助用户增加新的维度进行观察。接下来，为了进一步下钻分析这两个州亏损的原因，决定往下查看这两个州每个城市的利润情况。如图4-23所示，将“City”（城市）字段拖入行的维度，即可查看每个城市的利润情况。可以发现两个州的大部分城市的商场都发生了亏损，其中Ohio的Lancaster（兰卡斯特）和Pennsylvania的Philadelphia（费城）亏损情况最为严重。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130153831676.png" alt="image-20240130153831676"></p>
+ <div align="center">图4-23 下钻至各个城市的利润情况</div>
+
+<p>接下来，我们可以把我们的工作进行保存，对各个工作表进行命名，之后可以使用快捷键Ctrl+S或者通过文件菜单进行保存。</p>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><h2 id="步骤1：数据连接及导入"><a href="#步骤1：数据连接及导入" class="headerlink" title="步骤1：数据连接及导入"></a>步骤1：数据连接及导入</h2><p>打开Tableau Desktop，在主页面当中，在左侧连接栏下点击Microsoft Excel，选择相应的文件路径，导入数据，进入数据源页面，如图4-24所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/%E6%95%B0%E6%8D%AE%E8%BF%9E%E6%8E%A5%E5%8F%8A%E5%AF%BC%E5%85%A5%E7%95%8C%E9%9D%A2.png" alt="数据连接及导入界面"></p>
+ <div align="center">图4-24 连接数据</div>
+
+<p>接下来，将左侧数据源中的SalesData拖入到右侧，如图4-25所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE.png" alt="销售数据"></p>
+ <div align="center">图4-25 选择SalesData</div>
+
+<h2 id="步骤2：绘制各国的销售额"><a href="#步骤2：绘制各国的销售额" class="headerlink" title="步骤2：绘制各国的销售额"></a>步骤2：绘制各国的销售额</h2><p>点击左下角的工作表1，双击工作表1，并修改名称为“各国的销售额”。选择字段“国家”，右击选择地理角色下的国家&#x2F;地区，把其转换为地理属性，如图4-26所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130154545933.png" alt="image-20240130154545933"></p>
+ <div align="center">图4-26 把国家转换为地理属性</div>
+
+<p>将“国家”拖入到行中，将“销售额”拖入到列，展示非洲各个国家的销售情况，点击从小到大排序工具，可以看到南非的销售额最高，如图4-27所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130154609905.png" alt="image-20240130154609905"></p>
+ <div align="center">图4-27 各国销售额</div>
+
+<h2 id="步骤3：绘制各国的利润"><a href="#步骤3：绘制各国的利润" class="headerlink" title="步骤3：绘制各国的利润"></a>步骤3：绘制各国的利润</h2><p>点击工作表各国的销售额，右击选择拷贝，并将拷贝的附件命名为“各国的利润”。将总和(销售额)从标记当中移除，把“利润”拖入到颜色当中，展示非洲各个国家的利润情况。点击从小到大排序工具，可以更直达看到利润最多的国家是刚果民主共和国，部分国家利润是负的，如图4-28所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/image-20240130154638495.png" alt="image-20240130154638495"></p>
+ <div align="center">图4-28 各国利润</div>
+
+<h2 id="步骤4：绘制非洲各地区各服务分类的销售额年增长率"><a href="#步骤4：绘制非洲各地区各服务分类的销售额年增长率" class="headerlink" title="步骤4：绘制非洲各地区各服务分类的销售额年增长率"></a>步骤4：绘制非洲各地区各服务分类的销售额年增长率</h2><p>新建工作表，并命名为“各国各服务分类销售额年增长率”。将“服务分类”、“年”拖入到列，将“地区”、“销售额”拖入到行，如图4-29所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/%E5%90%84%E5%9B%BD%E5%A2%9E%E9%95%BF%E7%8E%87.png" alt="各国增长率"></p>
+ <div align="center">图4-29 各地区各服务分类各年销售额</div>
+
+<p>接下来，点击总额(销售额)的下拉三角，选择添加表计算，如下图4-30所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/%E6%B7%BB%E5%8A%A0%E8%A1%A8%E8%AE%A1%E7%AE%97.png" alt="添加表计算"></p>
+ <div align="center">图4-30 选择添加表计算</div>
+
+<p>计算类型选择差异百分比，计算依据选择特定维度，去掉服务分类和地区，只保留日期年。在标记中，显示标签，展示各个国家在各个分类下的销售额年增长率，如图4-31所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/%E9%80%89%E6%8B%A9%E5%B7%AE%E5%BC%82%E7%99%BE%E5%88%86%E6%AF%94.png" alt="选择差异百分比"></p>
+<div align="center">图4-31 选择特定维度</div>
+
+<p>各国各服务分类的销售额年增长率如图4-32所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/%E5%90%84%E5%9B%BD%E5%90%84%E6%9C%8D%E5%8A%A1%E5%88%86%E7%B1%BB%E7%9A%84%E9%94%80%E5%94%AE%E9%A2%9D%E5%B9%B4%E5%A2%9E%E9%95%BF%E7%8E%87.png" alt="各国各服务分类的销售额年增长率"></p>
+<div align="center">图4-32 各国各服务分类销售额年增长率</div>
+
+<h2 id="步骤5：绘制非洲各地区各服务分类的利润年增长率"><a href="#步骤5：绘制非洲各地区各服务分类的利润年增长率" class="headerlink" title="步骤5：绘制非洲各地区各服务分类的利润年增长率"></a>步骤5：绘制非洲各地区各服务分类的利润年增长率</h2><p>拷贝“各国各服务分类销售额年增长率”工作表，并命名为“各国各服务分类利润年增长率”。行当中通过点击总和(销售额)的下拉三角，点击移除，移除该项，把“利润”拖入到行，放在“地区“之后，进行和上一步骤相同的年增长率操作，这里不再重复，结果如图4-33所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/%E9%9D%9E%E6%B4%B2%E5%90%84%E5%9C%B0%E5%8C%BA%E5%90%84%E6%9C%8D%E5%8A%A1%E5%88%86%E7%B1%BB%E7%9A%84%E5%88%A9%E6%B6%A6%E5%B9%B4%E5%A2%9E%E9%95%BF%E7%8E%87.png" alt="非洲各地区各服务分类的利润年增长率"></p>
+<div align="center">图4-33 各国各服务分类利润年增长率</div>
+
+<h2 id="步骤6：绘制销售经理的销售合同数前-5-名排行榜"><a href="#步骤6：绘制销售经理的销售合同数前-5-名排行榜" class="headerlink" title="步骤6：绘制销售经理的销售合同数前 5 名排行榜"></a>步骤6：绘制销售经理的销售合同数前 5 名排行榜</h2><p>新建工作表，并命名为“销售经理的销售合同数”。在Tableau导航栏的“数据”选项卡，选择新建数据源，重新导入《非洲通讯产品销售数据.xlsx》表，并选择SalespersonData表。在工作表中显示两个数据源，如图所示。选择SalespersonData(非洲通讯产品销售数据)，把“销售经理”拖入到列，把“销售合同”拖入到行，显示标签。接下来进行排序，点击列中的“销售经理”下拉三角，选择排序，进入排序设置，排序依据选择字段，排序顺序选择降序，字段名称为“销售合同”，聚合为总和，如图4-34所示。</p>
+<p>![销售合同数前 5 名](..&#x2F;..&#x2F;source&#x2F;images&#x2F;课件-tableau入门&#x2F;销售合同数前 5 名.png)</p>
+<div align="center">图4-34 销售合同数按降序排序</div>
+
+<p>通过观察，前5名的销售合同数据为161到203，对销售合同数进行筛选，只展示销售合同数大于160的数据，即可实现目标。点击总和(销售合同)下拉三角，选择显示筛选器，设置值范围为160—203。如图4-35所示，点击确定，结果如图4-36所示。</p>
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/%E7%AD%9B%E9%80%89%E5%99%A8%E8%AE%BE%E7%BD%AE.png" alt="筛选器设置"></p>
+<div align="center">图4-35 筛选器设置范围</div>
+
+<p><img src="/../../source/images/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/%E9%94%80%E5%94%AE%E7%BB%8F%E7%90%86%E7%9A%84%E9%94%80%E5%94%AE%E5%90%88%E5%90%8C%E6%95%B0.png" alt="销售经理的销售合同数"></p>
+<div align="center">图4-36 销售经理的销售合同数前 5 名排行榜</div>
+
+<h2 id="项目总结"><a href="#项目总结" class="headerlink" title="项目总结"></a>项目总结</h2><p>通过本次课程，可以学习到Tableau数据可视化和分析的知识和技巧：</p>
+<p>1、Tableau的特点：支持多种数据类型、简单易用、智能仪表板和瞬时共享。</p>
+<p>2、Tableau的下载与安装：通过官网选择需要的版本，注册个人信息后便可下载安装。</p>
+<p>3、数据连接: Tableau可以从多个来源获取数据，包括文件、数据库、云服务等。在实训中，学习如何连接不同的数据源，并跳转到作表中进行分析。</p>
+<p>4、图表设计：Tableau提供了各种图表类型和样式，可以根据数据的特点选择合适的图表类型。</p>
+<p>5、交互式可视化: Tableau的一个重要特点是可以创建交互式的可视化。通过添加筛选器、标记等，可以使用户更好地与数据进行互动，并深入了解数据的细节。</p>
+<h2 id="作业练习"><a href="#作业练习" class="headerlink" title="作业练习"></a>作业练习</h2><p>使用Tableau对奥运会数据集（summer_olympics_2012_data）进行可视化分析展示，分析展示内容包括：</p>
+<p>1、以条形图显示各国家获奖排行榜。</p>
+<p>2、以柱形图显示运动员获奖排行榜。</p>
+<p>3、以饼图显示奥运会参赛运动员的性别占比。</p>
+<p>4、以条形图中国运动员获奖排行榜。</p>
+<p>以上图形，均可在一定基础上，加入标记中的颜色进行图像美化。并对所作出的图形进行简要解释说明</p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E7%BB%83%E4%B9%A0/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  课件-tableau练习
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/%E4%BD%9C%E4%B8%9A-tableau/">
+			  
+			
+				  <!-- 在这里访问 page.next.slug -->
+				  作业-tableau
+				
+				<i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+
+
+
+
+
+
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+
+	
+	    <a href="/">lucky</a>
+	
+	
+	
+	<br>
+	Email:wuliurong2021nnnu@163.com
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
