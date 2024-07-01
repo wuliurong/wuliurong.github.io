@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		深度学习图像分类中的对抗样本问题 | 
+	 
+	hi
+	</title>
+	
+	<!-- keywords,description -->
+	
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">hi</a>
+
+	<ul id="menu">
+    
+
+    
+
+    
+
+    
+      
+      
+        <li class="menu-item">
+          <a href='' class="menu-item-link" target="_blank">
+            
+          </a>
+        </li>
+      
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/wuliurong' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Spark
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Spark/1-spark%E8%BD%AF%E4%BB%B6%E6%A0%88/">
+                     
+										    1-spark软件栈
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    centos搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/rdd%E4%BD%BF%E7%94%A8/">
+                     
+										    rdd使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/rdd%E7%AC%94%E8%AE%B0/">
+                     
+										    rdd笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/scala%E5%9F%BA%E7%A1%80/">
+                     
+										    scala基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/spark%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                     
+										    spark学习笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/spark%E6%BA%90%E7%A0%81%E5%9F%BA%E7%A1%80/">
+                     
+										    spark源码基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    windows搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E4%BD%BF%E7%94%A8IDEA%E5%9C%A8Maven%E4%B8%AD%E5%88%9B%E5%BB%BAjava%E5%92%8Cscala%E9%A1%B9%E7%9B%AE/">
+                     
+										    使用IDEA在Maven中创建java和scala项目
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hadoop
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/hadoop/1.Hadoop%E6%90%AD%E5%BB%BA%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E6%A8%A1%E5%BC%8F%E7%8E%AF%E5%A2%83/">
+                     
+										    1.Hadoop搭建伪分布式模式环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                     
+										    学习笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95/">
+                     
+										    实验记录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										java
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/java/linux/">
+                     
+										    linux
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/python/1-%E5%9F%BA%E7%A1%80/">
+                     
+										    1-基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/2-%E7%AC%94%E8%AE%B0/">
+                     
+										    2-笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/3-%E6%8A%A5%E9%94%99/">
+                     
+										    3-报错
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/4.%E5%AE%9E%E8%B7%B5/">
+                     
+										    4.实践
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/lambda/">
+                     
+										    lambda
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/python/">
+                     
+										    python
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/%E4%BD%9C%E4%B8%9A-pyechart/">
+                     
+										    作业-pyechart
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/%E4%BD%9C%E4%B8%9A-%E5%BD%93%E5%BD%93%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B9%A6%E7%B1%8D%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90/">
+                     
+										    作业-当当网计算机书籍数据挖掘与可视化分析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95/">
+                     
+										    模拟登录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2/">
+                     
+										    爬取动态页面
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										tableau
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E4%BD%9C%E4%B8%9A-tableau/">
+                     
+										    作业-tableau
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/">
+                     
+										    课件-tableau仪表板
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/">
+                     
+										    课件-tableau入门
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E7%BB%83%E4%B9%A0/">
+                     
+										    课件-tableau练习
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										其他笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/docker/">
+                     
+										    docker
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/vscode/">
+                     
+										    vscode
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/%E5%9F%BA%E7%A1%80/">
+                     
+										    基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/%E9%95%9C%E5%83%8F%E6%BA%90/">
+                     
+										    镜像源
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%9C%A8%E6%A0%A1%E7%BB%8F%E5%8E%86/">
+                     
+										    在校经历
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										报错
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/Hyper-V/">
+                     
+										    Hyper-V
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/github%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5/">
+                     
+										    github基础语句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-deploy/">
+                     
+										    hexo-deploy
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-typora-img/">
+                     
+										    hexo-typora-img
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/linux%E8%BF%9E%E4%B8%8D%E4%B8%8A%E7%BD%91/">
+                     
+										    linux连不上网
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/vscode-install-config/">
+                     
+										    vscode-install-config
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数仓学习
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E4%BB%93%E5%AD%A6%E4%B9%A0/%E7%A6%BB%E7%BA%BF%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E6%A6%82%E8%AE%BA/">
+                     
+										    离线实时数仓概论
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										日记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2022-12-24/">
+                     
+										    2022-12-24
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-13/">
+                     
+										    2024-1-13
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-17/">
+                     
+										    2024-1-17
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-19/">
+                     
+										    2024-1-19
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-2-15/">
+                     
+										    2024-2-15
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										科研经历
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/%E7%A7%91%E7%A0%94%E7%BB%8F%E5%8E%86/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%B8%AD%E7%9A%84%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC%E9%97%AE%E9%A2%98/">
+                     
+										    深度学习图像分类中的对抗样本问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content" class="content">
+		<h1 id="article-title">
+	深度学习图像分类中的对抗样本问题
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>lucky</span>
+	<span>2024-06-15 12:20:56</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<p>2022.12-2023.7</p>
+<p>超级感谢恩师李老师的指导！学到很多知识和工具，认识到不断学习的重要性，看到了外面世界样子。</p>
+<p>2022.12-2023.4：学习基础</p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425444034.png" alt="1718425444034"></p>
+<p>2023.4-2023.6：撰写综述性论文</p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425735369.png" alt="1718425735369"></p>
+<h1 id="阶段汇报"><a href="#阶段汇报" class="headerlink" title="阶段汇报"></a>阶段汇报</h1><h2 id="2022-12-08-AI模型对抗鲁棒性小结1"><a href="#2022-12-08-AI模型对抗鲁棒性小结1" class="headerlink" title="2022.12.08-AI模型对抗鲁棒性小结1"></a>2022.12.08-AI模型对抗鲁棒性小结1</h2><p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425905337.png" alt="1718425905337"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425925507.png" alt="1718425925507"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425932230.png" alt="1718425932230"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425938055.png" alt="1718425938055"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425942990.png" alt="1718425942990"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425952550.png" alt="1718425952550"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425958626.png" alt="1718425958626"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425963204.png" alt="1718425963204"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425967066.png" alt="1718425967066"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425971157.png" alt="1718425971157"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425976986.png" alt="1718425976986"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425980508.png" alt="1718425980508"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425985611.png" alt="1718425985611"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425990304.png" alt="1718425990304"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425995208.png" alt="1718425995208"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718425999276.png" alt="1718425999276"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426006925.png" alt="1718426006925"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426011570.png" alt="1718426011570"></p>
+<h2 id="2022-12-22-AI模型对抗鲁棒性小结2"><a href="#2022-12-22-AI模型对抗鲁棒性小结2" class="headerlink" title="2022.12.22-AI模型对抗鲁棒性小结2"></a>2022.12.22-AI模型对抗鲁棒性小结2</h2><p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426044972.png" alt="1718426044972"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426057284.png" alt="1718426057284"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426062287.png" alt="1718426062287"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426070677.png" alt="1718426070677"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426075169.png" alt="1718426075169"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426079516.png" alt="1718426079516"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426096343.png" alt="1718426096343"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426101295.png" alt="1718426101295"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426105348.png" alt="1718426105348"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426113377.png" alt="1718426113377"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426118149.png" alt="1718426118149"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426124112.png" alt="1718426124112"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426129453.png" alt="1718426129453"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426133489.png" alt="1718426133489"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426136931.png" alt="1718426136931"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426142593.png" alt="1718426142593"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426147591.png" alt="1718426147591"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426153529.png" alt="1718426153529"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426162429.png" alt="1718426162429"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426166429.png" alt="1718426166429"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426172673.png" alt="1718426172673"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426176740.png" alt="1718426176740"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426181660.png" alt="1718426181660"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426186957.png" alt="1718426186957"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426190568.png" alt="1718426190568"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426194669.png" alt="1718426194669"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426198997.png" alt="1718426198997"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426203528.png" alt="1718426203528"></p>
+<h2 id="2023-2-15-白盒攻击小结"><a href="#2023-2-15-白盒攻击小结" class="headerlink" title="2023.2.15-白盒攻击小结"></a>2023.2.15-白盒攻击小结</h2><p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426331676.png" alt="1718426331676"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426335779.png" alt="1718426335779"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426340877.png" alt="1718426340877"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426347378.png" alt="1718426347378"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426351981.png" alt="1718426351981"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426356108.png" alt="1718426356108"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426362031.png" alt="1718426362031"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426367750.png" alt="1718426367750"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426371603.png" alt="1718426371603"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426378249.png" alt="1718426378249"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426383259.png" alt="1718426383259"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426388293.png" alt="1718426388293"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426402735.png" alt="1718426402735"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426408688.png" alt="1718426408688"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426417028.png" alt="1718426417028"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426422950.png" alt="1718426422950"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426435449.png" alt="1718426435449"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426439152.png" alt="1718426439152"></p>
+<h2 id="2023-3-21-神经网络编程学习小结"><a href="#2023-3-21-神经网络编程学习小结" class="headerlink" title="2023.3.21-神经网络编程学习小结"></a>2023.3.21-神经网络编程学习小结</h2><p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426482130.png" alt="1718426482130"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426486050.png" alt="1718426486050"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426490490.png" alt="1718426490490"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426495134.png" alt="1718426495134"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426502967.png" alt="1718426502967"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426506748.png" alt="1718426506748"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426513319.png" alt="1718426513319"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426517721.png" alt="1718426517721"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426522540.png" alt="1718426522540"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426528245.png" alt="1718426528245"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426532424.png" alt="1718426532424"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426537297.png" alt="1718426537297"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426540869.png" alt="1718426540869"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426544806.png" alt="1718426544806"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426550355.png" alt="1718426550355"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426555935.png" alt="1718426555935"></p>
+<h2 id="2023-4-4-深度学习入门小结"><a href="#2023-4-4-深度学习入门小结" class="headerlink" title="2023.4.4-深度学习入门小结"></a>2023.4.4-深度学习入门小结</h2><p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426836761.png" alt="1718426836761"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426840875.png" alt="1718426840875"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426844610.png" alt="1718426844610"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426851702.png" alt="1718426851702"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426856728.png" alt="1718426856728"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426860616.png" alt="1718426860616"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426865702.png" alt="1718426865702"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426868968.png" alt="1718426868968"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426874374.png" alt="1718426874374"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426878135.png" alt="1718426878135"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426882672.png" alt="1718426882672"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426887105.png" alt="1718426887105"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426891263.png" alt="1718426891263"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426897157.png" alt="1718426897157"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426901918.png" alt="1718426901918"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426920080.png" alt="1718426920080"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426924205.png" alt="1718426924205"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426934220.png" alt="1718426934220"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718426979701.png" alt="1718426979701"></p>
+<h2 id="2023-4-7-学术成果分享论坛之旅"><a href="#2023-4-7-学术成果分享论坛之旅" class="headerlink" title="2023.4.7-学术成果分享论坛之旅"></a>2023.4.7-学术成果分享论坛之旅</h2><p>看到了很多大佬，很激动，第一次直观感受到计算机世界的浩瀚，虽然台上分享的各方向研究进展几乎都听不懂，但是看到周围很多大佬们边听边截图，大胆提问题，茶歇时候做笔记，偷学大佬们的学学习惯嘻嘻。</p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718428294929.png" alt="1718428294929"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718428264021.png" alt="1718428264021"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718428336990.png" alt="1718428336990"></p>
+<p>参观滨海大厦，超级震撼T^T。</p>
+<p>希望自己未来有机会能在大公司工作，认识更多的人更多的想法，向大佬学习。</p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718428543467.png" alt="1718428543467"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718428562653.png" alt="1718428562653"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718428603593.png" alt="1718428603593"></p>
+<p><img src="/.io//hexo\blog\source\source\images\深度学习图像分类中的对抗样本问题\1718428617891.png" alt="1718428617891"></p>
+<h2 id="2023-4-2023-7完成综述论文撰写"><a href="#2023-4-2023-7完成综述论文撰写" class="headerlink" title="2023.4-2023.7完成综述论文撰写"></a>2023.4-2023.7完成综述论文撰写</h2><p>科研经历告一段落</p>
+<p>2023.7-2023.8期末考试、教育见习</p>
+<p>2023.8-2023.9放暑假，准备数模</p>
+<p>2023.9-2023.12参加数模，复习高数，参加数竞，数模答辩</p>
+<p>2024.1-2024.3放寒假，校内主修课程没有计算机网络，假期看了b站中科大郑烇老师的课和阅读CCNA书籍，CCNA中很多讲的是思科设备的配置，配置命令没记住T T</p>
+<p>2024.3-2024.4看算法课算法题，参加蓝桥杯和团体天梯赛</p>
+<p>2024.4-2024.6专业实践课、准备英语考试</p>
+<p>2024.6-至今</p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/Spark/spark%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  spark学习笔记
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/%E6%97%A5%E8%AE%B0/2022-12-24/">
+			  
+			
+				  <!-- 在这里访问 page.next.slug -->
+				  日记/2022-12-24
+				
+				<i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+
+
+
+
+
+
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+
+	
+	    <a href="/">lucky</a>
+	
+	
+	
+	<br>
+	Email:wuliurong2021nnnu@163.com
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
