@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		实验-基于hadoop互联网日志分析实战 | 
+	 
+	hi
+	</title>
+	
+	<!-- keywords,description -->
+	
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">hi</a>
+
+	<ul id="menu">
+    
+
+    
+
+    
+
+    
+      
+      
+        <li class="menu-item">
+          <a href='' class="menu-item-link" target="_blank">
+            
+          </a>
+        </li>
+      
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/wuliurong' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Spark
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Spark/1-spark%E8%BD%AF%E4%BB%B6%E6%A0%88/">
+                     
+										    1-spark软件栈
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    centos搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/rdd%E4%BD%BF%E7%94%A8/">
+                     
+										    rdd使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/rdd%E7%AC%94%E8%AE%B0/">
+                     
+										    rdd笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/scala%E5%9F%BA%E7%A1%80/">
+                     
+										    scala基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/spark%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                     
+										    spark学习笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/spark%E6%BA%90%E7%A0%81%E5%9F%BA%E7%A1%80/">
+                     
+										    spark源码基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    windows搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E4%BD%BF%E7%94%A8IDEA%E5%9C%A8Maven%E4%B8%AD%E5%88%9B%E5%BB%BAjava%E5%92%8Cscala%E9%A1%B9%E7%9B%AE/">
+                     
+										    使用IDEA在Maven中创建java和scala项目
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0%E4%B8%8E%E5%AE%9E%E9%AA%8C/">
+                     
+										    课堂笔记与实验
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hadoop
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/hadoop/0.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+                     
+										    0.基本配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/1.Hadoop%E6%90%AD%E5%BB%BA%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E6%A8%A1%E5%BC%8F%E7%8E%AF%E5%A2%83/">
+                     
+										    1.Hadoop搭建伪分布式模式环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/10.%E8%BF%90%E8%90%A5%E5%95%86%E5%85%B3%E4%BA%8E%E7%94%A8%E6%88%B7%E5%9F%BA%E7%AB%99%E5%81%9C%E7%95%99%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1/">
+                     
+										    10.运营商关于用户基站停留数据统计
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/11.Sqoop%E5%BA%94%E7%94%A8/">
+                     
+										    11.Sqoop应用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/2.%E9%80%9A%E8%BF%87shell%E5%91%BD%E4%BB%A4%E8%AE%BF%E9%97%AEHDFS/">
+                     
+										    2.通过shell命令访问HDFS
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/3.%E9%80%9A%E8%BF%87API%E8%AE%BF%E9%97%AEHDFS/">
+                     
+										    3.通过API访问HDFS
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/4.%E5%88%86%E6%9E%90%E7%BC%96%E5%86%99WordCount%E7%A8%8B%E5%BA%8F/">
+                     
+										    4.分析编写WordCount程序
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/5.Mapreduce%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%88%86%E5%8C%BA/">
+                     
+										    5.Mapreduce序列化和分区
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/6.MapReduce%E5%AE%9E%E9%AA%8Csales/">
+                     
+										    6.MapReduce实验sales
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/7.hive%E5%AE%9E%E9%AA%8C/">
+                     
+										    7.hive实验
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/8.%E6%90%9C%E7%8B%97%E6%97%A5%E5%BF%97%E6%9F%A5%E8%AF%A2%E5%88%86%E6%9E%90MapReduce+hive/">
+                     
+										    8.搜狗日志查询分析MapReduce+hive
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/9.%E5%9F%BA%E4%BA%8EHBase%E7%9A%84MapReduce%E8%AE%A1%E7%AE%97/">
+                     
+										    9.基于HBase的MapReduce计算
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                     
+										    学习笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/hadoop/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/">
+                     
+										    实验-基于hadoop互联网日志分析实战
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95/">
+                     
+										    实验记录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										java
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/java/linux/">
+                     
+										    linux
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/linux/%E5%9F%BA%E7%A1%80/">
+                     
+										    基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/python/1-%E5%9F%BA%E7%A1%80/">
+                     
+										    1-基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/2-%E7%AC%94%E8%AE%B0/">
+                     
+										    2-笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/3-%E6%8A%A5%E9%94%99/">
+                     
+										    3-报错
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/4.%E5%AE%9E%E8%B7%B5/">
+                     
+										    4.实践
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/lambda/">
+                     
+										    lambda
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/python/">
+                     
+										    python
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/%E4%BD%9C%E4%B8%9A-pyechart/">
+                     
+										    作业-pyechart
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/%E4%BD%9C%E4%B8%9A-%E5%BD%93%E5%BD%93%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B9%A6%E7%B1%8D%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90/">
+                     
+										    作业-当当网计算机书籍数据挖掘与可视化分析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95/">
+                     
+										    模拟登录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2/">
+                     
+										    爬取动态页面
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										tableau
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E4%BD%9C%E4%B8%9A-tableau/">
+                     
+										    作业-tableau
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/">
+                     
+										    课件-tableau仪表板
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/">
+                     
+										    课件-tableau入门
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E7%BB%83%E4%B9%A0/">
+                     
+										    课件-tableau练习
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										其他笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/docker/">
+                     
+										    docker
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/vscode/">
+                     
+										    vscode
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/%E5%9F%BA%E7%A1%80/">
+                     
+										    基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/%E9%95%9C%E5%83%8F%E6%BA%90/">
+                     
+										    镜像源
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%9C%A8%E6%A0%A1%E7%BB%8F%E5%8E%86/">
+                     
+										    在校经历
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										报错
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/Hyper-V/">
+                     
+										    Hyper-V
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/github%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5/">
+                     
+										    github基础语句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-deploy/">
+                     
+										    hexo-deploy
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-typora-img/">
+                     
+										    hexo-typora-img
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/linux%E8%BF%9E%E4%B8%8D%E4%B8%8A%E7%BD%91/">
+                     
+										    linux连不上网
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/vscode-install-config/">
+                     
+										    vscode-install-config
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数仓学习
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E4%BB%93%E5%AD%A6%E4%B9%A0/%E7%A6%BB%E7%BA%BF%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E6%A6%82%E8%AE%BA/">
+                     
+										    离线实时数仓概论
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										日记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2022-12-24/">
+                     
+										    2022-12-24
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-13/">
+                     
+										    2024-1-13
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-17/">
+                     
+										    2024-1-17
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-19/">
+                     
+										    2024-1-19
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-2-15/">
+                     
+										    2024-2-15
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										科研经历
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E7%A7%91%E7%A0%94%E7%BB%8F%E5%8E%86/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%B8%AD%E7%9A%84%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC%E9%97%AE%E9%A2%98/">
+                     
+										    深度学习图像分类中的对抗样本问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content" class="content">
+		<h1 id="article-title">
+	实验-基于hadoop互联网日志分析实战
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>lucky</span>
+	<span>2024-07-04 17:09:46</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>使用工具：Flume+HDFS+MapReduce+Hive+FineBI</p>
+<p>实验过程：</p>
+<p>使用Flume收集和聚合日志数据，并将其写入HDFS中，使用MapReduce编写程序来梳理数据，生成有用的统计信息，最后使用Hive进行数据查询和分析，以获取有关数据的更深入的简介，最后使用对处理结果进行可视化展示</p>
+<p>学习目标：</p>
+<p>1.掌握flume配置、启动和监控方法</p>
+<p>2.熟练掌握MapReduce编程模型</p>
+<p>3.掌握Hive的数据分析方法</p>
+<p>4.使用可视化工具进行可视化</p>
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720084650380.png" alt="1720084650380"></p>
+<h1 id="采集数据"><a href="#采集数据" class="headerlink" title="采集数据"></a>采集数据</h1><p>数据为典型的Apache服务器软件的日志格式，每行记录用户对Web服务器的一次访问</p>
+<p>远程主机ip    E-mail    登录名    请求时间    http请求信息    resource   protocal   状态码   发送字节数</p>
+<p>xaa.log</p>
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720094227448.png" alt="1720094227448"></p>
+<p>xab.log</p>
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720094750789.png" alt="1720094750789"></p>
+<h2 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h2><p>下载数据，上传数据到HDFS</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mkdir   ~/001</span><br><span class="line">mkdir   ~/001/log-data</span><br><span class="line"></span><br><span class="line">wget  -P  ~/001/ http://i9000.net:8888/sgn/BDHTech/07pro/HadoopLogAnalysis/xaa.log</span><br><span class="line">wget  -P  ~/001/  http://i9000.net:8888/sgn/BDHTech/07pro/HadoopLogAnalysis/xab.log</span><br><span class="line"></span><br><span class="line">ls     -l    ~/001</span><br></pre></td></tr></table></figure>
+
+<h2 id="启动hadoop"><a href="#启动hadoop" class="headerlink" title="启动hadoop"></a>启动hadoop</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hadoop namenode -format</span><br><span class="line">start-all.sh</span><br><span class="line"></span><br><span class="line">hdfs dfs -mkdir -p /001/input</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="配置flume"><a href="#配置flume" class="headerlink" title="配置flume"></a>配置flume</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">vim  ~/001/flume.conf</span><br><span class="line"></span><br><span class="line"># Name the components on this agent</span><br><span class="line"></span><br><span class="line">a1.sources = r1</span><br><span class="line"></span><br><span class="line">a1.sinks = k1</span><br><span class="line"></span><br><span class="line">a1.channels = c1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 定义源: spooldir</span><br><span class="line"></span><br><span class="line">a1.sources.r1.type = spooldir</span><br><span class="line"></span><br><span class="line"># 指定监控目录</span><br><span class="line"></span><br><span class="line">a1.sources.r1.spoolDir = /home/ubuntu/001/log-data</span><br><span class="line"></span><br><span class="line">a1.sources.r1.decodeErrorPolicy = IGNORE</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Describe the sink</span><br><span class="line"></span><br><span class="line">a1.sinks.k1.type = hdfs</span><br><span class="line"></span><br><span class="line">a1.sinks.k1.hdfs.path = /001/input/log-data</span><br><span class="line"></span><br><span class="line">a1.sinks.k1.hdfs.fileType = DataStream</span><br><span class="line"></span><br><span class="line">a1.sinks.k1.hdfs.useLocalTimeStamp = true</span><br><span class="line"></span><br><span class="line">a1.sinks.k1.hdfs.rollSize = 0</span><br><span class="line"></span><br><span class="line">a1.sinks.k1.hdfs.rollCount = 0</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Use a channel which buffers events in memory</span><br><span class="line"></span><br><span class="line">a1.channels.c1.type = memory</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Bind the source and sink to the channel</span><br><span class="line"></span><br><span class="line">a1.sources.r1.channels = c1</span><br><span class="line"></span><br><span class="line">a1.sinks.k1.channel = c1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="启动Flume"><a href="#启动Flume" class="headerlink" title="启动Flume"></a>启动Flume</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flume-ng agent -f ~/001/flume.conf -n a1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="数据源监听"><a href="#数据源监听" class="headerlink" title="数据源监听"></a>数据源监听</h2><p>启动后没出现异常，不关闭该窗口，也不终止flume</p>
+<p>启动成功后，flume已经处于监听状态，一旦监控的目录有数据变动，会将新增的数据采集并上传</p>
+<h1 id="处理数据"><a href="#处理数据" class="headerlink" title="处理数据"></a>处理数据</h1><h2 id="日志查看以及分析"><a href="#日志查看以及分析" class="headerlink" title="日志查看以及分析"></a>日志查看以及分析</h2><p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720094469635.png" alt="1720094469635"></p>
+<h2 id="数据处理思路"><a href="#数据处理思路" class="headerlink" title="数据处理思路"></a>数据处理思路</h2><p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720094770653.png" alt="1720094770653"></p>
+<p>1.原始数据</p>
+<p>xaa.log</p>
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720094227448.png" alt="1720094227448"></p>
+<p>xab.log</p>
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720094750789.png" alt="1720094750789"></p>
+<p>2.去除已经弃用的字段</p>
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720097440499.png" alt="1720097440499"></p>
+<p>3.去除多余的符号</p>
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720097790670.png" alt="1720097790670"></p>
+<h2 id="程序开发调试"><a href="#程序开发调试" class="headerlink" title="程序开发调试"></a>程序开发调试</h2><h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">package com.mystudy.hadoopPro;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import org.apache.hadoop.io.LongWritable;</span><br><span class="line">import org.apache.hadoop.io.NullWritable;</span><br><span class="line">import org.apache.hadoop.io.Text;</span><br><span class="line">import org.apache.hadoop.mapreduce.Mapper;</span><br><span class="line"></span><br><span class="line">public class logMapper extends Mapper&lt;LongWritable, Text, Text, NullWritable&gt;&#123;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	protected void map(LongWritable key, Text value, Mapper&lt;LongWritable, Text, Text, NullWritable&gt;.Context context)</span><br><span class="line">			throws IOException, InterruptedException &#123;</span><br><span class="line">		</span><br><span class="line">		String data = value.toString();</span><br><span class="line">		</span><br><span class="line">		String[] datas = data.split(&quot; &quot;);</span><br><span class="line">		</span><br><span class="line">		datas[3] = datas[3].substring(1);</span><br><span class="line">		datas[4] = datas[4].substring(0,datas[4].length()-1);</span><br><span class="line">		datas[5] = datas[5].substring(1);</span><br><span class="line">		</span><br><span class="line">		String tempString = &quot;&quot;;</span><br><span class="line">		</span><br><span class="line">		if(datas.length == 9) </span><br><span class="line">		&#123;</span><br><span class="line">			datas[6] = datas[6].substring(0,datas[6].length()-1);</span><br><span class="line">			tempString = datas[0]+&quot;,&quot;+datas[3]+datas[4]+&quot;,&quot;+datas[5]+&quot;,&quot;+datas[6]+&quot;,&quot;+&quot;null&quot;+&quot;,&quot;+datas[7]+&quot;,&quot;+datas[8];</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			datas[7] = datas[7].substring(0,datas[7].length()-1);</span><br><span class="line">			tempString = datas[0]+&quot;,&quot;+datas[3]+datas[4]+&quot;,&quot;+datas[5]+&quot;,&quot;+datas[6]+&quot;,&quot;+datas[7]+&quot;,&quot;+datas[8]+&quot;,&quot;+datas[9];</span><br><span class="line">		&#125;	</span><br><span class="line">		context.write(new Text(tempString), NullWritable.get());</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Main"><a href="#Main" class="headerlink" title="Main"></a>Main</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">package com.mystudy.hadoopPro;</span><br><span class="line">import org.apache.hadoop.conf.Configuration;</span><br><span class="line">import org.apache.hadoop.fs.Path;</span><br><span class="line">import org.apache.hadoop.io.NullWritable;</span><br><span class="line">import org.apache.hadoop.io.Text;</span><br><span class="line">import org.apache.hadoop.mapreduce.Job;</span><br><span class="line">import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;</span><br><span class="line">import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;</span><br><span class="line">public class logMain &#123;</span><br><span class="line">	public static void main(String[] args) throws Exception &#123;</span><br><span class="line">		Configuration conf = new Configuration();</span><br><span class="line">		Job job = Job.getInstance(conf);</span><br><span class="line">		job.setJarByClass(logMain.class);</span><br><span class="line">		</span><br><span class="line">		job.setMapperClass(logMapper.class);</span><br><span class="line">		job.setMapOutputKeyClass(Text.class);</span><br><span class="line">		job.setMapOutputValueClass(NullWritable.class);</span><br><span class="line"></span><br><span class="line">		job.setOutputKeyClass(Text.class);</span><br><span class="line">		job.setOutputValueClass(NullWritable.class);</span><br><span class="line">		</span><br><span class="line">		FileInputFormat.setInputPaths(job, new Path(args[0]));</span><br><span class="line">		FileInputFormat.setInputPaths(job, new Path(args[1]));</span><br><span class="line">		FileOutputFormat.setOutputPath(job, new Path(args[2]));</span><br><span class="line">		</span><br><span class="line">		job.waitForCompletion(true);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd  /home/ubuntu/eclipse-workspace/hadoopPro</span><br><span class="line"></span><br><span class="line">mvn clean package</span><br><span class="line"></span><br><span class="line">hadoop jar target/hadoopPro-0.0.1-SNAPSHOT.jar /001/input/xaa.log /001/input/xab.log /001/output05</span><br><span class="line"></span><br><span class="line">hdfs dfs -cat /001/output05/part-r-00000</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><p>ip time methon resource protocal status bytenum</p>
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720097798898.png" alt="1720097798898"></p>
+<h1 id="分析数据"><a href="#分析数据" class="headerlink" title="分析数据"></a>分析数据</h1><h2 id="启动hive"><a href="#启动hive" class="headerlink" title="启动hive"></a>启动hive</h2><h3 id="创建hive表"><a href="#创建hive表" class="headerlink" title="创建hive表"></a>创建hive表</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE log(</span><br><span class="line">    ip STRING,</span><br><span class="line">    time STRING,</span><br><span class="line">    method STRING,</span><br><span class="line">    resource STRING,</span><br><span class="line">    protocol STRING,</span><br><span class="line">    status INT,</span><br><span class="line">    bytenum INT</span><br><span class="line">)</span><br><span class="line">ROW FORMAT DELIMITED</span><br><span class="line">FIELDS TERMINATED BY &quot;,&quot;</span><br><span class="line">LINES TERMINATED BY &quot;\n&quot;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="导入数据"><a href="#导入数据" class="headerlink" title="导入数据"></a>导入数据</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LOAD DATA INPATH &#x27;/001/output05/part-r-00000&#x27; INTO TABLE log;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720098528362.png" alt="1720098528362"></p>
+<h3 id="使用hive统计数据"><a href="#使用hive统计数据" class="headerlink" title="使用hive统计数据"></a>使用hive统计数据</h3><h4 id="1-访问的次数最多5个资源"><a href="#1-访问的次数最多5个资源" class="headerlink" title="1.访问的次数最多5个资源"></a>1.访问的次数最多5个资源</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SELECT resource, COUNT(*) AS resource_count</span><br><span class="line">FROM log</span><br><span class="line">GROUP BY resource</span><br><span class="line">ORDER BY resource_count DESC</span><br><span class="line">LIMIT 5;</span><br><span class="line"></span><br><span class="line">DESC降序</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720101568774.png" alt="1720101568774"></p>
+<p>输出数据</p>
+<p>&#x2F;&#x2F;要确保目录存在</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">INSERT OVERWRITE DIRECTORY &#x27;/user/hive/output&#x27;  </span><br><span class="line">ROW FORMAT DELIMITED</span><br><span class="line">FIELDS TERMINATED BY &#x27;,&#x27;</span><br><span class="line">SELECT resource, COUNT(*) AS resource_count</span><br><span class="line">FROM log</span><br><span class="line">GROUP BY resource</span><br><span class="line">ORDER BY resource_count DESC</span><br><span class="line">LIMIT 5;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720100576576.png" alt="1720100576576"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输出到指定目录（覆盖）</span><br><span class="line">INSERT OVERWRITE DIRECTORY &#x27;/user/hive/output&#x27;</span><br><span class="line"></span><br><span class="line">追加到指定目录（不覆盖）</span><br><span class="line">INSERT INTO DIRECTORY &#x27;/user/hive/output&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-产生的流量最大的5个资源"><a href="#2-产生的流量最大的5个资源" class="headerlink" title="2.产生的流量最大的5个资源"></a>2.产生的流量最大的5个资源</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT resource, sum(bytenum) AS resource_bytenumsum</span><br><span class="line">FROM log</span><br><span class="line">GROUP BY resource</span><br><span class="line">ORDER BY resource_bytenumsum DESC</span><br><span class="line">LIMIT 5;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在想为什么会有空的，以为代码有问题，看了代码没为题，看数据发现确实是有空的地址</p>
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720101401457.png" alt="1720101401457"></p>
+<h4 id="3-日志记录的时期，一共有多少个错误请求，分别有多少个（响应码以4或5开头）"><a href="#3-日志记录的时期，一共有多少个错误请求，分别有多少个（响应码以4或5开头）" class="headerlink" title="3.日志记录的时期，一共有多少个错误请求，分别有多少个（响应码以4或5开头）"></a>3.日志记录的时期，一共有多少个错误请求，分别有多少个（响应码以4或5开头）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count(status) as error_request from log where status &gt;= 400;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720101745300.png" alt="1720101745300"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SET hive.cli.print.header=true; //设置显示列名</span><br><span class="line">select count(status) as error_request from log where status &gt;= 400;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720101926212.png" alt="1720101926212"></p>
+<h4 id="4-找出每个月最常访问的5个资源（窗口函数实现）"><a href="#4-找出每个月最常访问的5个资源（窗口函数实现）" class="headerlink" title="4.找出每个月最常访问的5个资源（窗口函数实现）"></a>4.找出每个月最常访问的5个资源（窗口函数实现）</h4><p>提取日期</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select resource, count(a.month) as month_count</span><br><span class="line">from(SELECT resource,regexp_extract(time, &#x27;([A-Za-z]&#123;3&#125;)&#x27;, 1) AS month</span><br><span class="line">FROM log</span><br><span class="line">group by resource,regexp_extract(time, &#x27;([A-Za-z]&#123;3&#125;)&#x27;, 1)) a;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../source/images/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/1720102859567.png" alt="1720102859567"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="5-流量前5的日期是哪些，具体流量是多少？（窗口函数实现）"><a href="#5-流量前5的日期是哪些，具体流量是多少？（窗口函数实现）" class="headerlink" title="5.流量前5的日期是哪些，具体流量是多少？（窗口函数实现）"></a>5.流量前5的日期是哪些，具体流量是多少？（窗口函数实现）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="导出结果"><a href="#导出结果" class="headerlink" title="导出结果"></a>导出结果</h2><h2 id="FineBI可视化"><a href="#FineBI可视化" class="headerlink" title="FineBI可视化"></a>FineBI可视化</h2><p>可视化4.4和4.5</p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/hadoop/11.Sqoop%E5%BA%94%E7%94%A8/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  11.Sqoop应用
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/hadoop/10.%E8%BF%90%E8%90%A5%E5%95%86%E5%85%B3%E4%BA%8E%E7%94%A8%E6%88%B7%E5%9F%BA%E7%AB%99%E5%81%9C%E7%95%99%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1/">
+			  
+			
+				  <!-- 在这里访问 page.next.slug -->
+				  hadoop/10.运营商关于用户基站停留数据统计
+				
+				<i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+
+
+
+
+
+
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+
+	
+	    <a href="/">lucky</a>
+	
+	
+	
+	<br>
+	Email:wuliurong2021nnnu@163.com
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

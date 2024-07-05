@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		6.MapReduce实验sales | 
+	 
+	hi
+	</title>
+	
+	<!-- keywords,description -->
+	
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">hi</a>
+
+	<ul id="menu">
+    
+
+    
+
+    
+
+    
+      
+      
+        <li class="menu-item">
+          <a href='' class="menu-item-link" target="_blank">
+            
+          </a>
+        </li>
+      
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/wuliurong' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Spark
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Spark/1-spark%E8%BD%AF%E4%BB%B6%E6%A0%88/">
+                     
+										    1-spark软件栈
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    centos搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/rdd%E4%BD%BF%E7%94%A8/">
+                     
+										    rdd使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/rdd%E7%AC%94%E8%AE%B0/">
+                     
+										    rdd笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/scala%E5%9F%BA%E7%A1%80/">
+                     
+										    scala基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/spark%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                     
+										    spark学习笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/spark%E6%BA%90%E7%A0%81%E5%9F%BA%E7%A1%80/">
+                     
+										    spark源码基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    windows搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E4%BD%BF%E7%94%A8IDEA%E5%9C%A8Maven%E4%B8%AD%E5%88%9B%E5%BB%BAjava%E5%92%8Cscala%E9%A1%B9%E7%9B%AE/">
+                     
+										    使用IDEA在Maven中创建java和scala项目
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0%E4%B8%8E%E5%AE%9E%E9%AA%8C/">
+                     
+										    课堂笔记与实验
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hadoop
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/hadoop/0.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+                     
+										    0.基本配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/1.Hadoop%E6%90%AD%E5%BB%BA%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E6%A8%A1%E5%BC%8F%E7%8E%AF%E5%A2%83/">
+                     
+										    1.Hadoop搭建伪分布式模式环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/10.%E8%BF%90%E8%90%A5%E5%95%86%E5%85%B3%E4%BA%8E%E7%94%A8%E6%88%B7%E5%9F%BA%E7%AB%99%E5%81%9C%E7%95%99%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1/">
+                     
+										    10.运营商关于用户基站停留数据统计
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/11.Sqoop%E5%BA%94%E7%94%A8/">
+                     
+										    11.Sqoop应用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/2.%E9%80%9A%E8%BF%87shell%E5%91%BD%E4%BB%A4%E8%AE%BF%E9%97%AEHDFS/">
+                     
+										    2.通过shell命令访问HDFS
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/3.%E9%80%9A%E8%BF%87API%E8%AE%BF%E9%97%AEHDFS/">
+                     
+										    3.通过API访问HDFS
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/4.%E5%88%86%E6%9E%90%E7%BC%96%E5%86%99WordCount%E7%A8%8B%E5%BA%8F/">
+                     
+										    4.分析编写WordCount程序
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/5.Mapreduce%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%88%86%E5%8C%BA/">
+                     
+										    5.Mapreduce序列化和分区
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/hadoop/6.MapReduce%E5%AE%9E%E9%AA%8Csales/">
+                     
+										    6.MapReduce实验sales
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/7.hive%E5%AE%9E%E9%AA%8C/">
+                     
+										    7.hive实验
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/8.%E6%90%9C%E7%8B%97%E6%97%A5%E5%BF%97%E6%9F%A5%E8%AF%A2%E5%88%86%E6%9E%90MapReduce+hive/">
+                     
+										    8.搜狗日志查询分析MapReduce+hive
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/9.%E5%9F%BA%E4%BA%8EHBase%E7%9A%84MapReduce%E8%AE%A1%E7%AE%97/">
+                     
+										    9.基于HBase的MapReduce计算
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                     
+										    学习笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/">
+                     
+										    实验-基于hadoop互联网日志分析实战
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95/">
+                     
+										    实验记录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										java
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/java/linux/">
+                     
+										    linux
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/linux/%E5%9F%BA%E7%A1%80/">
+                     
+										    基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/python/1-%E5%9F%BA%E7%A1%80/">
+                     
+										    1-基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/2-%E7%AC%94%E8%AE%B0/">
+                     
+										    2-笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/3-%E6%8A%A5%E9%94%99/">
+                     
+										    3-报错
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/4.%E5%AE%9E%E8%B7%B5/">
+                     
+										    4.实践
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/lambda/">
+                     
+										    lambda
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/python/">
+                     
+										    python
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/%E4%BD%9C%E4%B8%9A-pyechart/">
+                     
+										    作业-pyechart
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/%E4%BD%9C%E4%B8%9A-%E5%BD%93%E5%BD%93%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B9%A6%E7%B1%8D%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90/">
+                     
+										    作业-当当网计算机书籍数据挖掘与可视化分析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95/">
+                     
+										    模拟登录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2/">
+                     
+										    爬取动态页面
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										tableau
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E4%BD%9C%E4%B8%9A-tableau/">
+                     
+										    作业-tableau
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/">
+                     
+										    课件-tableau仪表板
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/">
+                     
+										    课件-tableau入门
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E7%BB%83%E4%B9%A0/">
+                     
+										    课件-tableau练习
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										其他笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/docker/">
+                     
+										    docker
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/vscode/">
+                     
+										    vscode
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/%E5%9F%BA%E7%A1%80/">
+                     
+										    基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/%E9%95%9C%E5%83%8F%E6%BA%90/">
+                     
+										    镜像源
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%9C%A8%E6%A0%A1%E7%BB%8F%E5%8E%86/">
+                     
+										    在校经历
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										报错
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/Hyper-V/">
+                     
+										    Hyper-V
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/github%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5/">
+                     
+										    github基础语句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-deploy/">
+                     
+										    hexo-deploy
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-typora-img/">
+                     
+										    hexo-typora-img
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/linux%E8%BF%9E%E4%B8%8D%E4%B8%8A%E7%BD%91/">
+                     
+										    linux连不上网
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/vscode-install-config/">
+                     
+										    vscode-install-config
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数仓学习
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E4%BB%93%E5%AD%A6%E4%B9%A0/%E7%A6%BB%E7%BA%BF%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E6%A6%82%E8%AE%BA/">
+                     
+										    离线实时数仓概论
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										日记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2022-12-24/">
+                     
+										    2022-12-24
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-13/">
+                     
+										    2024-1-13
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-17/">
+                     
+										    2024-1-17
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-19/">
+                     
+										    2024-1-19
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-2-15/">
+                     
+										    2024-2-15
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										科研经历
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E7%A7%91%E7%A0%94%E7%BB%8F%E5%8E%86/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%B8%AD%E7%9A%84%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC%E9%97%AE%E9%A2%98/">
+                     
+										    深度学习图像分类中的对抗样本问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content" class="content">
+		<h1 id="article-title">
+	6.MapReduce实验sales
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>lucky</span>
+	<span>2024-07-02 18:06:57</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<h1 id="求各年销售笔数、各年销售总额"><a href="#求各年销售笔数、各年销售总额" class="headerlink" title="求各年销售笔数、各年销售总额"></a>求各年销售笔数、各年销售总额</h1><p>启动</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/hadoop/sbin</span><br><span class="line">hadoop namenode -format</span><br><span class="line">start-all.sh</span><br><span class="line">jps</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../source/images/6.MapReduce%E5%AE%9E%E9%AA%8Csales/1719918931210.png" alt="1719918931210"></p>
+<p><img src="/../../source/images/6.MapReduce%E5%AE%9E%E9%AA%8Csales/1719918962075.png" alt="1719918962075"></p>
+<h2 id="1-编写代码"><a href="#1-编写代码" class="headerlink" title="1.编写代码"></a>1.编写代码</h2><h3 id="SalesMapper"><a href="#SalesMapper" class="headerlink" title="SalesMapper"></a>SalesMapper</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">package com.mystudy.hadoopPro;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import org.apache.hadoop.io.DoubleWritable;</span><br><span class="line">import org.apache.hadoop.io.LongWritable;</span><br><span class="line">import org.apache.hadoop.io.Text;</span><br><span class="line">import org.apache.hadoop.mapreduce.Mapper;</span><br><span class="line"></span><br><span class="line">public class SalesMapper extends Mapper&lt;LongWritable,Text,Text,DoubleWritable&gt;&#123;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	protected void map(LongWritable key, Text value, Mapper&lt;LongWritable, Text, Text, DoubleWritable&gt;.Context context)</span><br><span class="line">			throws IOException, InterruptedException &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		//super.map(key, value, context);</span><br><span class="line">		String data = value.toString();</span><br><span class="line">		String[] info = data.split(&quot;,&quot;);</span><br><span class="line">		String time=info[2].substring(0,4);</span><br><span class="line">		double amount = Double.parseDouble(info[6]);</span><br><span class="line">		context.write(new Text(time), new DoubleWritable(amount));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="SalesReducer"><a href="#SalesReducer" class="headerlink" title="SalesReducer"></a>SalesReducer</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">package com.mystudy.hadoopPro;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import org.apache.hadoop.io.DoubleWritable;</span><br><span class="line">import org.apache.hadoop.io.Text;</span><br><span class="line">import org.apache.hadoop.mapreduce.Reducer;</span><br><span class="line"></span><br><span class="line">public class SalesReducer extends Reducer&lt;Text,DoubleWritable,Text,Text&gt;&#123;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	protected void reduce(Text key, Iterable&lt;DoubleWritable&gt; v3,</span><br><span class="line">			Reducer&lt;Text, DoubleWritable, Text, Text&gt;.Context context) throws IOException, InterruptedException &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		//super.reduce(arg0, arg1, arg2);</span><br><span class="line">		int sum = 0;</span><br><span class="line">		int amount = 0;</span><br><span class="line">		for(DoubleWritable v : v3) &#123;</span><br><span class="line">			sum ++;</span><br><span class="line">			amount += v.get();</span><br><span class="line">		&#125;</span><br><span class="line">		String out = &quot;销售笔数：&quot;+sum+&quot;   销售总额：&quot;+amount;</span><br><span class="line">		context.write(key, new Text(out));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="SalesMain"><a href="#SalesMain" class="headerlink" title="SalesMain"></a>SalesMain</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">package com.mystudy.hadoopPro;</span><br><span class="line"></span><br><span class="line">import org.apache.hadoop.conf.Configuration;</span><br><span class="line">import org.apache.hadoop.fs.Path;</span><br><span class="line">import org.apache.hadoop.io.DoubleWritable;</span><br><span class="line">import org.apache.hadoop.io.Text;</span><br><span class="line">import org.apache.hadoop.mapreduce.Job;</span><br><span class="line">import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;</span><br><span class="line">import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;</span><br><span class="line"></span><br><span class="line">public class SalesMain &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) throws Exception&#123;</span><br><span class="line">		Job job = Job.getInstance(new Configuration());</span><br><span class="line">		job.setJarByClass(SalesMain.class);</span><br><span class="line">		</span><br><span class="line">		job.setMapperClass(SalesMapper.class);</span><br><span class="line">		job.setMapOutputKeyClass(Text.class);</span><br><span class="line">		job.setMapOutputValueClass(DoubleWritable.class);</span><br><span class="line">		</span><br><span class="line">		job.setReducerClass(SalesReducer.class);</span><br><span class="line">		job.setOutputKeyClass(Text.class);</span><br><span class="line">		job.setOutputValueClass(Text.class);</span><br><span class="line"></span><br><span class="line">		FileInputFormat.setInputPaths(job, new Path(args[0]));</span><br><span class="line">		FileOutputFormat.setOutputPath(job, new Path(args[1]));</span><br><span class="line">		</span><br><span class="line">		job.waitForCompletion(true);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-运行"><a href="#2-运行" class="headerlink" title="2.运行"></a>2.运行</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd  /home/ubuntu/eclipse-workspace/hadoopPro</span><br><span class="line"></span><br><span class="line">mvn clean package</span><br><span class="line"></span><br><span class="line">hadoop jar target/hadoopPro-0.0.1-SNAPSHOT.jar /001/input/sales.csv  /001/output00</span><br><span class="line"></span><br><span class="line">hdfs dfs -ls /001/output00</span><br><span class="line"></span><br><span class="line">hdfs dfs -cat /001/output00/part-r-00000</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h1><h2 id="计算商品和金额"><a href="#计算商品和金额" class="headerlink" title="计算商品和金额"></a>计算商品和金额</h2><p>数据：</p>
+<p><img src="/../../source/images/6.MapReduce%E5%AE%9E%E9%AA%8Csales/1719919018033.png" alt="1719919018033"></p>
+<h3 id="1-计算每个商品的总成交额"><a href="#1-计算每个商品的总成交额" class="headerlink" title="1.计算每个商品的总成交额"></a>1.计算每个商品的总成交额</h3><p>mapper</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.mystudy.hadoopPro;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.DoubleWritable;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.LongWritable;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Mapper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SalesMapper</span> <span class="keyword">extends</span> <span class="title class_">Mapper</span>&lt;LongWritable,Text,Text,DoubleWritable&gt;&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">map</span><span class="params">(LongWritable key, Text value, Mapper&lt;LongWritable, Text, Text, DoubleWritable&gt;.Context context)</span></span><br><span class="line">			<span class="keyword">throws</span> IOException, InterruptedException &#123;</span><br><span class="line">        </span><br><span class="line">		<span class="type">String</span> <span class="variable">data</span> <span class="operator">=</span> value.toString();</span><br><span class="line">		String[] info = data.split(<span class="string">&quot;,&quot;</span>);</span><br><span class="line">		<span class="type">String</span> <span class="variable">goodsID</span> <span class="operator">=</span> info[<span class="number">1</span>];</span><br><span class="line">		<span class="type">Double</span> <span class="variable">price</span> <span class="operator">=</span> Double.parseDouble(info[<span class="number">2</span>]);</span><br><span class="line">		</span><br><span class="line">		context.write(<span class="keyword">new</span> <span class="title class_">Text</span>(goodsID), <span class="keyword">new</span> <span class="title class_">DoubleWritable</span>(price));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>reducer</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.mystudy.hadoopPro;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.DoubleWritable;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Reducer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SalesReducer</span> <span class="keyword">extends</span> <span class="title class_">Reducer</span>&lt;Text,DoubleWritable,Text,Text&gt;&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">reduce</span><span class="params">(Text k3, Iterable&lt;DoubleWritable&gt; v3,</span></span><br><span class="line"><span class="params">			Reducer&lt;Text, DoubleWritable, Text, Text&gt;.Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException &#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		</span><br><span class="line">		<span class="type">Double</span> <span class="variable">sumprice</span> <span class="operator">=</span> <span class="number">0.0</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(DoubleWritable v : v3)</span><br><span class="line">		&#123;</span><br><span class="line">			sumprice += v.get();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="type">String</span> <span class="variable">out</span> <span class="operator">=</span> <span class="string">&quot;商品成交总额&quot;</span>+ sumprice;</span><br><span class="line">		context.write(k3, <span class="keyword">new</span> <span class="title class_">Text</span>(out));</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>main</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.mystudy.hadoopPro;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.DoubleWritable;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Reducer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SalesReducer</span> <span class="keyword">extends</span> <span class="title class_">Reducer</span>&lt;Text,DoubleWritable,Text,Text&gt;&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">reduce</span><span class="params">(Text k3, Iterable&lt;DoubleWritable&gt; v3,</span></span><br><span class="line"><span class="params">			Reducer&lt;Text, DoubleWritable, Text, Text&gt;.Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException &#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		</span><br><span class="line">		<span class="type">Double</span> <span class="variable">sumprice</span> <span class="operator">=</span> <span class="number">0.0</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(DoubleWritable v : v3)</span><br><span class="line">		&#123;</span><br><span class="line">			sumprice += v.get();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="type">String</span> <span class="variable">out</span> <span class="operator">=</span> <span class="string">&quot;商品成交总额&quot;</span>+ sumprice;</span><br><span class="line">		context.write(k3, <span class="keyword">new</span> <span class="title class_">Text</span>(out));</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-找出订单中最高的商品成交价"><a href="#2-找出订单中最高的商品成交价" class="headerlink" title="2.找出订单中最高的商品成交价"></a>2.找出订单中最高的商品成交价</h3><p>mapper</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">data</span> <span class="operator">=</span> value.toString();</span><br><span class="line">String[] info = data.split(<span class="string">&quot;,&quot;</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">goodsID</span> <span class="operator">=</span> info[<span class="number">0</span>];</span><br><span class="line"><span class="type">Double</span> <span class="variable">price</span> <span class="operator">=</span> Double.parseDouble(info[<span class="number">2</span>]);</span><br><span class="line"></span><br><span class="line">context.write(<span class="keyword">new</span> <span class="title class_">Text</span>(goodsID), <span class="keyword">new</span> <span class="title class_">DoubleWritable</span>(price));</span><br></pre></td></tr></table></figure>
+
+<p>reducer</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Double</span> <span class="variable">sumprice</span> <span class="operator">=</span> <span class="number">0.0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(DoubleWritable v : v3)</span><br><span class="line">&#123;</span><br><span class="line">	sumprice = Math.max(sumprice, v.get());</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">String</span> <span class="variable">out</span> <span class="operator">=</span> <span class="string">&quot;订单中最高的商品成交价&quot;</span>+ sumprice;</span><br><span class="line">context.write(key, <span class="keyword">new</span> <span class="title class_">Text</span>(out));main</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../source/images/6.MapReduce%E5%AE%9E%E9%AA%8Csales/1719923648883.png" alt="1719923648883"></p>
+<h3 id="3-假设金额按照区间分组-0-100-100-200-200-统计分组交易的商品数量"><a href="#3-假设金额按照区间分组-0-100-100-200-200-统计分组交易的商品数量" class="headerlink" title="3.假设金额按照区间分组  ,[0,100),[100,200),[200,+) ,统计分组交易的商品数量"></a>3.假设金额按照区间分组  ,[0,100),[100,200),[200,+) ,统计分组交易的商品数量</h3><p>mapper</p>
+<p>注意分隔符</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="string">&quot;[0，100)&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="string">&quot;[100，200)&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">s3</span> <span class="operator">=</span> <span class="string">&quot;[200，+)&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">data</span> <span class="operator">=</span> value.toString();</span><br><span class="line">String[] info = data.split(<span class="string">&quot;,&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(Double.parseDouble(info[<span class="number">2</span>]) &lt; <span class="number">100</span>)data += <span class="string">&quot;,&quot;</span>+s1;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(Double.parseDouble(info[<span class="number">2</span>]) &lt; <span class="number">200</span>)data += <span class="string">&quot;,&quot;</span>+s2;</span><br><span class="line"><span class="keyword">else</span> data += <span class="string">&quot;,&quot;</span>+s3;</span><br><span class="line"></span><br><span class="line">String[] info1 = data.split(<span class="string">&quot;,&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">goodsID</span> <span class="operator">=</span> info1[<span class="number">3</span>];<span class="comment">//代码优化，if判断goodsID=s？</span></span><br><span class="line"></span><br><span class="line"><span class="type">Double</span> <span class="variable">price</span> <span class="operator">=</span> Double.parseDouble(info1[<span class="number">2</span>]);</span><br><span class="line"></span><br><span class="line">context.write(<span class="keyword">new</span> <span class="title class_">Text</span>(goodsID), <span class="keyword">new</span> <span class="title class_">DoubleWritable</span>(price));</span><br></pre></td></tr></table></figure>
+
+<p>reducer</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">sumprice</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(DoubleWritable v : v3)</span><br><span class="line">&#123;</span><br><span class="line">	sumprice ++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">String</span> <span class="variable">out</span> <span class="operator">=</span> <span class="string">&quot;按照金额分组统计商品数量&quot;</span>+ sumprice;</span><br><span class="line">context.write(key, <span class="keyword">new</span> <span class="title class_">Text</span>(out));</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../source/images/6.MapReduce%E5%AE%9E%E9%AA%8Csales/1719924758066.png" alt="1719924758066"></p>
+<h3 id="4-找出每组–按区间分组-0-100-100-200-200-总的成交金额"><a href="#4-找出每组–按区间分组-0-100-100-200-200-总的成交金额" class="headerlink" title="4.找出每组–按区间分组[0,100),[100,200),[200,+)  总的成交金额"></a>4.找出每组–按区间分组[0,100),[100,200),[200,+)  总的成交金额</h3><p>mapper</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="string">&quot;[0，100)&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="string">&quot;[100，200)&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">s3</span> <span class="operator">=</span> <span class="string">&quot;[200，+)&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">data</span> <span class="operator">=</span> value.toString();</span><br><span class="line">String[] info = data.split(<span class="string">&quot;,&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(Double.parseDouble(info[<span class="number">2</span>]) &lt; <span class="number">100</span>)data += <span class="string">&quot;,&quot;</span>+s1;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(Double.parseDouble(info[<span class="number">2</span>]) &lt; <span class="number">200</span>)data += <span class="string">&quot;,&quot;</span>+s2;</span><br><span class="line"><span class="keyword">else</span> data += <span class="string">&quot;,&quot;</span>+s3;</span><br><span class="line"></span><br><span class="line">String[] info1 = data.split(<span class="string">&quot;,&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">goodsID</span> <span class="operator">=</span> info1[<span class="number">3</span>];</span><br><span class="line"><span class="type">Double</span> <span class="variable">price</span> <span class="operator">=</span> Double.parseDouble(info1[<span class="number">2</span>]);</span><br><span class="line"></span><br><span class="line">context.write(<span class="keyword">new</span> <span class="title class_">Text</span>(goodsID), <span class="keyword">new</span> <span class="title class_">DoubleWritable</span>(price));</span><br></pre></td></tr></table></figure>
+
+<p>reducer</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Double</span> <span class="variable">sumprice</span> <span class="operator">=</span> <span class="number">0.0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(DoubleWritable v : v3)</span><br><span class="line">&#123;</span><br><span class="line">	sumprice += v.get();</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">String</span> <span class="variable">out</span> <span class="operator">=</span> <span class="string">&quot;按照金额分组总成交金额：  &quot;</span>+ sumprice;</span><br><span class="line">context.write(key, <span class="keyword">new</span> <span class="title class_">Text</span>(out));</span><br></pre></td></tr></table></figure>
+
+<p>出现奇怪数值</p>
+<p><img src="/../../source/images/6.MapReduce%E5%AE%9E%E9%AA%8Csales/1719925148461.png" alt="1719925148461"></p>
+<p>试了几种方法，暂时没解决</p>
+<p>但可控制输出</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">String formattedValue = String.format(&quot;%.2f&quot;, value);</span><br><span class="line"></span><br><span class="line">BigDecimal value = new BigDecimal(&quot;968.3999999999999&quot;);</span><br><span class="line">BigDecimal roundedValue = value.setScale(2, RoundingMode.HALF_UP);</span><br><span class="line">System.out.println(roundedValue);  // 输出: 968.40</span><br><span class="line"></span><br><span class="line">double value = 968.3999999999999;</span><br><span class="line">DecimalFormat df = new DecimalFormat(&quot;#.00&quot;);</span><br><span class="line">String formattedValue = df.format(value);</span><br><span class="line">System.out.println(formattedValue);  // 输出: 968.40</span><br></pre></td></tr></table></figure>
+
+<h2 id="各个城市的职位信息"><a href="#各个城市的职位信息" class="headerlink" title="各个城市的职位信息"></a>各个城市的职位信息</h2><p>关联两个表</p>
+<p><img src="/../../source/images/6.MapReduce%E5%AE%9E%E9%AA%8Csales/1719986210125.png" alt="1719986210125"></p>
+<p>1.多多注意数据类型，确定数据类型后再继承重写能自动匹配类型</p>
+<p>2.Main中设置好输入路径</p>
+<h3 id="Main"><a href="#Main" class="headerlink" title="Main"></a>Main</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">package com.mystudy.hadoopPro;</span><br><span class="line"></span><br><span class="line">import org.apache.hadoop.conf.Configuration;</span><br><span class="line">import org.apache.hadoop.fs.Path;</span><br><span class="line">import org.apache.hadoop.io.IntWritable;</span><br><span class="line">import org.apache.hadoop.io.Text;</span><br><span class="line">import org.apache.hadoop.mapreduce.Job;</span><br><span class="line">import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;</span><br><span class="line">import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;</span><br><span class="line"></span><br><span class="line">public class SalesMain &#123;</span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        if (args.length != 3) &#123;</span><br><span class="line">            System.err.println(&quot;Usage: SalesMain &lt;input path 1&gt; &lt;input path 2&gt; &lt;output path&gt;&quot;);</span><br><span class="line">            System.exit(-1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Configuration conf = new Configuration();</span><br><span class="line">        Job job = Job.getInstance(conf, &quot;Sales Join&quot;);</span><br><span class="line">        job.setJarByClass(SalesMain.class);</span><br><span class="line"></span><br><span class="line">        job.setMapperClass(SalesMapper.class);</span><br><span class="line">        job.setMapOutputKeyClass(IntWritable.class);</span><br><span class="line">        job.setMapOutputValueClass(Text.class);</span><br><span class="line"></span><br><span class="line">        job.setReducerClass(SalesReducer.class);</span><br><span class="line">        job.setOutputKeyClass(Text.class);</span><br><span class="line">        job.setOutputValueClass(Text.class);</span><br><span class="line"></span><br><span class="line">        // 设置输入路径</span><br><span class="line">        FileInputFormat.addInputPath(job, new Path(args[0]));</span><br><span class="line">        FileInputFormat.addInputPath(job, new Path(args[1]));</span><br><span class="line">        // 设置输出路径</span><br><span class="line">        FileOutputFormat.setOutputPath(job, new Path(args[2]));</span><br><span class="line"></span><br><span class="line">        System.exit(job.waitForCompletion(true) ? 0 : 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="mapper"><a href="#mapper" class="headerlink" title="mapper"></a>mapper</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">package com.mystudy.hadoopPro;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import org.apache.hadoop.io.IntWritable;</span><br><span class="line">import org.apache.hadoop.io.LongWritable;</span><br><span class="line">import org.apache.hadoop.io.Text;</span><br><span class="line">import org.apache.hadoop.mapreduce.Mapper;</span><br><span class="line"></span><br><span class="line">public class SalesMapper extends Mapper&lt;LongWritable, Text, IntWritable, Text&gt; &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void map(LongWritable key, Text value, Mapper&lt;LongWritable, Text, IntWritable, Text&gt;.Context context)</span><br><span class="line">            throws IOException, InterruptedException &#123;</span><br><span class="line">        String data = value.toString();    </span><br><span class="line">        </span><br><span class="line">        String[] words = data.split(&quot;,&quot;);</span><br><span class="line">        </span><br><span class="line">        if (words.length == 3) &#123; // id:0  city:2</span><br><span class="line">            context.write(new IntWritable(Integer.parseInt(words[0])), new Text(words[2]));</span><br><span class="line">        &#125; else&#123; // id:7  stuff:2</span><br><span class="line">            context.write(new IntWritable(Integer.parseInt(words[7])), new Text(&quot;*&quot; + words[2]));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="reducer"><a href="#reducer" class="headerlink" title="reducer"></a>reducer</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">package com.mystudy.hadoopPro;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import org.apache.hadoop.io.IntWritable;</span><br><span class="line">import org.apache.hadoop.io.Text;</span><br><span class="line">import org.apache.hadoop.mapreduce.Reducer;</span><br><span class="line"></span><br><span class="line">public class SalesReducer extends Reducer&lt;IntWritable, Text, Text, Text&gt; &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void reduce(IntWritable key, Iterable&lt;Text&gt; values, Reducer&lt;IntWritable, Text, Text, Text&gt;.Context context)</span><br><span class="line">            throws IOException, InterruptedException &#123;</span><br><span class="line">        String stuff = &quot;&quot;;</span><br><span class="line">        String empcity = &quot;&quot;;</span><br><span class="line">        </span><br><span class="line">        for (Text value : values) &#123;</span><br><span class="line">            String city = value.toString();</span><br><span class="line">            int index = city.indexOf(&quot;*&quot;);</span><br><span class="line">            </span><br><span class="line">            if (index &gt;= 0) &#123; // stuff</span><br><span class="line">                stuff = city.substring(1) + &quot;,&quot; + stuff;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                empcity = city;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        context.write(new Text(empcity), new Text(stuff));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../source/images/6.MapReduce%E5%AE%9E%E9%AA%8Csales/1719987114099.png" alt="1719987114099"></p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/hadoop/0.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  0.基本配置
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/hadoop/5.Mapreduce%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%88%86%E5%8C%BA/">
+			  
+			
+				  <!-- 在这里访问 page.next.slug -->
+				  hadoop/5.Mapreduce序列化和分区
+				
+				<i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+
+
+
+
+
+
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+
+	
+	    <a href="/">lucky</a>
+	
+	
+	
+	<br>
+	Email:wuliurong2021nnnu@163.com
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
