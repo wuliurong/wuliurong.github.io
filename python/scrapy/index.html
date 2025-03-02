@@ -1,0 +1,2837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		scrapy | 
+	 
+	hi
+	</title>
+	
+	<!-- keywords,description -->
+	
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">hi</a>
+
+	<ul id="menu">
+    
+
+    
+
+    
+
+    
+      
+      
+        <li class="menu-item">
+          <a href='' class="menu-item-link" target="_blank">
+            
+          </a>
+        </li>
+      
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/wuliurong' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Hive
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Hive/hive-SQL%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92/">
+                     
+										    hive-SQL执行计划
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Hive/hive-YARN%E6%97%A5%E5%BF%97/">
+                     
+										    hive-YARN日志
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Hive/hive-%E4%BC%98%E5%8C%96/">
+                     
+										    hive-优化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Hive/hive-%E5%9F%BA%E7%A1%80/">
+                     
+										    hive-基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Hive/hive-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%A8%A1%E5%BC%8F/">
+                     
+										    hive-数据处理模式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Hive/hive-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/">
+                     
+										    hive-数据存储
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Hive/hive-%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Mapreduce%E8%AE%A1%E7%AE%97%E5%BC%95%E6%93%8E/">
+                     
+										    hive-深入理解Mapreduce计算引擎
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Hive/hive-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+                     
+										    hive-环境搭建
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Hive/hive-%E7%9B%B8%E5%85%B3%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%84%E4%BB%B6/">
+                     
+										    hive-相关大数据组件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Hive/hive-%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E6%80%BB%E7%BB%93/">
+                     
+										    hive-知识体系总结
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Hive/hive-%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5%E5%92%8C%E8%B0%83%E4%BC%98%E6%80%9D%E8%B7%AF/">
+                     
+										    hive-问题排查和调优思路
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Latex
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Latex/latex%E7%BB%8F%E9%AA%8C%E8%AE%B0%E5%BD%95/">
+                     
+										    latex经验记录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Mysql
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Mysql/SQL%E7%BC%96%E7%A8%8B-%E4%BA%8B%E5%8A%A1%E7%BC%96%E7%A8%8B/">
+                     
+										    SQL编程-事务编程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/SQL%E7%BC%96%E7%A8%8B-%E5%88%86%E5%8C%BA/">
+                     
+										    SQL编程-分区
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/SQL%E7%BC%96%E7%A8%8B-%E5%AD%90%E6%9F%A5%E8%AF%A2/">
+                     
+										    SQL编程-子查询
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/SQL%E7%BC%96%E7%A8%8B-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                     
+										    SQL编程-数据类型
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/SQL%E7%BC%96%E7%A8%8B-%E6%9F%A5%E8%AF%A2%E5%A4%84%E7%90%86/">
+                     
+										    SQL编程-查询处理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/SQL%E7%BC%96%E7%A8%8B-%E6%B8%B8%E6%A0%87/">
+                     
+										    SQL编程-游标
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/SQL%E7%BC%96%E7%A8%8B-%E7%B4%A2%E5%BC%95/">
+                     
+										    SQL编程-索引
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/SQL%E7%BC%96%E7%A8%8B-%E8%81%94%E6%8E%A5%E4%B8%8E%E9%9B%86%E5%90%88%E6%93%8D%E4%BD%9C/">
+                     
+										    SQL编程-联接与集合操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/SQL%E7%BC%96%E7%A8%8B-%E8%81%9A%E5%90%88%E5%92%8C%E6%97%8B%E8%BD%AC%E6%93%8D%E4%BD%9C/">
+                     
+										    SQL编程-聚合和旋转操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/SQL%E7%BC%96%E7%A8%8B/">
+                     
+										    SQL编程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/navicate%E6%97%A0%E9%99%90%E4%BD%BF%E7%94%A8/">
+                     
+										    navicate无限使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E4%BC%98%E5%8C%96-IO%E9%97%AE%E9%A2%98/">
+                     
+										    优化-IO问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E4%BC%98%E5%8C%96-SQL%E4%BC%98%E5%8C%96/">
+                     
+										    优化-SQL优化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E4%BC%98%E5%8C%96-%E4%BC%98%E5%8C%96MysqlServer/">
+                     
+										    优化-优化MysqlServer
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E4%BC%98%E5%8C%96-%E4%BC%98%E5%8C%96%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%B9%E8%B1%A1/">
+                     
+										    优化-优化数据库对象
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E4%BC%98%E5%8C%96-%E5%BA%94%E7%94%A8%E4%BC%98%E5%8C%96/">
+                     
+										    优化-应用优化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E4%BC%98%E5%8C%96-%E9%94%81%E9%97%AE%E9%A2%98/">
+                     
+										    优化-锁问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E5%BC%80%E5%8F%91-SQL%E4%B8%AD%E7%9A%84%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/">
+                     
+										    开发-SQL中的安全问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E5%BC%80%E5%8F%91-%E5%85%B6%E4%BB%96%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98/">
+                     
+										    开发-其他注意问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E5%BC%80%E5%8F%91-%E5%9F%BA%E7%A1%80/">
+                     
+										    开发-基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E5%BC%80%E5%8F%91-%E5%AD%97%E7%AC%A6%E9%9B%86/">
+                     
+										    开发-字符集
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E5%BC%80%E5%8F%91-%E5%B8%B8%E7%94%A8SQL%E6%8A%80%E5%B7%A7/">
+                     
+										    开发-常用SQL技巧
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E5%BC%80%E5%8F%91-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9/">
+                     
+										    开发-数据类型选择
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E5%BC%80%E5%8F%91-%E7%B4%A2%E5%BC%95%E8%AE%BE%E8%AE%A1%E5%92%8C%E4%BD%BF%E7%94%A8/">
+                     
+										    开发-索引设计和使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E5%BC%80%E5%8F%91-%E8%A1%A8%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9/">
+                     
+										    开发-表类型选择
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E5%BC%80%E5%8F%91-%E9%94%81%E6%9C%BA%E5%88%B6%E5%92%8C%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/">
+                     
+										    开发-锁机制和事务管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E7%AE%A1%E7%90%86-MysqlCluster/">
+                     
+										    管理-MysqlCluster
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E7%AE%A1%E7%90%86-Mysql%E5%A4%8D%E5%88%B6/">
+                     
+										    管理-Mysql复制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E7%AE%A1%E7%90%86-Mysql%E5%AE%89%E5%85%A8/">
+                     
+										    管理-Mysql安全
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E7%AE%A1%E7%90%86-Oracle%E5%90%91Mysql%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/">
+                     
+										    管理-Oracle向Mysql数据迁移
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E7%AE%A1%E7%90%86-%E5%AE%89%E8%A3%85%E5%8D%87%E7%BA%A7/">
+                     
+										    管理-安装升级
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E7%AE%A1%E7%90%86-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E6%8A%80%E5%B7%A7/">
+                     
+										    管理-常用命令和技巧
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E7%AE%A1%E7%90%86-%E5%BA%94%E6%80%A5%E5%A4%84%E7%90%86/">
+                     
+										    管理-应急处理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E7%AE%A1%E7%90%86-%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8D/">
+                     
+										    管理-数据备份和恢复
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Mysql/%E7%AE%A1%E7%90%86-%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86/">
+                     
+										    管理-日志管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Scala
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-Actors%E5%92%8C%E5%B9%B6%E5%8F%91/">
+                     
+										    Scala-Actors和并发
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-java%E4%BA%A4%E4%BA%92/">
+                     
+										    Scala-java交互
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/">
+                     
+										    Scala-函数式编程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E5%8C%85%E5%92%8C%E5%AF%BC%E5%85%A5/">
+                     
+										    Scala-包和导入
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%BB%E5%8A%A1/">
+                     
+										    Scala-命令行任务
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E5%9F%BA%E7%A1%80/">
+                     
+										    Scala-基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                     
+										    Scala-字符串
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E5%AF%B9%E8%B1%A1/">
+                     
+										    Scala-对象
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E6%83%AF%E7%94%A8%E6%B3%95/">
+                     
+										    Scala-惯用法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/">
+                     
+										    Scala-控制结构
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E6%95%B0%E5%80%BC/">
+                     
+										    Scala-数值
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96/">
+                     
+										    Scala-数据库和持久化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                     
+										    Scala-数据结构
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E6%96%87%E4%BB%B6%E8%BF%9B%E7%A8%8B/">
+                     
+										    Scala-文件进程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E6%96%B9%E6%B3%95/">
+                     
+										    Scala-方法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E7%89%B9%E8%B4%A8/">
+                     
+										    Scala-特质
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E7%B1%BB%E5%92%8C%E5%B1%9E%E6%80%A7/">
+                     
+										    Scala-类和属性
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E7%B1%BB%E5%9E%8B/">
+                     
+										    Scala-类型
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/Scala-%E9%9B%86%E5%90%88/">
+                     
+										    Scala-集合
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Scala/scala/">
+                     
+										    scala
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Spark
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/Spark/SQL-Tungsten%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0/">
+                     
+										    SQL-Tungsten技术实现
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/SQL-join%E5%AE%9E%E7%8E%B0/">
+                     
+										    SQL-join实现
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/SQL-%E5%9F%BA%E7%A1%80/">
+                     
+										    SQL-基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/SQL-%E5%BC%80%E5%8F%91%E4%B8%8E%E5%AE%9E%E8%B7%B5/">
+                     
+										    SQL-开发与实践
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/SQL-%E7%89%A9%E7%90%86%E8%AE%A1%E5%88%92/">
+                     
+										    SQL-物理计划
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/SQL-%E7%BC%96%E8%AF%91%E5%99%A8Parser/">
+                     
+										    SQL-编译器Parser
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/SQL-%E8%BF%9E%E6%8E%A5hive/">
+                     
+										    SQL-连接hive
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/SQL-%E9%80%BB%E8%BE%91%E8%AE%A1%E5%88%92/">
+                     
+										    SQL-逻辑计划
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/Streaming-%E5%85%A5%E9%97%A8-%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%B8%8E%E7%BB%84%E4%BB%B6/">
+                     
+										    Streaming-入门-体系结构与组件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/Streaming-%E5%85%A5%E9%97%A8-%E5%9F%BA%E7%A1%80/">
+                     
+										    Streaming-入门-基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/Streaming-%E5%85%A5%E9%97%A8-%E5%AE%9E%E6%97%B6%E5%A4%84%E7%90%86%E5%88%86%E5%B8%83%E5%BC%8F%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6/">
+                     
+										    Streaming-入门-实时处理分布式日志文件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/Streaming-%E5%85%A5%E9%97%A8-%E5%BA%94%E7%94%A8Transformation/">
+                     
+										    Streaming-入门-应用Transformation
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/Streaming-%E5%85%A5%E9%97%A8-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E6%95%B0%E6%8D%AE%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96/">
+                     
+										    Streaming-入门-日志分析数据的持久化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/Streaming-%E5%85%A5%E9%97%A8-%E9%83%A8%E7%BD%B2%E5%92%8C%E7%9B%91%E5%90%AC/">
+                     
+										    Streaming-入门-部署和监听
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/Streaming-%E5%85%A5%E9%97%A8-%E9%AB%98%E7%BA%A7%E5%BA%93%E9%9B%86%E6%88%90/">
+                     
+										    Streaming-入门-高级库集成
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/centos%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    centos搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/rdd%E4%BD%BF%E7%94%A8/">
+                     
+										    rdd使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/rdd%E7%AC%94%E8%AE%B0/">
+                     
+										    rdd笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/scala%E5%9F%BA%E7%A1%80/">
+                     
+										    scala基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/spark%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                     
+										    spark学习笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/spark%E6%BA%90%E7%A0%81%E5%9F%BA%E7%A1%80/">
+                     
+										    spark源码基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/windows%E6%90%AD%E5%BB%BApyspark%E7%8E%AF%E5%A2%83/">
+                     
+										    windows搭建pyspark环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E4%BD%BF%E7%94%A8IDEA%E5%9C%A8Maven%E4%B8%AD%E5%88%9B%E5%BB%BAjava%E5%92%8Cscala%E9%A1%B9%E7%9B%AE/">
+                     
+										    使用IDEA在Maven中创建java和scala项目
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E5%8E%9F%E7%90%86-Application%E6%8F%90%E4%BA%A4%E7%BB%99%E9%9B%86%E7%BE%A4/">
+                     
+										    原理-Application提交给集群
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E5%8E%9F%E7%90%86-Broadcast%E5%92%8CAccumulator/">
+                     
+										    原理-Broadcast和Accumulator
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E5%8E%9F%E7%90%86-Cache%E5%92%8Ccheckpoint/">
+                     
+										    原理-Cache和checkpoint
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E5%8E%9F%E7%90%86-RDD%E5%92%8CDataSet/">
+                     
+										    原理-RDD和DataSet
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E5%8E%9F%E7%90%86-Shuffle/">
+                     
+										    原理-Shuffle
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E5%8E%9F%E7%90%86-SparkDriver%E5%90%AF%E5%8A%A8/">
+                     
+										    原理-SparkDriver启动
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E5%8E%9F%E7%90%86-job%E5%B7%A5%E4%BD%9C/">
+                     
+										    原理-job工作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E5%8E%9F%E7%90%86-%E5%85%B6%E4%BB%96%E7%BB%84%E4%BB%B6%E6%95%B4%E5%90%88/">
+                     
+										    原理-其他组件整合
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E5%8E%9F%E7%90%86-%E5%9F%BA%E7%A1%80%E5%92%8C%E6%BA%90%E7%A0%81/">
+                     
+										    原理-基础和源码
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E5%8E%9F%E7%90%86-%E9%9B%86%E7%BE%A4%E5%90%AF%E5%8A%A8/">
+                     
+										    原理-集群启动
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E5%9F%BA%E4%BA%8Espark%E7%9A%84%E6%B5%81%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0/">
+                     
+										    基于spark的流处理学习
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E6%A1%88%E4%BE%8B-Dataset%E5%BC%80%E5%8F%91-%E4%BC%81%E4%B8%9A%E4%BA%BA%E5%91%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8/">
+                     
+										    案例-Dataset开发-企业人员管理系统应用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E6%A1%88%E4%BE%8B-Mapper%E5%92%8CReduce%E7%AB%AF%E5%86%85%E5%AD%98%E8%B0%83%E4%BC%98/">
+                     
+										    案例-Mapper和Reduce端内存调优
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E6%A1%88%E4%BE%8B-NBA%E7%AF%AE%E7%90%83%E8%BF%90%E5%8A%A8%E5%91%98%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                     
+										    案例-NBA篮球运动员大数据分析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E6%A1%88%E4%BE%8B-%E4%BD%BF%E7%94%A8Accumulator%E9%AB%98%E6%95%88%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E5%85%A8%E5%B1%80%E8%AE%A1%E6%95%B0%E5%99%A8/">
+                     
+										    案例-使用Accumulator高效实现分布式集群全局计数器
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E6%A1%88%E4%BE%8B-%E4%BD%BF%E7%94%A8Broadcast%E5%AE%9E%E7%8E%B0Mapper%E7%AB%AF%E5%92%8CShuffle%E8%81%9A%E5%90%88%E5%8A%9F%E8%83%BD%E7%9A%84%E8%B0%83%E4%BC%98/">
+                     
+										    案例-使用Broadcast实现Mapper端和Shuffle聚合功能的调优
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E6%A1%88%E4%BE%8B-%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/">
+                     
+										    案例-性能调优
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E6%A1%88%E4%BE%8B-%E6%95%B0%E6%8D%AE%E5%80%BE%E6%96%9C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+                     
+										    案例-数据倾斜解决方案
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E6%A1%88%E4%BE%8B-%E7%94%B5%E5%95%86%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%88%86%E6%9E%90%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8/">
+                     
+										    案例-电商交互式分析系统应用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E6%A1%88%E4%BE%8B-%E7%94%B5%E5%95%86%E5%B9%BF%E5%91%8A%E7%82%B9%E5%87%BB%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%9E%E6%97%B6%E6%B5%81%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F/">
+                     
+										    案例-电商广告点击大数据实时流处理系统
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E6%A1%88%E4%BE%8B-%E7%94%B5%E5%BD%B1%E7%82%B9%E8%AF%84%E7%B3%BB%E7%BB%9F/">
+                     
+										    案例-电影点评系统
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E6%A1%88%E4%BE%8B-%E9%80%9A%E4%BF%A1%E8%BF%90%E8%90%A5%E5%95%86%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/">
+                     
+										    案例-通信运营商生产环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E8%AF%BE%E5%90%8E%E5%B0%8F%E7%BB%93/">
+                     
+										    课后小结
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/Spark/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0%E4%B8%8E%E5%AE%9E%E9%AA%8C/">
+                     
+										    课堂笔记与实验
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hadoop
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/hadoop/0.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+                     
+										    0.基本配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/1.Hadoop%E6%90%AD%E5%BB%BA%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E6%A8%A1%E5%BC%8F%E7%8E%AF%E5%A2%83/">
+                     
+										    1.Hadoop搭建伪分布式模式环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/10.%E8%BF%90%E8%90%A5%E5%95%86%E5%85%B3%E4%BA%8E%E7%94%A8%E6%88%B7%E5%9F%BA%E7%AB%99%E5%81%9C%E7%95%99%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1/">
+                     
+										    10.运营商关于用户基站停留数据统计
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/11.Sqoop%E5%BA%94%E7%94%A8/">
+                     
+										    11.Sqoop应用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/2.%E9%80%9A%E8%BF%87shell%E5%91%BD%E4%BB%A4%E8%AE%BF%E9%97%AEHDFS/">
+                     
+										    2.通过shell命令访问HDFS
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/3.%E9%80%9A%E8%BF%87API%E8%AE%BF%E9%97%AEHDFS/">
+                     
+										    3.通过API访问HDFS
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/4.%E5%88%86%E6%9E%90%E7%BC%96%E5%86%99WordCount%E7%A8%8B%E5%BA%8F/">
+                     
+										    4.分析编写WordCount程序
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/5.Mapreduce%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%88%86%E5%8C%BA/">
+                     
+										    5.Mapreduce序列化和分区
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/6.MapReduce%E5%AE%9E%E9%AA%8Csales/">
+                     
+										    6.MapReduce实验sales
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/7.hive%E5%AE%9E%E9%AA%8C/">
+                     
+										    7.hive实验
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/8.%E6%90%9C%E7%8B%97%E6%97%A5%E5%BF%97%E6%9F%A5%E8%AF%A2%E5%88%86%E6%9E%90MapReduce+hive/">
+                     
+										    8.搜狗日志查询分析MapReduce+hive
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/9.%E5%9F%BA%E4%BA%8EHBase%E7%9A%84MapReduce%E8%AE%A1%E7%AE%97/">
+                     
+										    9.基于HBase的MapReduce计算
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/hadoop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                     
+										    hadoop学习笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/hadoop/%E5%AE%9E%E9%AA%8C-%E5%9F%BA%E4%BA%8Ehadoop%E4%BA%92%E8%81%94%E7%BD%91%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/">
+                     
+										    实验-基于hadoop互联网日志分析实战
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										java
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/java/Jvm/">
+                     
+										    Jvm
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/java/linux/">
+                     
+										    linux
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/linux/%E5%9F%BA%E7%A1%80/">
+                     
+										    基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/python/python-lambda/">
+                     
+										    python-lambda
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/python-pyechart/">
+                     
+										    python-pyechart
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/scrapy-%E4%BD%9C%E4%B8%9A-%E5%BD%93%E5%BD%93%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B9%A6%E7%B1%8D%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90/">
+                     
+										    scrapy-作业-当当网计算机书籍数据挖掘与可视化分析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/scrapy-%E5%9F%BA%E7%A1%80/">
+                     
+										    scrapy-基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/scrapy-%E5%AE%9E%E8%B7%B5/">
+                     
+										    scrapy-实践
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/scrapy-%E6%8A%A5%E9%94%99/">
+                     
+										    scrapy-报错
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/python/scrapy/">
+                     
+										    scrapy
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/scrapy-%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95/">
+                     
+										    scrapy-模拟登录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/scrapy-%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2/">
+                     
+										    scrapy-爬取动态页面
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/python/scrapy-%E7%AC%94%E8%AE%B0/">
+                     
+										    scrapy-笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										tableau
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E4%BD%9C%E4%B8%9A-tableau/">
+                     
+										    作业-tableau
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E4%BB%AA%E8%A1%A8%E6%9D%BF/">
+                     
+										    课件-tableau仪表板
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E5%85%A5%E9%97%A8/">
+                     
+										    课件-tableau入门
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/tableau/%E8%AF%BE%E4%BB%B6-tableau%E7%BB%83%E4%B9%A0/">
+                     
+										    课件-tableau练习
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										其他笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/docker/">
+                     
+										    docker
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/github/">
+                     
+										    github
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/vscode/">
+                     
+										    vscode
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/%E5%9F%BA%E7%A1%80/">
+                     
+										    基础
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/%E9%95%9C%E5%83%8F%E6%BA%90/">
+                     
+										    镜像源
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E5%9C%A8%E6%A0%A1%E7%BB%8F%E5%8E%86/">
+                     
+										    在校经历
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工作相关
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E5%B7%A5%E4%BD%9C%E7%9B%B8%E5%85%B3/%E5%91%BD%E4%BB%A4-%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                     
+										    命令-快捷键
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										报错
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/Adv_Toolbox/">
+                     
+										    Adv_Toolbox
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/Hyper-V/">
+                     
+										    Hyper-V
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/Hyper-V%E6%89%BE%E4%B8%8D%E5%88%B0/">
+                     
+										    Hyper-V找不到
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/github%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5/">
+                     
+										    github基础语句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-deploy/">
+                     
+										    hexo-deploy
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/hexo-typora-img/">
+                     
+										    hexo-typora-img
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/linux%E8%BF%9E%E4%B8%8D%E4%B8%8A%E7%BD%91/">
+                     
+										    linux连不上网
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%8A%A5%E9%94%99/vscode-install-config/">
+                     
+										    vscode-install-config
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据仓库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/%E7%AC%94%E8%AE%B0-%E5%9C%A8%E7%BA%BF%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86/">
+                     
+										    笔记-在线分析处理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/">
+                     
+										    笔记-应用场景
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/%E7%AC%94%E8%AE%B0-%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/">
+                     
+										    笔记-数据仓库
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/%E7%AC%94%E8%AE%B0-%E6%A6%82%E8%BF%B0/">
+                     
+										    笔记-概述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/%E7%AC%94%E8%AE%B0-%E7%BB%B4%E5%BA%A6%E5%BB%BA%E6%A8%A1/">
+                     
+										    笔记-维度建模
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据可视化
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%8F%AF%E8%A7%86%E5%8C%96-Matplotlib/">
+                     
+										    可视化-Matplotlib
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%8F%AF%E8%A7%86%E5%8C%96-Numpy/">
+                     
+										    可视化-Numpy
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%8F%AF%E8%A7%86%E5%8C%96-Pandas/">
+                     
+										    可视化-Pandas
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%8F%AF%E8%A7%86%E5%8C%96-Seaborn/">
+                     
+										    可视化-Seaborn
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%8F%AF%E8%A7%86%E5%8C%96-%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1/">
+                     
+										    可视化-交互设计
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE/">
+                     
+										    可视化-关系数据
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%90%84%E9%A2%86%E5%9F%9F%E5%BA%94%E7%94%A8/">
+                     
+										    可视化-各领域应用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE/">
+                     
+										    可视化-复杂数据
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%8F%AF%E8%A7%86%E5%8C%96-%E6%96%87%E6%9C%AC%E6%95%B0%E6%8D%AE/">
+                     
+										    可视化-文本数据
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%8F%AF%E8%A7%86%E5%8C%96-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">
+                     
+										    可视化-时间数据
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%8F%AF%E8%A7%86%E5%8C%96-%E6%A6%82%E8%BF%B0/">
+                     
+										    可视化-概述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%8F%AF%E8%A7%86%E5%8C%96-%E6%AF%94%E4%BE%8B%E6%95%B0%E6%8D%AE/">
+                     
+										    可视化-比例数据
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据挖掘
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-pandas/">
+                     
+										    数据挖掘-pandas
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4/">
+                     
+										    数据挖掘-关联规则协同过滤
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95/">
+                     
+										    数据挖掘-分类算法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95/">
+                     
+										    数据挖掘-回归算法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                     
+										    数据挖掘-图像数据分析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/">
+                     
+										    数据挖掘-无监督学习
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                     
+										    数据挖掘-机器学习
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E6%A6%82%E8%BF%B0/">
+                     
+										    数据挖掘-概述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E4%B8%8ENLTK/">
+                     
+										    数据挖掘-自然语言处理与NLTK
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										日记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2022-12-24/">
+                     
+										    2022-12-24
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-13/">
+                     
+										    2024-1-13
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-17/">
+                     
+										    2024-1-17
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-1-19/">
+                     
+										    2024-1-19
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E6%97%A5%E8%AE%B0/2024-2-15/">
+                     
+										    2024-2-15
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										科研经历
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E7%A7%91%E7%A0%94%E7%BB%8F%E5%8E%86/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%B8%AD%E7%9A%84%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC%E9%97%AE%E9%A2%98/">
+                     
+										    图像分类中的对抗样本问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										项目实践
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/%E9%87%87%E9%9B%86-DataX%E7%9A%84%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86%E5%92%8C%E4%BC%98%E5%8C%96/">
+                     
+										    采集-DataX的执行原理和优化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/%E9%87%87%E9%9B%86-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                     
+										    采集-基础知识
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/%E9%87%87%E9%9B%86-%E6%97%A5%E5%BF%97%E6%95%B0%E6%8D%AE%E6%B5%81%E8%BD%AC%E8%BF%87%E7%A8%8B/">
+                     
+										    采集-日志数据流转过程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/%E9%87%87%E9%9B%86-%E6%97%A5%E5%BF%97%E6%95%B0%E6%8D%AE%E7%9A%84%E9%9B%B6%E7%82%B9%E6%BC%82%E7%A7%BB%E9%97%AE%E9%A2%98/">
+                     
+										    采集-日志数据的零点漂移问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content" class="content">
+		<h1 id="article-title">
+	scrapy
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>lucky</span>
+	<span>2024-08-05 15:04:46</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<p>官方文档：<a target="_blank" rel="noopener" href="https://doc.scrapy.org/en/latest/topics/selectors.html">https://doc.scrapy.org/en/latest/topics/selectors.html</a></p>
+<h1 id="scrapy基础-UR2IM"><a href="#scrapy基础-UR2IM" class="headerlink" title="scrapy基础-UR2IM"></a>scrapy基础-UR2IM</h1><h2 id="xpath表达式"><a href="#xpath表达式" class="headerlink" title="xpath表达式"></a>xpath表达式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">title</span><br><span class="line">//*[@itemprop=&quot;name&quot;][1]/text()示例值：[u&#x27;set unique family well&#x27;]</span><br><span class="line"></span><br><span class="line">price</span><br><span class="line">//*[@itemprop=&quot;price&quot;][1]/text()示例值（使用re()）：[u&#x27;334.39&#x27;]</span><br><span class="line"></span><br><span class="line">description</span><br><span class="line">//*[@itemprop=&quot;description&quot;][1]/text()示例值：[u&#x27;website court warehouse\r\npool...&#x27;]</span><br><span class="line">/*[@itemtype=&quot;http://schema.org/Place&quot;][1]/text()示例值：[u&#x27;Angel, London&#x27;]</span><br><span class="line"></span><br><span class="line">image_urls</span><br><span class="line">//*[@itemprop=&quot;image&quot;][1]/@src示例值：[u&#x27;../images/i01.jpg&#x27;]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="基础项目"><a href="#基础项目" class="headerlink" title="基础项目"></a>基础项目</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scrapy  startproject  properties</span><br><span class="line">cd  properties  </span><br><span class="line">tree</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="爬虫基础"><a href="#爬虫基础" class="headerlink" title="爬虫基础"></a>爬虫基础</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo  hello  world</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="常见示例"><a href="#常见示例" class="headerlink" title="常见示例"></a>常见示例</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">获取id为&quot;firstHeading&quot;的h1标签下span中的text。</span><br><span class="line">//h1[@id=&quot;firstHeading&quot;]/span/text()</span><br><span class="line"></span><br><span class="line">获取id为&quot;toc&quot;的div标签内的无序列表（ul）中所有链接URL。</span><br><span class="line">//div[@id=&quot;toc&quot;]/ul//a/@href</span><br><span class="line"></span><br><span class="line">获取class属性包含&quot;ltr&quot;以及class属性包含&quot;skin-vector&quot;的任意元素内所有标题元素（h1）中的文本。这两个字符串可能在同一个class中，也可能在不同的class中。</span><br><span class="line">//*[contains(@class,&quot;ltr&quot;)  and  contains(@class,&quot;skin-vector&quot;)]//h1//text()</span><br><span class="line"></span><br><span class="line">选择class属性值为&quot;infobox&quot;的表格中第一张图片的URL</span><br><span class="line">//table[@class=&quot;infobox&quot;]//img[1]/@src</span><br><span class="line"></span><br><span class="line">选择class属性以&quot;reflist&quot;开头的div标签中所有链接的URL。</span><br><span class="line">//div[starts-with(@class,&quot;reflist&quot;)]//a/@href</span><br><span class="line"></span><br><span class="line">选择子元素包含文本&quot;References&quot;的元素之后的div元素中所有链接的URL。</span><br><span class="line">//*[text()=&quot;References&quot;]/../following-sibling::div//a</span><br><span class="line"></span><br><span class="line">获取页面中每张图片的URL。</span><br><span class="line">//img/@src</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="scrapy实践"><a href="#scrapy实践" class="headerlink" title="scrapy实践"></a>scrapy实践</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">scrapy  shell  http://example.com</span><br><span class="line"></span><br><span class="line">//xpath()css()返回了网页内容预加载的Selector对象返回选择器,extract()或re()方法的时候，才会得到真实的文本数组</span><br><span class="line">response.xpath(&#x27;/html&#x27;).extract()</span><br><span class="line"></span><br><span class="line">//-s是配置 --set，USER_AGENT模拟浏览器</span><br><span class="line">scrapy  shell  -s  USER_AGENT=&quot;Mozilla/5.0&quot;  http://www.gumtree.com</span><br><span class="line"></span><br><span class="line">//在请求处理过程中遇到任何异常，Scrapy 会自动启动 pdb 调试器，让你可以即时检查和调试代码</span><br><span class="line">scrapy  shell  --pdb  https://gumtree.com</span><br><span class="line"></span><br><span class="line">//正则表达式，只选择数字和点号</span><br><span class="line">response.xpath(&#x27;//*[@itemprop=&quot;price&quot;][1]/text()&#x27;).re(&#x27;[.0-9]+&#x27;)</span><br><span class="line"></span><br><span class="line">//组合使用</span><br><span class="line">response.css(&#x27;.ad-price&#x27;).xpath(&#x27;text()&#x27;).re(&#x27;[.0-9]+&#x27;)</span><br><span class="line"></span><br><span class="line">//创建爬虫spiders目录中增加了一个新文件basic.py</span><br><span class="line">scrapy  genspider  basic  web</span><br><span class="line"></span><br><span class="line">//使用模板</span><br><span class="line">通过输入scrapy genspider-l来查看其他可用的模板，然后在执行scrapy genspider时，通过-t参数，使用任意其他模板创建爬虫</span><br><span class="line"></span><br><span class="line">//运行整个爬虫获取数据</span><br><span class="line">scrapy  crawl  basic</span><br><span class="line">//使用“最合适”的爬虫来解析参数中给定的任意URL,无需启动整个爬虫即可检查特定的数据提取规则</span><br><span class="line">scrapy  parse  --spider=basic  http://web:9312/properties/property_000001.html</span><br><span class="line"></span><br><span class="line">//保存为不同文件</span><br><span class="line">scrapy  crawl  basic  -o  items.csv</span><br><span class="line">scrapy  crawl  basic  -o  items.xml</span><br><span class="line"></span><br><span class="line">//将爬取数据上传到到FTP或S3存储桶中</span><br><span class="line">scrapy  crawl  basic  -o  &quot;ftp://user:pass@ftp.scrapybook.com/items.json  &quot;</span><br><span class="line">scrapy  crawl  basic  -o  &quot;s3://aws_key:aws_secret@scrapybook/items.json&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="item"><a href="#item" class="headerlink" title="item"></a>item</h2><h3 id="普通写法"><a href="#普通写法" class="headerlink" title="普通写法"></a>普通写法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span>  <span class="title function_">parse</span>(<span class="params">self,  response</span>):　　　　</span><br><span class="line">    item  =  PropertiesItem()　　　　</span><br><span class="line">    item[<span class="string">&#x27;title&#x27;</span>]  =  response.xpath(　　　　　　<span class="string">&#x27;//*[@itemprop=&quot;name&quot;][1]/text()&#x27;</span>).extract()　　　　</span><br><span class="line">    item[<span class="string">&#x27;price&#x27;</span>]  =  response.xpath(　　　　　　<span class="string">&#x27;//*[@itemprop=&quot;price&quot;][1]/text()&#x27;</span>).re(<span class="string">&#x27;[.0-9]+&#x27;</span>)　　　　</span><br><span class="line">    item[<span class="string">&#x27;description&#x27;</span>]  =  response.xpath(　　　　　　<span class="string">&#x27;//*[@itemprop=&quot;description&quot;][1]/text()&#x27;</span>).extract()</span><br></pre></td></tr></table></figure>
+
+<h3 id="item装载器与管理字段ItemLoader"><a href="#item装载器与管理字段ItemLoader" class="headerlink" title="item装载器与管理字段ItemLoader"></a>item装载器与管理字段ItemLoader</h3><p>提供了许多有趣的结合数据及对数据进行格式化和清洗的方式，此类功能的开发非常活跃</p>
+<p><a target="_blank" rel="noopener" href="http://doc.scrapy.org/en/latest/topics/loaders.html">http://doc.scrapy.org/en/latest/topics/loaders.html</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span>  <span class="title function_">parse</span>(<span class="params">self,  response</span>):　　</span><br><span class="line">    l  =  ItemLoader(item=PropertiesItem(),  response=response)　　</span><br><span class="line">    l.add_xpath(<span class="string">&#x27;title&#x27;</span>,  <span class="string">&#x27;//*[@itemprop=&quot;name&quot;][1]/text()&#x27;</span>)　　</span><br><span class="line">    l.add_xpath(<span class="string">&#x27;price&#x27;</span>,  <span class="string">&#x27;.//*[@itemprop=&quot;price&quot;]&#x27;</span>　　　　　  <span class="string">&#x27;[1]/text()&#x27;</span>,  re=<span class="string">&#x27;[,.0-9]+&#x27;</span>)　　</span><br><span class="line">    l.add_xpath(<span class="string">&#x27;description&#x27;</span>,  <span class="string">&#x27;//*[@itemprop=&quot;description&quot;]&#x27;</span>　　　　　  <span class="string">&#x27;[1]/text()&#x27;</span>)　　</span><br><span class="line">    l.add_xpath(<span class="string">&#x27;address&#x27;</span>,  <span class="string">&#x27;//*[@itemtype=&#x27;</span>　　　　　  <span class="string">&#x27;&quot;http://schema.org/Place&quot;][1]/text()&#x27;</span>)　</span><br><span class="line">    l.add_xpath(<span class="string">&#x27;image_urls&#x27;</span>,  <span class="string">&#x27;//*[@itemprop=&quot;image&quot;][1]/@src&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="处理器-函数"><a href="#处理器-函数" class="headerlink" title="处理器-函数"></a>处理器-函数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">from  scrapy.loader.processors  import  MapCompose,  Join</span><br><span class="line"></span><br><span class="line">Join()</span><br><span class="line">把多个结果连接在一起  </span><br><span class="line"></span><br><span class="line">apCompose(unicode.strip)</span><br><span class="line">去除首尾的空白符  </span><br><span class="line"></span><br><span class="line">MapCompose(unicode.strip,unicode. title)去除首尾的空白符  </span><br><span class="line">与  MapCompose(unicode.strip)相同，但结果会按照标题格式</span><br><span class="line"></span><br><span class="line">MapCompose(float)</span><br><span class="line">将字符串转为数值  </span><br><span class="line"></span><br><span class="line">MapCompose(lambda i: i.replace(&#x27;,&#x27;, &#x27;&#x27;), float)</span><br><span class="line">将字符串转为数值，并忽略可能存在的&#x27;,&#x27;字符  </span><br><span class="line"></span><br><span class="line">MapCompose(lambda i: urlparse.urljoin (response.url, i))</span><br><span class="line">以  response.url为基础，将URL相对路径转换为URL绝对路径</span><br></pre></td></tr></table></figure>
+
+<h2 id="add-value"><a href="#add-value" class="headerlink" title="add_value()"></a>add_value()</h2><p>添加Python计算得出的单个值（而不是XPath&#x2F;CSS表达式）</p>
+<p>我们可以用该方法设置“管理字段”，比如URL、爬虫名称、时间戳等</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">l.add_value(<span class="string">&#x27;url&#x27;</span>,  response.url)</span><br><span class="line">l.add_value(<span class="string">&#x27;project&#x27;</span>,  self.settings.get(<span class="string">&#x27;BOT_NAME&#x27;</span>))</span><br><span class="line">l.add_value(<span class="string">&#x27;spider&#x27;</span>,  self.name)</span><br><span class="line">l.add_value(<span class="string">&#x27;server&#x27;</span>,  socket.gethostname())</span><br><span class="line">l.add_value(<span class="string">&#x27;date&#x27;</span>,  datetime.datetime.now())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="contract"><a href="#contract" class="headerlink" title="contract"></a>contract</h2><p>像为爬虫设计的单元测试。它可以让你快速知道哪里有运行异常</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy  check  basic</span><br></pre></td></tr></table></figure>
+
+<h2 id="抽取更多的URL"><a href="#抽取更多的URL" class="headerlink" title="抽取更多的URL"></a>抽取更多的URL</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">start_urls  =  [i.strip()  for  i  inopen(&#x27;todo.urls.txt&#x27;).readlines()]</span><br><span class="line"></span><br><span class="line">//水平爬取</span><br><span class="line">scrapy  shell  http://web:9312/properties/index_00000.html</span><br><span class="line">urls  =  response.xpath(&#x27;//*[contains(@class,&quot;next&quot;)]//@href&#x27;).extract()</span><br><span class="line">import  urlparse</span><br><span class="line">[urlparse.urljoin(response.url,  i)  for  i  in  urls]</span><br><span class="line">//垂直爬取</span><br><span class="line">urls  =  response.xpath(&#x27;//*[@itemprop=&quot;url&quot;]/@href&#x27;).extract()</span><br><span class="line">len(urls)</span><br><span class="line">[urlparse.urljoin(response.url,  i)  for  i  in  urls]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用爬虫实现双向爬取"><a href="#使用爬虫实现双向爬取" class="headerlink" title="使用爬虫实现双向爬取"></a>使用爬虫实现双向爬取</h2><p>将之前的爬虫拷贝到一个新文件中，并命名为manual.py</p>
+<p>添加from scrapy.http import Request语句引入Request模块</p>
+<p>将爬虫的name参数改为’manual’，修改start_urls以使用第一个索引页，并将parse()方法重命名为parse_item()</p>
+<p>编写一个新的parse()方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scrapy.http <span class="keyword">import</span> Request</span><br><span class="line"><span class="keyword">def</span>  <span class="title function_">parse</span>(<span class="params">self,  response</span>):　　</span><br><span class="line">    <span class="comment">#  Get  the  next  index  URLs  and  yield  Requests　　</span></span><br><span class="line">    next_selector  =  response.xpath(<span class="string">&#x27;//*[contains(@class,&#x27;</span> <span class="string">&#x27;&quot;next&quot;)]//@href&#x27;</span>)　</span><br><span class="line">    <span class="keyword">for</span>  url  <span class="keyword">in</span>  next_selector.extract():</span><br><span class="line">        <span class="keyword">yield</span>  Request(urlparse.urljoin(response.url,  url))　　</span><br><span class="line">    <span class="comment">#  Get  item  URLs  and  yield  Requests　　</span></span><br><span class="line">    item_selector  =  response.xpath(<span class="string">&#x27;//*[@itemprop=&quot;url&quot;]/@href&#x27;</span>)　　</span><br><span class="line">    <span class="keyword">for</span>  url  <span class="keyword">in</span>  item_selector.extract():　　　　</span><br><span class="line">        <span class="keyword">yield</span>  Request(urlparse.urljoin(response.url,  url), callback=self.parse_item)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>避免运行时间过长，可以通过命令行参数：-s CLOSESPIDER_ITEMCOUNT&#x3D;90，告知爬虫在爬取指定数量（如90个）的Item后停止运行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy  crawl  manual  -s  CLOSESPIDER_ITEMCOUNT=<span class="number">90</span></span><br></pre></td></tr></table></figure>
+
+<p>需要多次执行同一个URL的请求，可以设置dont_filter_Request()参数为true。</p>
+<p>大于0表示高于默认的优先级，小于0表示低于默认的优先级</p>
+<h2 id="使用CrawlSpider实现双向爬取"><a href="#使用CrawlSpider实现双向爬取" class="headerlink" title="使用CrawlSpider实现双向爬取"></a>使用CrawlSpider实现双向爬取</h2><p>使用genspider命令，并设置-t crawl以使用crawl爬虫模板创建一个爬虫</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">scrapy  genspider  -t  crawl  easy  web</span><br><span class="line">//properties/spiders/easy.py</span><br><span class="line">//爬虫是继承自CrawlSpider,提供了一个使用rules变量实现的parse()</span><br><span class="line"><span class="keyword">class</span>  <span class="title class_">EasySpider</span>(<span class="title class_ inherited__">CrawlSpider</span>):　　</span><br><span class="line">    name  =  <span class="string">&#x27;easy&#x27;</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">//LinkExtractor专门用于抽取链接的,将预定义的rules变量替换为两条规则，即水平抓取和垂直抓取</span><br><span class="line">rules  =  (</span><br><span class="line">    Rule(LinkExtractor(restrict_xpaths=<span class="string">&#x27;//*[contains(@class,&quot;next&quot;)]&#x27;</span>)),</span><br><span class="line">    Rule(LinkExtractor(restrict_xpaths=<span class="string">&#x27;//*[@itemprop=&quot;url&quot;]&#x27;</span>),　</span><br><span class="line">	callback=<span class="string">&#x27;parse_item&#x27;</span>))</span><br><span class="line"></span><br><span class="line">scrapy  crawl  easy  -s  CLOSESPIDER_ITEMCOUNT=<span class="number">90</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>除非设置了callback参数，否则Rule将跟踪已经抽取的URL，也就是说它将会扫描目标页面以获取额外的链接并跟踪它们。</p>
+<p>如果设置了callback，Rule将不会跟踪目标页面的链接。如果你希望它跟踪链接，应当在callback方法中使用return或yield返回它们，或者将Rule()的follow参数设置为true。</p>
+<p>当你的房源页既包含Item又包含其他有用的导航链接时，该功能可能会非常有用</p>
+<h2 id="1-需要登录的爬虫"><a href="#1-需要登录的爬虫" class="headerlink" title="1.需要登录的爬虫"></a>1.需要登录的爬虫</h2><h3 id="FormRequest发送登录的初始请求"><a href="#FormRequest发送登录的初始请求" class="headerlink" title="FormRequest发送登录的初始请求"></a>FormRequest发送登录的初始请求</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span>  scrapy.http  <span class="keyword">import</span>  FormRequest</span><br><span class="line">//将start_urls语句替换为start_requests()</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span>  <span class="title class_">LoginSpider</span>(<span class="title class_ inherited__">CrawlSpider</span>):</span><br><span class="line">    <span class="comment">#  Start  with  a  login  requestdef  </span></span><br><span class="line">    start_requests(self):　</span><br><span class="line">        <span class="keyword">return</span>[　　</span><br><span class="line">            FormRequest(<span class="string">&quot;http://web:9312/dynamic/login&quot;</span>, </span><br><span class="line">                        formdata=&#123;<span class="string">&quot;user&quot;</span>:  <span class="string">&quot;user&quot;</span>,  <span class="string">&quot;pass&quot;</span>:  <span class="string">&quot;pass&quot;</span>&#125; )]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scrapy  crawl  login</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="复杂机制（NonceLoginSpider）"><a href="#复杂机制（NonceLoginSpider）" class="headerlink" title="复杂机制（NonceLoginSpider）"></a>复杂机制（NonceLoginSpider）</h3><p>要求你在执行POST请求时，将表单页中的某些表单变量传输到登录页，以便确认Cookie是启用的</p>
+<p><img src="/../../source/images/scrapy/1722865466066.png" alt="1722865466066"></p>
+<p>除非你既传输了正确的用户名&#x2F;密码，又提交了服务端在你访问该登录页时给你的nonce值，否则登录不会成功。你无法猜测该值，因为它通常是随机且一次性的。这就表示要想成功登录，现在就需要请求两次了。你必须先访问表单页，然后再访问登录页传输数据。当然，Scrapy同样拥有内置函数可以帮助我们实现这一目的。</p>
+<p>在start_requests()中，将返回一个简单的Request（不要忘记引入该模块）到表单页面中，并通过设置其callback属性为处理方法parse_welcome()手动处理响应。在parse_welcome()中，使用了FormRequest对象的辅助方法from_response()，以创建从原始表单中预填充所有字段和值的FormRequest对象。FormRequest.from_response()粗略模拟了一次在页面的第一个表单上的提交单击，此时所有字段留空</p>
+<p>熟悉from_response()的文档，formname和formnumber可以帮助你在拥有多个表单的页面上选择其中某个表单</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  Start  on  the  welcome  page</span></span><br><span class="line"><span class="keyword">def</span>  <span class="title function_">start_requests</span>(<span class="params">self</span>):　　</span><br><span class="line">    <span class="keyword">return</span>  [Request(</span><br><span class="line">                    <span class="string">&quot;http://web:9312/dynamic/nonce&quot;</span>,</span><br><span class="line">                     callback=self.parse_welcome)</span><br><span class="line">    ]</span><br><span class="line"><span class="comment">#  Post  welcome  page&#x27;s  first  form  with  the  given  user/pass</span></span><br><span class="line"><span class="keyword">def</span>  <span class="title function_">parse_welcome</span>(<span class="params">self,  response</span>):　　</span><br><span class="line">    <span class="keyword">return</span>  FormRequest.from_response(response,formdata=&#123;<span class="string">&quot;user&quot;</span>:  <span class="string">&quot;user&quot;</span>,  <span class="string">&quot;pass&quot;</span>:  <span class="string">&quot;pass&quot;</span>&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scrapy  crawl  noncelogin</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-使用JSON-API和AJAX页面的爬虫"><a href="#2-使用JSON-API和AJAX页面的爬虫" class="headerlink" title="2.使用JSON API和AJAX页面的爬虫"></a>2.使用JSON API和AJAX页面的爬虫</h2><h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">//json.loads(response.body)解析JSON，将其转换为由Python原语、列表和字典组成的等效Python对象。</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span>  <span class="title function_">parse</span>(<span class="params">self,  response</span>):　　</span><br><span class="line">    base_url  =  <span class="string">&quot;http://web:9312/properties/&quot;</span>　　</span><br><span class="line">    js  =  json.loads(response.body)　　</span><br><span class="line">    <span class="keyword">for</span>  item  <span class="keyword">in</span>  js:</span><br><span class="line">        <span class="built_in">id</span>  =  item[<span class="string">&quot;id&quot;</span>]</span><br><span class="line">        url  =  base_url  +  <span class="string">&quot;property_%06d.html&quot;</span>  %  <span class="built_in">id</span></span><br><span class="line">        <span class="keyword">yield</span>  Request(url,  callback=self.parse_item)</span><br><span class="line">//JSON对象解析为Python列表，然后迭代该列表</span><br><span class="line">//%06d将会被变量<span class="built_in">id</span>的值替换（本行结尾处%后面的变量）。<span class="built_in">id</span>将会被视为数字（%d表示视为数字），并且如果不满<span class="number">6</span>位，则会在前面加上<span class="number">0</span>，扩展成<span class="number">6</span>位字符。比如，<span class="built_in">id</span>值为<span class="number">5</span>，%06d将会被替换为000005</span><br><span class="line"></span><br><span class="line">scrapy  crawl  api</span><br></pre></td></tr></table></figure>
+
+<h4 id="在响应间传参"><a href="#在响应间传参" class="headerlink" title="在响应间传参"></a>在响应间传参</h4><p>JSON API会在给定房产信息的标题前面加上”better”。比如，房产标题是”Covent Garden”，API就会将标题写为”Better Covent Garden”。假设我们<strong>想要将这些”better”开头的标题存储到Items中</strong>，要如何将信息从parse()方法<strong>传递到parse_item()<strong>方法呢？<br>不要感到惊讶，通过在parse()生成的Request中设置一些东西，就能实现该功能。之后，可以从parse_item()接收到的Response中取得这些信息。</strong>Request</strong>有一个名为<strong>meta的字典</strong>，能够<strong>直接访问Response</strong>。比如在我们的例子中，可以在该字典中设置标题值，以存储来自JSON对象的标题</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title  =  item[<span class="string">&quot;title&quot;</span>]</span><br><span class="line"><span class="keyword">yield</span>  Request(url,  meta=&#123;<span class="string">&quot;title&quot;</span>:title&#125;,callback=self.parse_item)</span><br><span class="line"></span><br><span class="line">//在parse_item()内部，可以使用该值替代之前使用过的XPath表达式</span><br><span class="line">l.add_value(<span class="string">&#x27;title&#x27;</span>,  response.meta[<span class="string">&#x27;title&#x27;</span>],MapCompose(unicode.strip,  unicode.title))</span><br><span class="line"></span><br><span class="line">scrapy crawl</span><br></pre></td></tr></table></figure>
+
+<h3 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h3><h2 id="3-30倍速的房产爬虫"><a href="#3-30倍速的房产爬虫" class="headerlink" title="3.30倍速的房产爬虫"></a>3.30倍速的房产爬虫</h2><p>抓取一个索引页，就能抽取其中的30个条目以及前往下一页的链接</p>
+<p>在真实的Gumtree网站中，索引页的描述信息要比列表页中完整的描述信息稍短一些</p>
+<p>ItemLoader现在使用selector作为源，而不再是Response。</p>
+<p>这是ItemLoaderAPI一个非常便捷的功能，能够让我们从当前选取的部分（而不是整个页面）抽取数据。</p>
+<p>XPath表达式通过使用前缀点号（.）转为相对XPath。抽取出房源的URL，然后使用MapCompose处理器将其转换为绝对URL</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">parse</span>(<span class="params">self, response</span>):</span><br><span class="line">    <span class="comment">#  Get  the  next  index  URLs  and  yield  Requests　　</span></span><br><span class="line">    next_sel = response.xpath(<span class="string">&#x27;//*[contains(@class,&quot;next&quot;)]//@href&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> url <span class="keyword">in</span> next_sel.extract():</span><br><span class="line">        <span class="keyword">yield</span> Request(urlparse.urljoin(response.url, url))</span><br><span class="line">    <span class="comment">#  Iterate  through  products  and  create  PropertiesItems</span></span><br><span class="line">    selectors = response.xpath(<span class="string">&#x27;//*[@itemtype=&quot;http://schema.org/Product&quot;]&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> selector <span class="keyword">in</span> selectors:</span><br><span class="line">        <span class="keyword">yield</span> self.parse_item(selector, response)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">parse_item</span>(<span class="params">self, selector, response</span>):</span><br><span class="line">    <span class="comment">#  Create  the  loader  using  the  selector　　</span></span><br><span class="line">    l = ItemLoader(item=PropertiesItem(), selector=selector)</span><br><span class="line">    <span class="comment">#  Load  fields  using  XPath  expressions　　</span></span><br><span class="line">    l.add_xpath(<span class="string">&#x27;title&#x27;</span>, <span class="string">&#x27;.//*[@itemprop=&quot;name&quot;][1]/text()&#x27;</span>, MapCompose(unicode.strip, unicode.title))</span><br><span class="line">    l.add_xpath(<span class="string">&#x27;price&#x27;</span>, <span class="string">&#x27;.//*[@itemprop=&quot;price&quot;][1]/text()&#x27;</span>,</span><br><span class="line">                MapCompose(<span class="keyword">lambda</span> i: i.replace(<span class="string">&#x27;,&#x27;</span>, <span class="string">&#x27;&#x27;</span>), <span class="built_in">float</span>),re = <span class="string">&#x27;[,.0-9]+&#x27;</span>)</span><br><span class="line">    l.add_xpath(<span class="string">&#x27;description&#x27;</span>, <span class="string">&#x27;.//*[@itemprop=&quot;description&quot;][1]/text()&#x27;</span>, MapCompose(unicode.strip), Join())</span><br><span class="line">    l.add_xpath(<span class="string">&#x27;address&#x27;</span>, <span class="string">&#x27;.//*[@itemtype=&quot;http://schema.org/Place&quot;]&#x27;</span><span class="string">&#x27;[1]/*/text()&#x27;</span>,</span><br><span class="line">                MapCompose(unicode.strip))　　make_url = <span class="keyword">lambda</span> i: urlparse.urljoin(response.url, i)</span><br><span class="line">    l.add_xpath(<span class="string">&#x27;image_urls&#x27;</span>, <span class="string">&#x27;.//*[@itemprop=&quot;image&quot;][1]/@src&#x27;</span>, MapCompose(make_url))</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#  Housekeeping  fields　　</span></span><br><span class="line">    l.add_xpath(<span class="string">&#x27;url&#x27;</span>, <span class="string">&#x27;.//*[@itemprop=&quot;url&quot;][1]/@href&#x27;</span>,MapCompose(make_url))</span><br><span class="line">    l.add_value(<span class="string">&#x27;project&#x27;</span>,  self.settings.get(<span class="string">&#x27;BOT_NAME&#x27;</span>))</span><br><span class="line">    l.add_value(<span class="string">&#x27;spider&#x27;</span>,  self.name)</span><br><span class="line">    l.add_value(<span class="string">&#x27;server&#x27;</span>,  socket.gethostname())</span><br><span class="line">    l.add_value(<span class="string">&#x27;date&#x27;</span>,  datetime.datetime.now())</span><br><span class="line">    <span class="keyword">return</span>  l.load_item()</span><br><span class="line"></span><br><span class="line">scrapy  crawl  fast  -s  CLOSESPIDER_PAGECOUNT=<span class="number">3</span></span><br><span class="line"></span><br><span class="line">//使用scrapy parse进行调试</span><br><span class="line">scrapy  parse  --spider=fast  http://web:<span class="number">9312</span>/properties/index_00000.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-基于Excel文件爬取的爬虫"><a href="#4-基于Excel文件爬取的爬虫" class="headerlink" title="4.基于Excel文件爬取的爬虫"></a>4.基于Excel文件爬取的爬虫</h2><p>只使用一个爬虫来爬取所有这些网站</p>
+<p><img src="/../../source/images/scrapy/1722868904099.png" alt="1722868904099"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>  csv</span><br><span class="line"><span class="keyword">with</span>  <span class="built_in">open</span>(<span class="string">&quot;todo.csv&quot;</span>,  <span class="string">&quot;rU&quot;</span>)  <span class="keyword">as</span>  f:　　　　</span><br><span class="line">    reader  =  csv.DictReader(f)　　　　</span><br><span class="line">    <span class="keyword">for</span>  line  <span class="keyword">in</span>  reader:　　　　　　</span><br><span class="line">        <span class="built_in">print</span>  line</span><br><span class="line">//文件中的第一行会被自动作为标题行处理 并且会根据它们得出字典中键的名称  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span>  csvimport  scrapyfrom  scrapy.http  </span><br><span class="line"><span class="keyword">import</span>  Requestfrom  scrapy.loader  </span><br><span class="line"><span class="keyword">import</span>  ItemLoaderfrom  scrapy.item  </span><br><span class="line"><span class="keyword">import</span>  Item,  Field</span><br><span class="line"><span class="keyword">class</span>  <span class="title class_">FromcsvSpider</span>(scrapy.Spider):　　</span><br><span class="line">    name  =  <span class="string">&quot;fromcsv&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">start_requests</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="built_in">getattr</span>(self,  <span class="string">&quot;file&quot;</span>,  <span class="string">&quot;todo.csv&quot;</span>),  <span class="string">&quot;rU&quot;</span>) <span class="keyword">as</span> f:  </span><br><span class="line">            reader = csv.DictReader(f)</span><br><span class="line">            <span class="keyword">for</span> line <span class="keyword">in</span> reader:</span><br><span class="line">                request = Request(line.pop(<span class="string">&#x27;url&#x27;</span>))</span><br><span class="line">                request.meta[<span class="string">&#x27;fields&#x27;</span>] = line</span><br><span class="line">                <span class="keyword">yield</span> request</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">parse</span>(<span class="params">self, response</span>):</span><br><span class="line">        item = Item()</span><br><span class="line">        l = ItemLoader(item=item, response=response)</span><br><span class="line">        <span class="keyword">for</span> name, xpath <span class="keyword">in</span> response.meta[<span class="string">&#x27;fields&#x27;</span>].items():  <span class="comment"># 使用items()而不是iteritems()</span></span><br><span class="line">            <span class="keyword">if</span> xpath:</span><br><span class="line">                item.fields[name] = Field()</span><br><span class="line">                l.add_xpath(name, xpath)</span><br><span class="line">        <span class="keyword">return</span> l.load_item()</span><br><span class="line"> </span><br><span class="line">scrapy  crawl  fromcsv  -o  out.csv</span><br><span class="line">//除非明确使用-a参数设置源文件名，否则将会使用todo.csv作为其默认值</span><br><span class="line"></span><br><span class="line">scrapy  crawl  fromcsv  -a  file=another_todo.csv  -o  out.csv</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="scrapy设置"><a href="#scrapy设置" class="headerlink" title="scrapy设置"></a>scrapy设置</h1><p>查看设置</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">scrapy  settings  --get  CONCURRENT_REQUESTS  -s  CONCURRENT_REQUESTS=<span class="number">19</span></span><br><span class="line"></span><br><span class="line">scrapy  shell  -s  CONCURRENT_REQUESTS=<span class="number">19</span></span><br><span class="line"></span><br><span class="line">settings.getint(<span class="string">&#x27;CONCURRENT_REQUESTS&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>基本设置</p>
+<p><img src="/../../source/images/scrapy/1722935520685.png" alt="1722935520685"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/%E6%8A%A5%E9%94%99/Adv_Toolbox/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  Adv_Toolbox
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/%E9%87%87%E9%9B%86-DataX%E7%9A%84%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86%E5%92%8C%E4%BC%98%E5%8C%96/">
+			  
+			
+				  <!-- 在这里访问 page.next.slug -->
+				  项目实践/采集-DataX的执行原理和优化
+				
+				<i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+
+
+
+
+
+
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+
+	
+	    <a href="/">lucky</a>
+	
+	
+	
+	<br>
+	Email:wuliurong2021nnnu@163.com
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
